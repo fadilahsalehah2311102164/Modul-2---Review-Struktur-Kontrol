@@ -178,14 +178,15 @@ import (
 func main() {
 	var nama string 
 	
+	// input nama 
 	fmt.Scanln(&nama)
 
+	// output nama
 	fmt.Println(nama)
 }
 ```
 #### Screenshoot Source Code
-![Guided1 carbon](https://github.com/user-attachments/assets/1eeb7260-8e07-4641-b3bd-094ef0ea0839)
-
+![Guided1 carbon](https://github.com/user-attachments/assets/a95f3c8c-4d47-49b3-b13d-f77a07348767)
 #### Screenshoot Output
 ![Guided1 go](https://github.com/user-attachments/assets/f814d9ba-c656-4558-8e16-efebdfdf9c57)
 
@@ -254,8 +255,7 @@ func main() {
 
 ```
 #### Screenshoot Source Code
-![Guided2 carbon](https://github.com/user-attachments/assets/5bc67756-0b53-47bc-be51-75de5b06c115)
-
+![Guided2 carbon](https://github.com/user-attachments/assets/5a560969-c901-4763-81fe-a9fc61c46cca)
 #### Screenshoot Output
 ![Guided2 go](https://github.com/user-attachments/assets/c8ccaf94-6853-4d32-888f-3588a0ba0e1b)
 ![Guided2(1) go](https://github.com/user-attachments/assets/cadb683c-a6ae-4a9d-a4bb-2c1bcdb175ad)
@@ -286,16 +286,18 @@ func main() {
 	var a, b, c, d, e int
 	var hasil int 
 
+	// input nilai
 	fmt.Scanln(&a, &b, &c, &d, &e)
 	
+	// hitung operasi penjumlahan
 	hasil = a + b + c + d + e
 
+	// output hasil
 	fmt.Println("Hasil Penjumlahan ", a, b, c, d, e, "adalah = ", hasil)
 }
 ```
 #### Screenshoot Source Code
-![Guided3 carbon](https://github.com/user-attachments/assets/987fdc2e-1bf6-4ccf-a583-2475226995cf)
-
+![Guided3 carbon](https://github.com/user-attachments/assets/d356b553-2e83-4ba8-a482-6331133d98ed)
 #### Screenshoot Output
 ![Guided3 go](https://github.com/user-attachments/assets/e2f00999-f6eb-4b4c-ac85-886cb2ffd9cd)
 
@@ -321,34 +323,34 @@ package main
 import "fmt"
 
 func main() {
-	var nam float32
+	var nam float64 
 	var nmk string
 
+	// input nilai
 	fmt.Print("Masukkan Nilai: ")
 	fmt.Scan(&nam)
 
-	if nam > 80 {
+	// nilai untuk penentuan indeks
+	if nam >= 80 {
 		nmk = "A"
-	} else if nam > 72.5 {
+	} else if nam >= 65 {
 		nmk = "B"
-	} else if nam > 65 {
-		nmk = "C"		
-	} else if nam > 50 {
+	} else if nam >= 50 {
+		nmk = "C"
+	} else if nam >= 40 {
 		nmk = "D"
-	} else if nam > 40 {
-		nmk = "E"
 	} else {
 		nmk = "F"
 	}
 
+	// output hasil
 	fmt.Printf("Nilai indeks untuk nilai %.2f adalah %s\n", nam, nmk)
 }
 ```
 #### Screenshoot Source Code
-![Guided4 carbon](https://github.com/user-attachments/assets/67f3043e-276a-47e3-823a-8d5fe75d1763)
-
+![Guided4 carbon](https://github.com/user-attachments/assets/2126c1e3-ea7b-4a2d-9ecd-65629b868df3)
 #### Screenshoot Output
-
+![image](https://github.com/user-attachments/assets/bd97e65a-e8ca-4f21-8a0f-31020d7c67d0)
 #### Deskripsi Program
 Program ini berisi tentang predikat nilai dari rentang nilai yang tersedia seperti A,B,C,dan seterusnya
 
@@ -386,9 +388,11 @@ func main() {
 	var nam float64 
 	var nmk string
 
+	// input nilai
 	fmt.Print("Masukkan Nilai: ")
 	fmt.Scan(&nam)
 
+	// nilai untuk penentuan indeks
 	if nam >= 80 {
 		nmk = "A"
 	} else if nam >= 65 {
@@ -401,9 +405,9 @@ func main() {
 		nmk = "F"
 	}
 
+	// output hasil
 	fmt.Printf("Nilai indeks untuk nilai %.2f adalah %s\n", nam, nmk)
 }
-
 ```
 ![image](https://github.com/user-attachments/assets/16510a37-0e48-45c3-afc8-0cfb321a71f4)
 
@@ -436,11 +440,12 @@ import (
 )
 
 func main() {
-	var pita string
-	var hitung int
+	var pita string //variabel pita
+	var hitung int // variabel hitung
 
 	scanner := bufio.NewScanner(os.Stdin)
 
+	// Input data
 	for {
 		fmt.Printf("Bunga %d: ", hitung+1) 
 		scanner.Scan()
@@ -450,6 +455,7 @@ func main() {
 			break
 		}
 
+		// Pengolahan data
 		if pita == "" {
 			pita = bunga
 		} else {
@@ -459,14 +465,13 @@ func main() {
 		hitung++
 	}
 
+	// output
 	fmt.Println("Pita : ", pita)
 	fmt.Printf("Bunga: %d\n", hitung)
 }
-
 ```
 #### Screenshoot Source Code
-![Unguided1 carbon](https://github.com/user-attachments/assets/8ac4d2a3-f5d0-448b-9c99-43b21dafae2b)
-
+![Unguided1 carbon](https://github.com/user-attachments/assets/c12863a9-f97a-49bd-81be-e6df4938e48d)
 #### Screenshoot Output
 ![Unguided1 go](https://github.com/user-attachments/assets/f465eb8b-253c-4538-a775-42ba3f4a3bab)
 
@@ -503,20 +508,24 @@ func main() {
 	var beratKiri, beratKanan float64
 
 	for {
+		// input
 		fmt.Print("Masukkan berat belanjaan di kedua kantong : ")
 		fmt.Scan(&beratKiri, &beratKanan)
 
+		// cek berat negatif
 		if beratKiri < 0 || beratKanan < 0 {
 			fmt.Println("Salah satu kantong memiliki berat negatif, program selesai.")
 			break
 		}
 
+		// hitung total berat
 		totalBerat := beratKiri + beratKanan
 		if totalBerat > 150 {
 			fmt.Println("Proses selesai.")
 			break
 		}
 
+		// hitung selisih berat
 		var selisihBerat float64
 		if beratKiri > beratKanan {
 			selisihBerat = beratKiri - beratKanan
@@ -524,6 +533,7 @@ func main() {
 			selisihBerat = beratKanan - beratKiri
 		}
 
+		// cek kondisi
 		if selisihBerat >= 9 {
 			fmt.Println("Sepeda motor Pak Andi akan oleng: True")
 		} else {
@@ -535,8 +545,7 @@ func main() {
 }
 ```
 #### Screenshoot Source Code
-![Unguided2 carbon](https://github.com/user-attachments/assets/313687d3-8b50-47e0-9ad6-66b706218608)
-
+![Unguided2 carbon](https://github.com/user-attachments/assets/51add5ab-3099-45f4-a377-84f26e107ef9)
 #### Screenshoot Output
 ![Unguided2 go](https://github.com/user-attachments/assets/d5495e05-9b1b-479b-bceb-b088e5d3c062)
 
@@ -569,21 +578,23 @@ import (
 
 func main() {
     var K float64
+    // input
     fmt.Print("Nilai K = ")
     fmt.Scan(&K)
 
+    // menghitung pembilang dan penyebut
     pembilang := (4*K + 2) * (4*K + 2)
     penyebut := (4*K + 1) * (4*K + 3)
+
+    // menghitung f(k)
     fK := pembilang / penyebut
 
+    // output
     fmt.Printf("Nilai f(K) = %.10f\n", fK)
 }
-
-
 ```
 #### Screenshoot Source Code
-![Unguided3 carbon](https://github.com/user-attachments/assets/9955f643-34e7-4a08-abaf-41550dcf0afc)
-
+![Unguided3 carbon](https://github.com/user-attachments/assets/5e29ae56-4795-4e0f-9cf2-9727b66989bf)
 #### Screenshoot Output
 ![Unguided3 go](https://github.com/user-attachments/assets/fed084d7-162f-4c27-866d-950186d2e682)
 
@@ -617,6 +628,7 @@ import (
 func main() {
 	var beratParselGram int
 
+	// input berat parsel
 	fmt.Print("Berat parsel (gram): ")
 	_, err := fmt.Scan(&beratParselGram)
 	if err != nil || beratParselGram < 0 {
@@ -624,12 +636,15 @@ func main() {
 		return
 	}
 
+	// hitung berat parsel dalam kilogram dan gram
 	beratParselKilogram := beratParselGram / 1000
 	sisaGram := beratParselGram % 1000
 
+	// hitung biaya dasar
 	biaya := 10000 * beratParselKilogram 
 	detailBiaya := 0         
 	
+	// hitung biaya sisa gram
 	if beratParselKilogram > 10 {
 		sisaGram = 0
 	} else if sisaGram >= 500 {
@@ -640,15 +655,14 @@ func main() {
 		biaya += detailBiaya
 	}
 
+	// output
 	fmt.Printf("Detail berat: %d kg + %d gr\n", beratParselKilogram, sisaGram)
 	fmt.Printf("Detail biaya: Rp. %d + Rp. %d\n", 10000*beratParselKilogram, detailBiaya)
 	fmt.Printf("Total biaya: Rp. %d\n", biaya)
 }
-
 ```
 #### Screenshoot Source Code
-![Unguided4 carbon](https://github.com/user-attachments/assets/73f3537c-7ea1-4513-91c6-397defa4af5d)
-
+![Unguided4 carbon](https://github.com/user-attachments/assets/64c5cf41-fe1a-4b86-b573-aa5b4ab0e6da)
 #### Screenshoot Output
 ![Unguided4 go](https://github.com/user-attachments/assets/9dc2f071-fa8d-479b-9fbe-5bb4157db459)
 
@@ -685,6 +699,7 @@ import (
 func main() {
 	var b int
 
+	// input bilangan
 	fmt.Print("Bilangan: ")
 	_, err := fmt.Scan(&b)
 	if err != nil || b <= 1 {
@@ -695,6 +710,7 @@ func main() {
 	faktor := []int{}
 	bilPrima := true 
 
+	// perulangan untuk faktor
 	for i := 1; i <= b; i++ {
 		if b%i == 0 {
 			faktor = append(faktor, i) 
@@ -704,6 +720,7 @@ func main() {
 		}
 	}
 
+	// output hasil
 	fmt.Printf("Bilangan: %d\n", b)
 	fmt.Printf("Faktor: ")
 	for i, f := range faktor {
@@ -715,13 +732,12 @@ func main() {
 	}
 	fmt.Println()
 
+	// output bilangan prima atau tidak
 	fmt.Printf("Prima: %t\n", bilPrima)
 }
-
 ```
 #### Screenshoot Source Code
-![Unguided5 carbon](https://github.com/user-attachments/assets/d17d962a-b956-4e1b-ab12-ebcf28283429)
-
+![Unguided5 carbon](https://github.com/user-attachments/assets/49324004-a486-49c5-9d7a-768a0f0e6102)
 #### Screenshoot Output
 ![Unguided5(1) go](https://github.com/user-attachments/assets/dd0c4289-5449-4cfc-bc33-f0654888f4e3)
 ![Unguided5(2) go](https://github.com/user-attachments/assets/38a31559-8312-4bf6-b5aa-c5e3e482988c)
