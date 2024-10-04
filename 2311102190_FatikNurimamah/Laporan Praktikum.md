@@ -106,6 +106,70 @@ func main () {
 
 
 ### 2. Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. 
+	**Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', 'kuning', 'hijau', dan 'ungu' selama 5 kali percobaan berulang.Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya.**
+ ![Screenshot 2024-10-04 230120](https://github.com/user-attachments/assets/bda3c6e1-fb3c-4a49-a36c-b0f90bb1903d)
+
+ ### Source Code :
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	// Urutan warna yang benar
+	correctOrder := []string{"merah", "kuning", "hijau", "ungu"}
+
+	// Membaca input untuk 5 percobaan
+	reader := bufio.NewReader(os.Stdin)
+	success := true
+
+	for i := 1; i <= 5; i++ {
+		fmt.Printf("Percobaan %d: ", i)
+
+		// Membaca input dari pengguna
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(input)
+
+		// Memisahkan input berdasarkan spasi
+		colors := strings.Split(input, " ")
+
+		// Mengecek apakah urutan warna sesuai
+		for j := 0; j < 4; j++ {
+			if colors[j] != correctOrder[j] {
+				success = false
+				break
+			}
+		}
+
+		// Jika ada percobaan yang tidak sesuai, keluar dari loop
+		if !success {
+			break
+		}
+	}
+
+	// Menampilkan hasil
+	if success {
+		fmt.Println("BERHASIL: true")
+	} else {
+		fmt.Println("BERHASIL: false")
+	}
+}
+```
+## Output:
+
+### Full code Screenshot:
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
+
 
 
 
