@@ -106,7 +106,7 @@ func main () {
 
 
 ### 2. Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. 
-	**Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', 'kuning', 'hijau', dan 'ungu' selama 5 kali percobaan berulang.Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya.**
+**Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', 'kuning', 'hijau', dan 'ungu' selama 5 kali percobaan berulang.Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya**
  ![Screenshot 2024-10-04 230120](https://github.com/user-attachments/assets/bda3c6e1-fb3c-4a49-a36c-b0f90bb1903d)
 
  ### Source Code :
@@ -169,6 +169,199 @@ func main() {
 ### Algoritma Program
 
 ### Cara Kerja Program
+
+
+### 3. Penjumlahan 5 Angka dari Input Pengguna
+
+### Source Code :
+```go
+package main 
+
+import "fmt"
+
+func main() {
+	var a, b, c, d, e int
+	var hasil int
+
+	// Menambahkan prompt untuk input
+	fmt.Print("Masukkan penjualan (a, b, c, d, e): ")
+	fmt.Scanln(&a, &b, &c, &d, &e)
+
+	hasil = a + b + c + d + e
+	fmt.Println("Hasil Penjualan", a, b, c, d, e, "adalah =", hasil)
+}
+
+```
+### Output:
+
+
+### Full code Screenshot:
+
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
+
+### 4.Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:
+
+### Source Code :
+```go
+
+```
+### Output:
+
+
+### Full code Screenshot:
+
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
+
+
+## Unguided 
+
+### 1.Buatlah sebuah program yang menerima input sebuah bilangan bulat positif (dan tidak nol) N, kemudian program akan meminta input berupa nama bunga secara berulang sebanyak N kali dan nama tersebut disimpan ke dalam pita.
+
+
+### Source Code :
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	// Variabel pita digunakan untuk menyimpan daftar nama bunga
+	var pita string
+	var TotalBunga int
+
+	// Menggunakan scanner untuk membaca input dari pengguna
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Masukkan nama bunga dan ketik 'SELESAI' untuk mengakhiri. :\n")
+
+	for {
+		TotalBunga++
+		fmt.Printf("Bunga %d: ", TotalBunga)
+
+		// Membaca input dari pengguna
+		scanner.Scan()
+		input := scanner.Text()
+
+		// Cek jika pengguna mengetikkan "SELESAI" maka program akan berhenti
+		if strings.ToUpper(input) == "SELESAI" {
+			TotalBunga-- // Mengurangi jumlah bunga karena input "SELESAI" tidak dihitung
+			break
+		}
+
+		// Menambahkan nama bunga ke pita 
+		if pita == "" {
+			pita = input
+		} else {
+			pita += " - " + input
+		}
+	}
+
+	// Menampilkan hasil akhir pita dan jumlah bunga yang dimasukkan
+	fmt.Println("Pita:", pita)
+	fmt.Println("Total bunga:", TotalBunga )
+}
+
+```
+### Output:
+![Screenshot 2024-10-02 205457](https://github.com/user-attachments/assets/a9c25f50-1b96-432a-8a24-0ce28162d27f)
+
+### Full code Screenshot:
+![Screenshot 2024-10-04 231610](https://github.com/user-attachments/assets/aadc38e3-1a0e-4b22-96b0-d8ca9963825a)
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
+
+### 2. Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.
+
+
+### Source Code :
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var BeratKantongKiri, BeratKantongKanan float64
+
+	for {
+		// Meminta pengguna untuk memasukkan berat kedua kantong
+		fmt.Print("Masukkan berat barang di kedua kantong: ")
+		fmt.Scan(&BeratKantongKiri, &BeratKantongKanan)
+
+		// Mengecek apakah berat salah satu kantong bernilai negatif
+		if BeratKantongKiri < 0 || BeratKantongKanan < 0 {
+			fmt.Println("Proses selesai. Salah satu kantong memiliki berat negatif.")
+			break
+		}
+
+		// Mengecek apakah total berat kedua kantong melebihi 150 kg
+		TotalBeratKantong := BeratKantongKiri + BeratKantongKanan
+		if TotalBeratKantong > 150 {
+			fmt.Println("Proses selesai. Total berat kedua kantong melebihi 150 kg.")
+			break
+		}
+
+		// Menghitung selisih berat antara kedua kantong
+		SelisihBeratKantong := math.Abs(BeratKantongKiri -BeratKantongKanan)
+
+		// Mengecek apakah selisih berat menyebabkan sepeda motor oleng
+		if SelisihBeratKantong >= 9 {
+			fmt.Println("Sepeda motor Pak Andi akan oleng: True")
+		} else {
+			fmt.Println("Sepeda motor Pak Andi akan oleng: False")
+		}
+	}
+}
+
+```
+### Output:
+![Screenshot 2024-10-02 214136](https://github.com/user-attachments/assets/4229d529-f363-492e-a72a-1129bb8546b6)
+
+### Full code Screenshot:
+![Screenshot 2024-10-04 231930](https://github.com/user-attachments/assets/09287ed6-180a-4da8-8d39-48588b456c58)
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
+
+
+
+
+
+
+
+
+
+
+
+## Daftar Pustaka
+[1] Effective Go. (n.d.). Retrieved from Golang Indonesia: https://golang-id.org/doc/effective_go.html 
+
+
+
 
 
 
