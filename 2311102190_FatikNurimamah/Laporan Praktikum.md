@@ -42,9 +42,11 @@
 
 
 ## Daftar Isi
-1. [Tujuan Praktikum](#tujuan-praktikum)
-2. [Dasar Teori](#dasar-teori)
-3. [Guided](#guided)
-4. [Unguided](#unguided)
-5. [Kesimpulan](#kesimpulan)
-6. [Daftar Pustaka](#daftar-pustaka)
+1. [Dasar Teori](#dasar-teori)
+2. [Guided](#guided)
+3. [Unguided](#unguided)
+4. [Kesimpulan](#kesimpulan)
+5. [Daftar Pustaka](#daftar-pustaka)
+
+## Dasar Teori
+ 
