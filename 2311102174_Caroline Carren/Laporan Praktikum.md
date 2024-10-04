@@ -1106,5 +1106,5 @@ Dari praktikum ini, dapat disimpulkan sebagai berikut:
 3. Mengoptimalkan penggunaan struktur kontrol sehingga dapat menulis kode yang lebih ringkas, efisien, dan mudah dipelihara sesuai dengan kebutuhan logika program.
    
 ## Daftar Pustaka
-[1] [1] A. A. A. Donovan and B. W. Kernighan, *The Go Programming Language*. Boston, MA: Addison-Wesley, 2015.
+[1] A. A. A. Donovan and B. W. Kernighan, *The Go Programming Language*. Boston, MA: Addison-Wesley, 2015.
 
