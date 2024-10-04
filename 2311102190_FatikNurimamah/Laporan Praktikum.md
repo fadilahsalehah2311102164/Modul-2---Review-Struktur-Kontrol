@@ -161,8 +161,10 @@ func main() {
 }
 ```
 ## Output:
+![Screenshot 2024-10-04 232908](https://github.com/user-attachments/assets/1d18fa8a-bde5-412b-84fe-116ab4b62667)
 
 ### Full code Screenshot:
+![Screenshot 2024-10-04 232952](https://github.com/user-attachments/assets/d6f86650-497a-4dfb-91b8-b4dc27bf7ae8)
 
 ### Deskripsi Program : 
 
