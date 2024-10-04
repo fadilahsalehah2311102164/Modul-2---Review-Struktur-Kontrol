@@ -93,8 +93,10 @@ func main () {
 }
 ```
 ### Output:
+![Screenshot 2024-10-04 225448](https://github.com/user-attachments/assets/b72455a1-8a1d-46da-b35f-8a0275f0f7a8)
 
 ### Full code Screenshot:
+![Screenshot 2024-10-04 225654](https://github.com/user-attachments/assets/5bfcd0c0-e51f-45ac-b1d8-9fe3c1f264ee)
 
 ### Deskripsi Program : 
 
