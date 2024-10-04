@@ -51,8 +51,17 @@
 ## Dasar Teori
 Struktur kontrol dari Go berkaitan dengan bahasa C namun berbeda dalam hal-hal tertentu. Tidak ada pengulangan do atau while, hanya for; switch yang lebih fleksibel; if dan switch bisa menggunakan perintah inisialisasi seperti halnya pada for; perintah break dan continue memiliki label identifikasi yang opsional; dan ada beberapa kontrol struktur baru termasuk switch pada tipe dan komunikasi multiplexer, select. Sintaksnya juga sedikit berbeda: tidak ada tanda kurung dan bagian badan dari kontrol harus selalu dibatasi oleh kurung kurawal.
 
-1. If
-Dalam Go if yang sederhana itu bentuknya seperti ini:
+1. if
+   
+Dalam Go, bentuk if yang paling sederhana adalah sebagai berikut:
+
+```go
+if x > 0 {
+	return y
+}
+```
+
+
 
 
 
