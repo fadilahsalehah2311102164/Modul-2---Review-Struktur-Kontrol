@@ -39,3 +39,12 @@
 </p>
 
 ------
+
+
+## Daftar Isi
+1. [Tujuan Praktikum](#tujuan-praktikum)
+2. [Dasar Teori](#dasar-teori)
+3. [Guided](#guided)
+4. [Unguided](#unguided)
+5. [Kesimpulan](#kesimpulan)
+6. [Daftar Pustaka](#daftar-pustaka)
