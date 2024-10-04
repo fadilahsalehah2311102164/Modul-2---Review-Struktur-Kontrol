@@ -51,7 +51,7 @@
 ## Dasar Teori
 Struktur kontrol dari Go berkaitan dengan bahasa C namun berbeda dalam hal-hal tertentu. Tidak ada pengulangan do atau while, hanya for; switch yang lebih fleksibel; if dan switch bisa menggunakan perintah inisialisasi seperti halnya pada for; perintah break dan continue memiliki label identifikasi yang opsional; dan ada beberapa kontrol struktur baru termasuk switch pada tipe dan komunikasi multiplexer, select. Sintaksnya juga sedikit berbeda: tidak ada tanda kurung dan bagian badan dari kontrol harus selalu dibatasi oleh kurung kurawal.
 
-1. if
+**1. `if`**
    
 Dalam Go, bentuk if yang paling sederhana adalah sebagai berikut:
 
@@ -60,6 +60,51 @@ if x > 0 {
 	return y
 }
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+## Guided 
+
+### 1. Program Sederhana untuk Membaca dan Menampilkan Nama
+
+### Source Code :
+```go
+package main
+
+import (
+	"fmt"
+)
+func main () {
+
+	var nama string
+	
+	fmt.Print("Masukkan nama: ")
+	fmt.Scanln(&nama)
+	fmt.Println("Nama yang dimasukkan:", nama)
+}
+```
+### Output:
+
+### Full code Screenshot:
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
+
+
+### 2. Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. 
+
 
 
 
