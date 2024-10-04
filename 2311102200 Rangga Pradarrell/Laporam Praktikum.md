@@ -26,7 +26,7 @@
 
 <p align="center">
   <strong>Dosen Pengampu:</strong><br>
-  Arif Amrulloh
+  Arif Amrulloh, S.Kom., M.Kom.
 </p>
 
 <br>
