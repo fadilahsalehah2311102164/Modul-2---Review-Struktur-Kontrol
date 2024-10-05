@@ -75,6 +75,7 @@ String: Tipe data untuk teks.
 Array: Koleksi elemen dengan tipe yang sama.
 Slice: Mirip dengan array tetapi lebih fleksibel, dapat berubah ukuran.
 Map: Koleksi pasangan kunci-nilai.
+
 Contoh penggunaan tipe data dan instruksi dasar:
 ```go
 package main
@@ -99,6 +100,7 @@ Struktur kontrol perulangan memungkinkan kita untuk mengulangi eksekusi blok kod
 For dengan Inisialisasi dan Kondisi: Ini mirip dengan loop di banyak bahasa lain.
 For Tanpa Kondisi: Ini akan menciptakan loop tak terbatas, jika tidak dihentikan dengan break[1].
 For dengan Range: Digunakan untuk iterasi melalui elemen dalam slice, array, atau map[1].
+
 Contoh perulangan menggunakan for:
 ```go
 package main
@@ -136,6 +138,7 @@ Percabangan memungkinkan program untuk membuat keputusan berdasarkan kondisi ter
 If Statement: Memeriksa kondisi dan menjalankan blok kode jika kondisi terpenuhi.
 Else If dan Else: Menambahkan lebih banyak kondisi yang dapat diperiksa.
 Switch Statement: Memeriksa satu nilai terhadap beberapa kemungkinan[1].
+
 Contoh penggunaan percabangan:
 ```go
 package main
@@ -182,30 +185,30 @@ func main() {
 ```go
 package main
 
-import (
-	"fmt" 
-)
+import "fmt"
 
 func main() {
-	var nama string 
-	
-	fmt.Scanln(&nama)
 
+	var nama string
+
+	fmt.Scanln(nama)
 	fmt.Println(nama)
 }
+
 ```
 #### Screenshoot Source Code
+
+![Screenshot 2024-10-05 190647](https://github.com/user-attachments/assets/59e2ab1b-2c77-468f-983d-c2fbcc2ca3af)
 
 
 #### Screenshoot Output
 
+![Screenshot 2024-10-05 190711](https://github.com/user-attachments/assets/33fa5782-3554-4c4b-b0ec-533d480c79c7)
+
 
 #### Deskripsi Program
 
-
-2. Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', 'kuning', 'hijau', dan 'ungu' selama 5 kali percobaan berulang[1].
-Buatlah sebuah program yang menerima Input berupa warna dari ke 4 gelas reaks! sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuat dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya[1].
-
+Kode di atas adalah program sederhana dalam bahasa Go yang meminta pengguna untuk memasukkan sebuah nama dan kemudian mencetak nama tersebut. Program dimulai dengan mendeklarasikan paket main dan mengimpor paket fmt untuk input dan output. Di dalam fungsi main, variabel nama bertipe string dideklarasikan untuk menyimpan input dari pengguna. Namun, terdapat kesalahan pada penggunaan fmt.Scanln(nama); seharusnya ditulis fmt.Scanln(&nama) untuk menyimpan input ke dalam variabel. Setelah itu, fungsi fmt.Println(nama) digunakan untuk mencetak nama yang diinputkan ke konsol.
 #### Source Code
 ```go
 package main
