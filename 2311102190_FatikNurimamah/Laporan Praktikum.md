@@ -442,7 +442,6 @@ Program ini dibuat untuk meminta pengguna memasukkan lima angka bulat. Setelah i
 ### 4.Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:
 
 ![Screenshot 2024-10-05 185203](https://github.com/user-attachments/assets/f9c9959e-bcde-4b09-b3a5-5feab7302db3)
-![Screenshot 2024-10-05 185442](https://github.com/user-attachments/assets/e7e4becb-ef34-4315-a1e3-9ec4fa7b5057)
 
 **Jawablah pertanyaan-pertanyaan berikut:**
 
@@ -505,7 +504,6 @@ func main (){
 
 **setelah perbaikan**
 
-![Screenshot 2024-10-05 191556](https://github.com/user-attachments/assets/c5284cba-3524-43a6-b8b6-fe58d3165b67)
 
 
 ### Full code Screenshot:
