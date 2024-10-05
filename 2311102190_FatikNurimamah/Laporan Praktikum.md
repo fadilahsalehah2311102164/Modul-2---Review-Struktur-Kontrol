@@ -382,10 +382,10 @@ func main() {
 }
 ```
 ### Output:
-
+![Screenshot 2024-10-04 205308](https://github.com/user-attachments/assets/48ff47ca-61c1-4899-863d-e6cce4830006)
 
 ### Full code Screenshot:
-
+![Screenshot 2024-10-05 103402](https://github.com/user-attachments/assets/b9d51301-9995-4786-9011-5ba4d16bf035)
 
 ### Deskripsi Program : 
 
@@ -393,6 +393,75 @@ func main() {
 
 ### Cara Kerja Program
 
+
+### 4. 
+
+
+### Source Code :
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func BiayaPengiriman(beratGram int) int {
+	// Konversi berat ke kg dan sisa gram
+	BeratKg := beratGram / 1000
+	SisaBeratGram := beratGram % 1000
+
+	// Hitung biaya dasar untuk kg
+	biayaDasar := BeratKg * 10000
+
+	// Hitung biaya tambahan untuk sisa gram
+	biayaTambahan := 0
+	if SisaBeratGram > 0 {
+		if BeratKg >= 10 {
+			// Jika berat lebih dari 10 kg, sisa gram digratiskan
+			biayaTambahan = 0
+		} else if SisaBeratGram <= 500 {
+			// Jika sisa gram <= 500, biaya tambahan Rp. 5,- per gram
+			biayaTambahan = SisaBeratGram * 5
+		} else {
+			// Jika sisa gram > 500, biaya tambahan Rp. 15,- per gram
+			biayaTambahan = SisaBeratGram * 15
+		}
+	}
+
+	// Total biaya adalah biaya dasar + biaya tambahan
+	totalBiaya := biayaDasar + biayaTambahan
+
+	// Cetak detail
+	fmt.Printf("Detail berat: %d kg + %d gr\n", BeratKg, SisaBeratGram)
+	fmt.Printf("Detail biaya: Rp. %d + Rp. %d\n", biayaDasar, biayaTambahan)
+	return totalBiaya
+}
+
+func main() {
+	var berat int
+	// Minta input berat dari pengguna
+	fmt.Print("Berat parsel (gram): ")
+	fmt.Scanln(&berat)
+
+	// Hitung biaya pengiriman
+	totalBiaya := BiayaPengiriman(berat)
+
+	// Tampilkan total biaya
+	fmt.Printf("Total biaya: Rp. %d\n", totalBiaya)
+}
+
+```
+### Output:
+![Screenshot 2024-10-02 214136](https://github.com/user-attachments/assets/0e0cfbaa-0eb3-4cba-8ccc-10c268da4956)
+
+### Full code Screenshot:
+![Screenshot 2024-10-05 104036](https://github.com/user-attachments/assets/f5512033-3c8b-40a3-ac13-7408d7983d83)
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
 
 
 
