@@ -4,7 +4,7 @@
 <br>
 
 <h2 align="center"><strong>MODUL II</strong></h2>
-<h2 align="center"><strong> REVIEW STRUKTUR KONTROL </strong></h2>
+<h2 align="center"><strong> REVIEW STRUKTUR KONTROL </strong></h2> 
 
 <br>
 
