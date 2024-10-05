@@ -454,16 +454,7 @@ c. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Sehar
 
 **Jawaban:**
 
-a. Jika nilai nam adalah 80.1, output dari program akan menghasilkan nilai mata kuliah "B". Namun, ini tidak sesuai dengan spesifikasi yang diharapkan. Pada program, nilai 80.1 seharusnya mendapatkan hasil "A" karena kondisi if nam > 80 terpenuhi. Akan tetapi, program tetap melanjutkan evaluasi ke kondisi if nam > 72.5, yang juga terpenuhi, sehingga nilai berubah menjadi "B".
 
-b. Kesalahan dalam program:
- - Program tidak menggunakan blok else if, sehingga setiap kondisi dievaluasi secara terpisah. Hal ini menyebabkan kondisi yang lebih rendah (misalnya 72.5) tetap dievaluasi meskipun kondisi yang lebih 
-tinggi sudah terpenuhi.
- - Berdasarkan spesifikasi, jika suatu kondisi yang lebih tinggi sudah terpenuhi, kondisi yang lebih rendah seharusnya tidak dievaluasi.
-    
-Alur yang benar:
- - Penggunaan else if diperlukan agar hanya satu kondisi yang dievaluasi. Jika sebuah kondisi sudah memenuhi syarat, maka kondisi berikutnya tidak akan diperiksa lagi.
-   
 
 ### Source Code :
 
@@ -503,39 +494,7 @@ func main (){
 
 **setelah perbaikan**
 ```go
-package main
 
-import "fmt"
-
-func main() {
-    // Mendeklarasikan variabel untuk menyimpan nilai akhir dan nama nilai
-    var nam float64  // Variabel untuk menyimpan nilai akhir mata kuliah
-    var nmk string   // Variabel untuk menyimpan huruf nilai
-
-    // Meminta user untuk menginput nilai akhir mata kuliah
-    fmt.Print("Nilai akhir mata kuliah: ")
-    fmt.Scanln(&nam) // Membaca input nilai dari user
-
-    // Menentukan huruf nilai berdasarkan nilai akhir yang diinputkan
-    if nam > 80 {
-        nmk = "A"
-    } else if nam > 72.5 {
-        nmk = "AB"
-    } else if nam > 65 {
-        nmk = "B"
-    } else if nam > 57.5 {
-        nmk = "BC"
-    } else if nam > 50 {
-        nmk = "C"
-    } else if nam > 40 {
-        nmk = "D"
-    } else {
-        nmk = "E"
-    }
-
-    // Menampilkan hasil huruf nilai kepada user
-    fmt.Println("Nilai mata kuliah: ", nmk)
-}
 
 ```
 ### Output:
@@ -557,7 +516,7 @@ func main() {
 
 **setelah perbaikan**
 
-![Screenshot 2024-10-05 191834](https://github.com/user-attachments/assets/864c0f8d-b9ed-4ac5-b30a-601cce8be227)
+
 
 
 ### Deskripsi Program : 
