@@ -72,6 +72,15 @@ if err := file.Chmod(0664); err != nil {
 }
 ```
 
+Dalam pustaka Go, dapat dijumpai bahwa jika perintah `if` tidak melanjutkan ke perintah berikutnya—misalnya, ketika badan kondisi diakhiri dengan `break`, `continue`, `goto`, atau `return`—maka kondisi `else` yang tidak diperlukan akan dihilangkan[1].
+
+```go
+f, err := os.Open(name)
+if err != nil {
+	return err
+}
+codeUsing(f)
+```
 
 
 
