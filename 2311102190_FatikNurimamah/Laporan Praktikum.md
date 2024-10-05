@@ -455,6 +455,11 @@ c. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Sehar
 
 a. **jika nam 80.1**
 
+Eksekusi program sesuai dengan spesifikasi soal, karena berdasarkan kondisi yang diberikan, nilai 80.1 lebih besar dari 80, sehingga sesuai dengan logika penentuan nilai huruf yang telah ditetapkan, nilai huruf yang diberikan adalah A.
+![Screenshot 2024-10-05 200147](https://github.com/user-attachments/assets/0162912e-658c-4603-acd2-8ca0f42a31bc)
+
+b. 
+
 
 
 ### Source Code :
