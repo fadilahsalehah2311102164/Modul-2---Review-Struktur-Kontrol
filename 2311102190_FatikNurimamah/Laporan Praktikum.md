@@ -450,13 +450,92 @@ a. Jika nam diberikan adalah 80.1, apa keluaran dari program tersebut? Apakah ek
 
 b. Apa saja kesalahan dari program tersebut? Mengapa demikian? Jelaskan alur program seharusnya!
 
-C. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Seharusnya keluaran yang diperoleh adalah 'A', 'B', dan 'D'.
+c. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Seharusnya keluaran yang diperoleh adalah 'A', 'B', dan 'D'.
 
 **Jawaban:**
 
+a. Jika nilai nam adalah 80.1, output dari program akan menghasilkan nilai mata kuliah "AB". Namun, ini tidak sesuai dengan spesifikasi yang diharapkan. Pada program, nilai 80.1 seharusnya mendapatkan hasil "A" karena kondisi if nam > 80 terpenuhi. Akan tetapi, program tetap melanjutkan evaluasi ke kondisi if nam > 72.5, yang juga terpenuhi, sehingga nilai berubah menjadi "AB".
+
+b. Kesalahan dalam program:
+ - Program tidak menggunakan blok else if, sehingga setiap kondisi dievaluasi secara terpisah. Hal ini menyebabkan kondisi yang lebih rendah (misalnya 72.5) tetap dievaluasi meskipun kondisi yang lebih 
+tinggi sudah terpenuhi.
+ - Berdasarkan spesifikasi, jika suatu kondisi yang lebih tinggi sudah terpenuhi, kondisi yang lebih rendah seharusnya tidak dievaluasi.
+    
+Alur yang benar:
+ - Penggunaan else if diperlukan agar hanya satu kondisi yang dievaluasi. Jika sebuah kondisi sudah memenuhi syarat, maka kondisi berikutnya tidak akan diperiksa lagi.
+   
 
 ### Source Code :
+
+**sebelum perbaikan**
 ```go
+package main
+
+import "fmt"
+
+func main (){
+	var nam float32
+	var nmk string
+
+	// Meminta input nilai
+	fmt.Print("Masukkan nilai : ")
+	fmt.Scan(&nam)
+
+	// Logika penentuan nilai huruf berdasarkan nilai numerik
+	if nam > 80 {
+		nmk = "A"
+	} else if nam > 72.5 {
+		nmk = "B"
+	} else if nam > 65 {
+		nmk = "C"
+	} else if nam > 50 {
+		nmk = "D"
+	} else if nam > 40 {
+		nmk = "E"
+	} else {
+		nmk = "F"
+	}
+
+	// Menampilkan hasil
+	fmt.Printf("Nilai Indeks untuk nilai %.2f adalah %s\n", nam, nmk)
+}
+```
+
+**setelah perbaikan**
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Mendeklarasikan variabel untuk menyimpan nilai akhir dan nama nilai
+    var nam float64  // Variabel untuk menyimpan nilai akhir mata kuliah
+    var nmk string   // Variabel untuk menyimpan huruf nilai
+
+    // Meminta user untuk menginput nilai akhir mata kuliah
+    fmt.Print("Nilai akhir mata kuliah: ")
+    fmt.Scanln(&nam) // Membaca input nilai dari user
+
+    // Menentukan huruf nilai berdasarkan nilai akhir yang diinputkan
+    if nam > 80 {
+        nmk = "A"
+    } else if nam > 72.5 {
+        nmk = "AB"
+    } else if nam > 65 {
+        nmk = "B"
+    } else if nam > 57.5 {
+        nmk = "BC"
+    } else if nam > 50 {
+        nmk = "C"
+    } else if nam > 40 {
+        nmk = "D"
+    } else {
+        nmk = "E"
+    }
+
+    // Menampilkan hasil huruf nilai kepada user
+    fmt.Println("Nilai mata kuliah: ", nmk)
+}
 
 ```
 ### Output:
