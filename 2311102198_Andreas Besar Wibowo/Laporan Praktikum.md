@@ -313,8 +313,7 @@ Cara kerja dari program ini adalah program mengenal 5 variabel untuk menentukan 
 
 4. Diberikan sebuah nilai akhir mata kullah (NAM) [0..100] dan standar penilaian nilai mata kullah (NMK)
    sebagai berikut:
-![Screenshot 2024-10-03 211225](https://github.com/user-attachments/assets/f5ea697d-88cd-43ba-b4dd-2b7779e9ccd1)
-
+![Screenshot 2024-10-03 211225](https://github.com/user-attachments/assets/fb887a41-e995-4420-b807-5212dcc88a7d)
 
 #### Source Code
 ```go
@@ -409,7 +408,7 @@ func main() {
 	fmt.Printf("Nilai indeks untuk nilai %.2f adalah %s\n", nam, nmk)
 }
 ```
-![image](https://github.com/user-attachments/assets/16510a37-0e48-45c3-afc8-0cfb321a71f4)
+![Screenshot 2024-10-03 212536](https://github.com/user-attachments/assets/11c52300-664a-4cd3-85b0-19610cbf3099)
 
 ## III. UNGUIDED
 
@@ -562,8 +561,7 @@ Cara kerja dari program ini adalah program meminta user menginputkan berat kantu
 
 3. Diberikan sebuah persamaan sebagai berikut ini.
    Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas.
-![Screenshot 2024-10-03 083724](https://github.com/user-attachments/assets/a761515c-219a-43e1-9c5b-bd9fa1a3278a)
-
+![Screenshot 2024-10-03 083724](https://github.com/user-attachments/assets/400331cb-2eb3-4d12-99c7-db726f39f3db)
 
 #### Source Code
 ```go
