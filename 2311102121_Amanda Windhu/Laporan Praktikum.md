@@ -464,6 +464,16 @@ func main() {
 
 Kode di atas dirancang untuk menentukan nilai huruf berdasarkan input nilai akhir mata kuliah yang dimasukkan oleh pengguna. Pertama, program meminta pengguna untuk memasukkan nilai akhir dalam bentuk numerik (tipe data float64). Setelah menerima input tersebut, program menggunakan serangkaian kondisi `if` dan `else if` untuk mengevaluasi nilai dan menetapkan nilai huruf yang sesuai. Rentang nilai yang ditetapkan dalam program ini adalah: "A" untuk nilai di atas 80, "AB" untuk nilai antara 72.5 hingga 80, "B" untuk nilai antara 65 hingga 72.5, "BC" untuk nilai antara 57.5 hingga 65, "C" untuk nilai antara 50 hingga 57.5, "D" untuk nilai antara 40 hingga 50, dan "E" untuk nilai di bawah atau sama dengan 40. Setelah menentukan nilai huruf, program menampilkan hasilnya dalam format yang jelas, memberikan informasi kepada pengguna mengenai nilai indeks yang sesuai dengan nilai akhir mata kuliah yang dimasukkan.
 
+### 7. Sebuah bilangan bulat b memiliki faktor bilangan f > 0 jika f habis membagi b. Contoh: 2 merupakan faktor dari bilangan 6 karena 6 habis dibagi 2. <br/> Buatlah program yang menerima input sebuah bilangan bulat b dan b > 1. Program harus dapat mencari dan menampilkan semua faktor dari bilangan tersebut!<br/>
+![image](https://github.com/user-attachments/assets/8330a3c8-b137-481a-bfc7-353406f0fcad)<br/>
+
+## Bilangan bulat b > 0 merupakan bilangan prima p jika dan hanya jika memiliki persis dua faktor bilangan saja, yaitu 1 dan dirinya sendiri. <br/> Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b > 0. Program tersebut mencari dan menampilkan semua faktor bilangan tersebut. Kemudian, program menentukan apakah b merupakan bilangan prima.<br/>
+
+![image](https://github.com/user-attachments/assets/a1a6ef25-8bef-4722-ae96-7037e09a440a)<br/>
+
+
+
+
 
 
 
