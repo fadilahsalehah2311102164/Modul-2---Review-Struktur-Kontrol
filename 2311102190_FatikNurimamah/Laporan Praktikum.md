@@ -411,6 +411,7 @@ func main() {
 ![Screenshot 2024-10-05 103402](https://github.com/user-attachments/assets/b9d51301-9995-4786-9011-5ba4d16bf035)
 
 ### Deskripsi Program : 
+Program ini digunakan untuk menghitung nilai dari fungsi `f(k)`  berdasarkan nilai `( k )` yang dimasukkan oleh pengguna. Fungsi `f(k)` dihitung menggunakan rumus matematika tertentu, dan hasilnya ditampilkan dengan presisi hingga 10 angka di belakang koma.
 
 ### Algoritma Program
 
