@@ -188,7 +188,7 @@ func main() {
 #### Screenshoot Source Code
 ![Guided1 carbon](https://github.com/user-attachments/assets/a95f3c8c-4d47-49b3-b13d-f77a07348767)
 #### Screenshoot Output
-![Guided1 go](https://github.com/user-attachments/assets/f814d9ba-c656-4558-8e16-efebdfdf9c57)
+![Guided1 go](https://github.com/user-attachments/assets/11bbe9ba-0019-4e1c-bd95-57d1c9cba3fc)
 
 #### Deskripsi Program
 Program ini berisi tentang menampilkan inputan ke layar output
@@ -257,8 +257,8 @@ func main() {
 #### Screenshoot Source Code
 ![Guided2 carbon](https://github.com/user-attachments/assets/5a560969-c901-4763-81fe-a9fc61c46cca)
 #### Screenshoot Output
-![Guided2 go](https://github.com/user-attachments/assets/c8ccaf94-6853-4d32-888f-3588a0ba0e1b)
-![Guided2(1) go](https://github.com/user-attachments/assets/cadb683c-a6ae-4a9d-a4bb-2c1bcdb175ad)
+![Guided2 go](https://github.com/user-attachments/assets/e49af4ea-7ae9-4c99-9b1f-6a35577f5e33)
+![Guided2(1) go](https://github.com/user-attachments/assets/2d18eebe-d3fc-406b-b421-271c1e9a5807)
 
 #### Deskripsi Program
 Program ini berisi tentang mengurutkan warna dengan benar dan hanya 5 percobaan. Jika semua inputan diisi dengan benar, maka akan muncul kata "BERHASIL:True". Jika salah maka akan muncul kata "BERHASIL:False"
@@ -299,7 +299,7 @@ func main() {
 #### Screenshoot Source Code
 ![Guided3 carbon](https://github.com/user-attachments/assets/d356b553-2e83-4ba8-a482-6331133d98ed)
 #### Screenshoot Output
-![Guided3 go](https://github.com/user-attachments/assets/e2f00999-f6eb-4b4c-ac85-886cb2ffd9cd)
+![Guided3 go](https://github.com/user-attachments/assets/7a0addad-8757-4ea3-923d-1120c93b5daf)
 
 #### Deskripsi Program
 Program ini berisi tentang perhitungan penjumlahan sederhana dengan memasukkan cukup hanya 5 angka yang ingin dihitung. Program menggunakan 'fmt.Scanln' untuk membaca dan menyimpan input pengguna pada variabel
@@ -473,7 +473,7 @@ func main() {
 #### Screenshoot Source Code
 ![Unguided1 carbon](https://github.com/user-attachments/assets/c12863a9-f97a-49bd-81be-e6df4938e48d)
 #### Screenshoot Output
-![Unguided1 go](https://github.com/user-attachments/assets/f465eb8b-253c-4538-a775-42ba3f4a3bab)
+![Unguided1 go](https://github.com/user-attachments/assets/dc338122-7a41-4e2e-9280-87f9102a0d38)
 
 #### Deskripsi Program
 Program ini berisi tentang nama nama bunga secara urut dan pada output disimpulkan semua nama bunga yang diinput dan jumlah bunganya
@@ -547,7 +547,7 @@ func main() {
 #### Screenshoot Source Code
 ![Unguided2 carbon](https://github.com/user-attachments/assets/51add5ab-3099-45f4-a377-84f26e107ef9)
 #### Screenshoot Output
-![Unguided2 go](https://github.com/user-attachments/assets/d5495e05-9b1b-479b-bceb-b088e5d3c062)
+![Unguided2 go](https://github.com/user-attachments/assets/6d6a4429-22b0-45d9-bb62-536d3eac9909)
 
 #### Deskripsi Program
 Program ini berisi tentang menghitung berat belanjaan di dua kantong dan selisih berat kedua kantung dan memperkirakan motor akan jatuh atau tidak
@@ -596,7 +596,7 @@ func main() {
 #### Screenshoot Source Code
 ![Unguided3 carbon](https://github.com/user-attachments/assets/5e29ae56-4795-4e0f-9cf2-9727b66989bf)
 #### Screenshoot Output
-![Unguided3 go](https://github.com/user-attachments/assets/fed084d7-162f-4c27-866d-950186d2e682)
+![Unguided3 go](https://github.com/user-attachments/assets/0a1a5fdf-c07d-4b3d-b6fd-5f064159217a)
 
 #### Deskripsi Program
 Program ini berisi tentang menghitung nilai akar dari bilangan yang diinoutkan oleh user. 
@@ -664,7 +664,7 @@ func main() {
 #### Screenshoot Source Code
 ![Unguided4 carbon](https://github.com/user-attachments/assets/64c5cf41-fe1a-4b86-b573-aa5b4ab0e6da)
 #### Screenshoot Output
-![Unguided4 go](https://github.com/user-attachments/assets/9dc2f071-fa8d-479b-9fbe-5bb4157db459)
+![Unguided4 go](https://github.com/user-attachments/assets/28dd00b0-8dbc-4707-8ccc-f23be1493146)
 
 #### Deskripsi Program
 Program ini berisi tentang menghitung dan mengonversikan berat yang dimasukkan oleh user dengan menggunakan gram dan kilogram. Program ini juga menghitung biaya pengiriman dari ketentuan yang ditentukan.
@@ -739,8 +739,8 @@ func main() {
 #### Screenshoot Source Code
 ![Unguided5 carbon](https://github.com/user-attachments/assets/49324004-a486-49c5-9d7a-768a0f0e6102)
 #### Screenshoot Output
-![Unguided5(1) go](https://github.com/user-attachments/assets/dd0c4289-5449-4cfc-bc33-f0654888f4e3)
-![Unguided5(2) go](https://github.com/user-attachments/assets/38a31559-8312-4bf6-b5aa-c5e3e482988c)
+![Unguided5(1) go](https://github.com/user-attachments/assets/85dee62e-5829-4b33-a01b-ccff2c7ff393)
+![Unguided5(2) go](https://github.com/user-attachments/assets/00f32607-9308-41ad-a3ef-ed282a32eed2)
 
 #### Deskripsi Program
 Program ini berisi tentang menentukan bilangan yang dimasukkan termasuk bilangan prima atau bukan. Pada awal program, user diminta untuk memasukkan bilangan bulat terlebih dahulu
