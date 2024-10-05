@@ -40,4 +40,24 @@
 
 ------
 
-<strong>I. DASAR TEORI</strong>
+## I. Dasar Teori
+## II. GUIDED
+1. Menampilkan output yang diinputkan user
+
+#### Source Code
+```go
+package main
+
+import (
+	"fmt" 
+)
+
+func main() {
+	var nama string 
+	
+	// input nama 
+	fmt.Scanln(&nama)
+
+	// output nama
+	fmt.Println(nama)
+}
