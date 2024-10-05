@@ -198,7 +198,7 @@ for {
 }
 ```
 
-## Tips Tambahan
+## Break
 1. Gunakan `break` untuk keluar dari loop
 2. Gunakan `continue` untuk melompat ke iterasi berikutnya
 3. Label bisa digunakan dengan `break` dan `continue` untuk kontrol yang lebih spesifik
