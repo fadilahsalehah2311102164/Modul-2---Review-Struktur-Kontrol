@@ -202,7 +202,7 @@ Program ini dibuat untuk menguji kemampuan pengguna dalam mengingat urutan warna
 
 ```
 ### Output:
-
+![Screenshot 2024-10-05 131743](https://github.com/user-attachments/assets/d6ebbbd9-5959-45eb-90f0-b6dc491f144f)
 
 ### Full code Screenshot:
 
