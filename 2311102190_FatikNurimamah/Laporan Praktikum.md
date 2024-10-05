@@ -61,6 +61,9 @@ if x > 0 {
 }
 ```
 
+Kewajiban penggunaan kurung kurawal mendorong penulisan perintah `if` menjadi lebih terstruktur dengan beberapa baris. Gaya penulisan ini sangat efektif, terutama jika badan kondisi mengandung perintah kontrol seperti `return` atau `break`[1].
+
+Karena `if` dan `switch` dapat melakukan inisialisasi, sering kali kita melihat penggunaan kedua struktur ini untuk mendeklarasikan variabel lokal[1].
 
 
 
