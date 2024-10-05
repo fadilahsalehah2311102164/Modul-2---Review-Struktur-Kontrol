@@ -378,6 +378,7 @@ Kode di atas menentukan indeks nilai huruf berdasarkan input nilai numerik dari 
 
 ## III. UNGUIDED
 1. Program Input Bunga dengan Kata Kunci
+
 #### Source Code
 ```go
 package main
@@ -486,6 +487,7 @@ Bunga: 3
 6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
 2. Program Keseimbangan Berat Belanjaan di Dua Kantong
+
 #### Source Code
 ```go
 package main
@@ -569,6 +571,7 @@ Program kembali ke langkah 1 (meminta input berat lagi).
 Jika pada suatu saat total berat kedua kantong melebihi 150 kg, atau salah satu kantong beratnya negatif, program langsung berhenti dengan pesan "Proses selesai."
 
 3. Program Perhitungan Fungsi Matematika dengan Input Variabel
+
 #### Source Code
 ```go
 package main
@@ -626,6 +629,7 @@ Kode di atas menghitung serta menampilkan hasil dari suatu fungsi matematika ber
 7. Setelah hasil ditampilkan, program selesai menjalankan tugasnya.
 
 4. Program Input Bunga dengan Kata Kunci
+
 #### Source Code
 ```go
 package main
@@ -734,6 +738,7 @@ Bunga: 3
 6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
 5. Program Input Bunga dengan Kata Kunci
+
 #### Source Code
 ```go
 package main
