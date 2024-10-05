@@ -452,7 +452,6 @@ func main() {
 
 ```
 ### Output:
-![Screenshot 2024-10-02 214136](https://github.com/user-attachments/assets/0e0cfbaa-0eb3-4cba-8ccc-10c268da4956)
 
 ### Full code Screenshot:
 ![Screenshot 2024-10-05 104036](https://github.com/user-attachments/assets/f5512033-3c8b-40a3-ac13-7408d7983d83)
