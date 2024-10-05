@@ -485,6 +485,361 @@ Bunga: 3
 5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
 6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
+2. Program Keseimbangan Berat Belanjaan di Dua Kantong
+#### Source Code
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var kiri, kanan, total float64
+	for {
+		fmt.Print("Masukan berat belanjaan di kedua kantong: ")
+		fmt.Scanln(&kiri, &kanan)
+
+		total = kiri + kanan
+		selisih := math.Abs(kiri - kanan)
+
+		if total > 150 || kiri < 0 || kanan < 0 {
+			break
+		}
+
+		if selisih >= 9 {
+			fmt.Println("Sepeda motor pak Andi akan oleng: true")
+		} else {
+			fmt.Println("Sepeda motor pak Andi akan oleng: false")
+		}
+	}
+	fmt.Println("Proses selesai.")
+}
+
+```
+#### Screenshoot Source Code
+
+![Screenshot 2024-10-05 201457](https://github.com/user-attachments/assets/fa0c2086-089f-4754-bef3-9056bebbb52f)
+
+
+#### Screenshoot Output
+![Screenshot 2024-10-05 201604](https://github.com/user-attachments/assets/38959b5f-ad57-4ca5-9159-a9c221fa0152)
+
+#### Deskripsi Program
+
+Kode di atas berfungsi untuk mengevaluasi berat belanjaan di dua kantong. Di dalam loop tak terbatas, pengguna diminta untuk memasukkan berat dari dua kantong (kiri dan kanan). Total berat dihitung dengan menjumlahkan kedua kantong, dan selisih antara keduanya dihitung menggunakan fungsi math.Abs. Jika total berat melebihi 150 atau jika salah satu kantong memiliki berat negatif, program akan menghentikan proses. Selain itu, jika selisih berat antara kedua kantong lebih besar atau sama dengan 9, program akan mencetak bahwa sepeda motor Pak Andi akan oleng; jika tidak, akan mencetak bahwa sepeda motor tersebut tidak akan oleng. Setelah keluar dari loop, program mencetak "Proses selesai."
+
+
+#### Algoritma Program
+1. Inisialisasi:
+
+Tetapkan berat_kiri = 0
+Tetapkan berat_kanan = 0
+Tetapkan total_berat = 0
+
+2. Looping Input dan Pemeriksaan:
+
+Ulangi langkah berikut hingga salah satu kondisi terpenuhi:
+Minta pengguna memasukkan berat_kiri dan berat_kanan.
+Hitung total_berat = berat_kiri + berat_kanan.
+Jika berat_kiri < 0 atau berat_kanan < 0 atau total_berat > 150, maka:
+Keluar dari loop.
+Jika berat_kiri >= 9 atau berat_kanan >= 9, maka:
+Keluar dari loop.
+Jika selisih absolut antara berat_kiri dan berat_kanan >= 9, maka:
+Tampilkan "true" (motor oleng)
+Lainnya:
+Tampilkan "false" (motor tidak oleng)
+3. Tampilkan Pesan Selesai:
+
+Tampilkan "Proses selesai."
+
+#### Cara Kerja Program
+1. Input: Program meminta pengguna memasukkan berat belanjaan untuk kedua kantong terpal. Input berupa bilangan real positif.
+2. Perhitungan Selisih: Program menghitung selisih berat antara kedua kantong.
+3. Evaluasi:
+Jika selisih lebih dari atau sama dengan 9 kg:
+Program menampilkan output: "Sepeda motor pak Andi akan oleng: true"
+Program kembali ke langkah 1 (meminta input berat lagi).
+Jika selisih kurang dari 9 kg:
+Program menampilkan output: "Sepeda motor pak Andi akan oleng: false"
+Program kembali ke langkah 1 (meminta input berat lagi).
+4. Kondisi Berhenti:
+Jika pada suatu saat total berat kedua kantong melebihi 150 kg, atau salah satu kantong beratnya negatif, program langsung berhenti dengan pesan "Proses selesai."
+
+3. Program Perhitungan Fungsi Matematika dengan Input Variabel
+#### Source Code
+```go
+package main
+
+import (
+        "fmt"
+)
+
+func main() {
+        var k int
+        fmt.Print("Nilai K = ")
+        fmt.Scan(&k)
+
+        // Hitung nilai f(k)
+        fk := float64((4*k+2)*(4*k+2)) / float64((4*k+1)*(4*k+3))
+
+        fmt.Printf("Nilai f(K) = %.10f\n",fk)
+}
+
+```
+#### Screenshoot Source Code
+
+![Screenshot 2024-10-05 204841](https://github.com/user-attachments/assets/974a672c-6e21-4b38-ac78-8ebe092abe27)
+
+
+#### Screenshoot Output
+![Screenshot 2024-10-05 204914](https://github.com/user-attachments/assets/171c08e3-b6bc-490e-b0d2-60c93055bc7e)
+
+
+
+#### Deskripsi Program
+
+Kode di atas menghitung serta menampilkan hasil dari suatu fungsi matematika berdasarkan nilai masukan yang diberikan oleh pengguna. Program akan meminta pengguna untuk memasukkan nilai variabel k, lalu menghitung nilai f berdasarkan rumus tertentu yang melibatkan operasi aritmatika seperti perkalian, penjumlahan, pengkuadratan, dan pembagian. Setelah nilai f dihitung, program menampilkannya dengan presisi hingga 10 angka desimal. Fungsi ini memanfaatkan tipe data float64 untuk memastikan perhitungan dilakukan secara akurat dengan angka desimal.
+
+
+#### Algoritma Program
+1. Mulai
+2. Minta pengguna memasukkan nilai k
+3. Hitung empat kali k ditambah dua
+4. Kuadratkan hasil dari langkah tiga
+5. Hitung empat kali k ditambah satu
+6. Hitung empat kali k ditambah tiga
+7. Kalikan hasil dari langkah lima dengan hasil dari langkah enam
+8. Bagi hasil dari langkah empat dengan hasil dari langkah tujuh untuk mendapatkan nilai f
+9. Tampilkan hasil nilai f dengan presisi sepuluh angka di belakang koma
+10. Selesai
+
+#### Cara Kerja Program
+1. Program meminta pengguna memasukkan nilai k dan menyimpannya.
+2. Setelah menerima nilai k, program mulai melakukan perhitungan. Langkah pertama adalah mengalikan nilai k dengan empat dan menambahkan dua. Hasilnya kemudian dikuadratkan.
+3. Program melanjutkan dengan menghitung empat kali k ditambah satu, dan menghitung juga empat kali k ditambah tiga.
+4. Program mengalikan kedua hasil perhitungan tersebut.
+5. Hasil kuadrat dari langkah awal kemudian dibagi dengan hasil kali dari langkah sebelumnya.
+6. Program menampilkan hasil perhitungan f kepada pengguna dalam bentuk desimal dengan sepuluh angka di belakang koma.
+7. Setelah hasil ditampilkan, program selesai menjalankan tugasnya.
+
+4. Program Input Bunga dengan Kata Kunci
+#### Source Code
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	var (
+		nBunga int
+		namaBunga string
+		pita string
+		jumlahBunga int
+	)
+
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Print("N: ")
+	inputN, _ := reader.ReadString('\n')
+	inputN = strings.TrimSpace(inputN)
+	nBunga, _ = strconv.Atoi(inputN)
+
+	for i := 1; i <= nBunga; i++ {
+		fmt.Printf("Bunga %d: ", i)
+		namaBunga, _ = reader.ReadString('\n')
+		namaBunga = strings.TrimSpace(namaBunga)
+
+		// Hentikan input jika user menginputkan 'SELESAI'
+		if namaBunga == "SELESAI" {
+			break
+		}
+
+		// Tambahkan nama bunga ke pita
+		if pita == "" {
+			pita = namaBunga
+		} else {
+			pita = pita + " - " + namaBunga
+		}
+
+		// Hitung jumlah bunga
+		jumlahBunga++
+	}
+
+	fmt.Println("Pita:", pita)
+	fmt.Println("Bunga:", jumlahBunga)
+}
+
+```
+#### Screenshoot Source Code
+![Screenshot 2024-10-05 194914](https://github.com/user-attachments/assets/52d86e31-2bba-425a-97f6-53a799f29b00)
+
+
+
+#### Screenshoot Output
+
+![Screenshot 2024-10-05 195144](https://github.com/user-attachments/assets/312f87a2-535b-472e-9a2b-6d744e2c2375)
+
+
+#### Deskripsi Program
+
+Kode di atas menerima input bilangan bulat positif 'N'. Kemudian akan meminta input nama bunga sebanyak 'N' kali. Input nama bunga tersebut akan digabungkan ke dalam variabel 'pita' dengan pemisah spasi dan '-'. Program dimodifikasi agar proses input berhenti ketika user menginput 'SELESAI'. Setelah itu, program akan menampilkan isi pita dan jumlah bunga yang ada di dalamnya.
+
+
+#### Algoritma Program
+1. Jumlah Bunga (N): User memasukkan bilangan bulat positif (selain nol) yang menunjukkan berapa banyak nama bunga yang akan diinput.
+2. Nama-nama Bunga:
+User memasukkan nama bunga satu per satu sebanyak N kali.
+Setiap nama bunga akan digabung menjadi sebuah string (pita) dengan pemisah " - ".
+Contoh 1:
+
+Input:
+N: 3
+Bunga 1: Kertas
+Bunga 2: Mawar
+Bunga 3: Tulip
+Output:
+Pita: Kertas - Mawar - Tulip -
+Modifikasi Program:
+
+Program dimodifikasi agar proses input nama bunga berhenti ketika user memasukkan kata kunci 'SELESAI'. Setelah itu, program akan menampilkan:
+
+Isi Pita: String yang berisi semua nama bunga yang telah diinput.
+Jumlah Bunga: Banyaknya bunga di dalam pita.
+Contoh 2:
+
+Input:
+Bunga 1: Kertas
+Bunga 2: Mawar
+Bunga 3: Tulip
+Bunga 4: SELESAI
+Output:
+Pita: Kertas - Mawar - Tulip -
+Bunga: 3
+
+#### Cara Kerja Program
+1. Program meminta pengguna memasukkan bilangan bulat positif N yang menentukan berapa kali input nama bunga akan diminta.
+2. Program kemudian menjalankan loop for sebanyak N kali.
+3. Di dalam loop, program meminta pengguna untuk memasukkan nama bunga.
+4. Jika pengguna memasukkan 'SELESAI', loop akan dihentikan.
+5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
+6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
+
+5. Program Input Bunga dengan Kata Kunci
+#### Source Code
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	var (
+		nBunga int
+		namaBunga string
+		pita string
+		jumlahBunga int
+	)
+
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Print("N: ")
+	inputN, _ := reader.ReadString('\n')
+	inputN = strings.TrimSpace(inputN)
+	nBunga, _ = strconv.Atoi(inputN)
+
+	for i := 1; i <= nBunga; i++ {
+		fmt.Printf("Bunga %d: ", i)
+		namaBunga, _ = reader.ReadString('\n')
+		namaBunga = strings.TrimSpace(namaBunga)
+
+		// Hentikan input jika user menginputkan 'SELESAI'
+		if namaBunga == "SELESAI" {
+			break
+		}
+
+		// Tambahkan nama bunga ke pita
+		if pita == "" {
+			pita = namaBunga
+		} else {
+			pita = pita + " - " + namaBunga
+		}
+
+		// Hitung jumlah bunga
+		jumlahBunga++
+	}
+
+	fmt.Println("Pita:", pita)
+	fmt.Println("Bunga:", jumlahBunga)
+}
+
+```
+#### Screenshoot Source Code
+![Screenshot 2024-10-05 194914](https://github.com/user-attachments/assets/52d86e31-2bba-425a-97f6-53a799f29b00)
+
+
+
+#### Screenshoot Output
+
+![Screenshot 2024-10-05 195144](https://github.com/user-attachments/assets/312f87a2-535b-472e-9a2b-6d744e2c2375)
+
+
+#### Deskripsi Program
+
+Kode di atas menerima input bilangan bulat positif 'N'. Kemudian akan meminta input nama bunga sebanyak 'N' kali. Input nama bunga tersebut akan digabungkan ke dalam variabel 'pita' dengan pemisah spasi dan '-'. Program dimodifikasi agar proses input berhenti ketika user menginput 'SELESAI'. Setelah itu, program akan menampilkan isi pita dan jumlah bunga yang ada di dalamnya.
+
+
+#### Algoritma Program
+1. Jumlah Bunga (N): User memasukkan bilangan bulat positif (selain nol) yang menunjukkan berapa banyak nama bunga yang akan diinput.
+2. Nama-nama Bunga:
+User memasukkan nama bunga satu per satu sebanyak N kali.
+Setiap nama bunga akan digabung menjadi sebuah string (pita) dengan pemisah " - ".
+Contoh 1:
+
+Input:
+N: 3
+Bunga 1: Kertas
+Bunga 2: Mawar
+Bunga 3: Tulip
+Output:
+Pita: Kertas - Mawar - Tulip -
+Modifikasi Program:
+
+Program dimodifikasi agar proses input nama bunga berhenti ketika user memasukkan kata kunci 'SELESAI'. Setelah itu, program akan menampilkan:
+
+Isi Pita: String yang berisi semua nama bunga yang telah diinput.
+Jumlah Bunga: Banyaknya bunga di dalam pita.
+Contoh 2:
+
+Input:
+Bunga 1: Kertas
+Bunga 2: Mawar
+Bunga 3: Tulip
+Bunga 4: SELESAI
+Output:
+Pita: Kertas - Mawar - Tulip -
+Bunga: 3
+
+#### Cara Kerja Program
+1. Program meminta pengguna memasukkan bilangan bulat positif N yang menentukan berapa kali input nama bunga akan diminta.
+2. Program kemudian menjalankan loop for sebanyak N kali.
+3. Di dalam loop, program meminta pengguna untuk memasukkan nama bunga.
+4. Jika pengguna memasukkan 'SELESAI', loop akan dihentikan.
+5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
+6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
 
 ## Referensi 
