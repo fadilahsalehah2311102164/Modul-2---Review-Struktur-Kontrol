@@ -158,11 +158,34 @@ for key, value := range oldMap {
 Jika hanya memerlukan item pertama dalam `range` (yaitu, kunci dari map atau indeks dari array/slice/string), variabel kembalian kedua dapat dihilangkan[1].
 
 ```go
+for key := range m {
+	if key.expired() {
+		delete(m, key)
+	}
+}
+
+```
+
+Jika hanya memerlukan item kedua (nilainya), gunakan pengidentifikasi kosong, yaitu garis bawah, untuk mengabaikan yang pertama[1].
+
+```go
 sum := 0
 for _, value := range array {
 	sum += value
 }
 ```
+
+Go tidak memiliki operator koma, dan perintah `dan` serta `--` bukanlah ekspresi. Oleh karena itu, jika ingin menggunakan beberapa variabel dalam satu pernyataan `for`, kita perlu menggunakan penempatan paralel, karena cara ini tidak mengizinkan penggunaan `dan` atau `--`[1].
+
+```go
+// Reverse a
+for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+	a[i], a[j] = a[j], a[i]
+}
+```
+
+**4. `Switch`**
+
 
 ## Guided 
 
