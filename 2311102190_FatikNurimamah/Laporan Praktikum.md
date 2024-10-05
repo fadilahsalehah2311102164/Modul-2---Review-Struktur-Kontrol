@@ -464,8 +464,11 @@ Program ini digunakan untuk menghitung nilai dari fungsi `f(k)`  berdasarkan nil
 
 3. Menampilkan 3. 3. Hasil : Setelah perhitungan selesai, program akan menampilkan hasil fungsi dengan presisi 10 angka desimal.
 
-### 4. 
+### 4. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BlayaPos untuk menghitung blaya pengiriman tersebut dengan ketentuan sebagai berikut!
+**Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.**
 
+**Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read):**
+![Screenshot 2024-10-05 134805](https://github.com/user-attachments/assets/73515b8c-05ac-4ca4-859d-8dab50bf3497)
 
 ### Source Code :
 ```go
