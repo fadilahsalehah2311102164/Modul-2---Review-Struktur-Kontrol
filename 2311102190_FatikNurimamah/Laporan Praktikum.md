@@ -287,10 +287,21 @@ func main() {
 ![Screenshot 2024-10-04 231610](https://github.com/user-attachments/assets/aadc38e3-1a0e-4b22-96b0-d8ca9963825a)
 
 ### Deskripsi Program : 
+Program ini digunakan untuk menerima input dari pengguna berupa nama-nama bunga, yang disimpan dalam variabel pita. Pengguna dapat terus memasukkan nama bunga sampai mengetikkan kata "SELESAI", yang akan menghentikan proses input. Setelah selesai, program akan menampilkan daftar lengkap nama bunga yang dimasukkan serta total bunga yang dihitung (tidak termasuk input "SELESAI").
 
 ### Algoritma Program
+1. Inisialisasi variabel pita sebagai string kosong dan TotalBunga sebagai penghitung jumlah bunga.
+2. Gunakan loop untuk terus menerima input dari pengguna.
+3. Di dalam loop:
+-Tambahkan nama bunga yang dimasukkan ke dalam variabel pita.
+-Jika pengguna mengetik "SELESAI", akhiri loop dan kurangi penghitung jumlah bunga karena input ini tidak dianggap sebagai bunga.
+4. Setelah keluar dari loop, tampilkan daftar lengkap bunga yang dimasukkan serta jumlah total bunga yang dihitung.
 
 ### Cara Kerja Program
+1. Input Nama Bunga: Program meminta pengguna untuk memasukkan nama bunga satu per satu hingga pengguna mengetikkan kata "SELESAI".
+2. Penggabungan Nama: Setiap nama bunga yang diberikan akan ditambahkan ke dalam variabel pita dan dipisahkan dengan tanda strip (" - ") untuk memudahkan pembacaan.
+3. Penghitungan Jumlah Bunga: Setiap kali pengguna memasukkan nama bunga, penghitung TotalBunga bertambah satu, namun jika pengguna mengetik "SELESAI", penghitung ini dikurangi satu agar input "SELESAI" tidak dihitung sebagai bunga.
+4. Output: Program menampilkan daftar nama-nama bunga yang dimasukkan pengguna dan jumlah total bunga yang valid setelah proses input berakhir.
 
 
 ### 2. Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.
