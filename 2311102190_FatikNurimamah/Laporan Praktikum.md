@@ -65,7 +65,12 @@ Kewajiban penggunaan kurung kurawal mendorong penulisan perintah `if` menjadi le
 
 Karena `if` dan `switch` dapat melakukan inisialisasi, sering kali kita melihat penggunaan kedua struktur ini untuk mendeklarasikan variabel lokal[1].
 
-
+```go
+if err := file.Chmod(0664); err != nil {
+	log.Print(err)
+	return err
+}
+```
 
 
 
