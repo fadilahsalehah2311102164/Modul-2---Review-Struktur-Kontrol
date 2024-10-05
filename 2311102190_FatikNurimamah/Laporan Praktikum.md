@@ -414,7 +414,12 @@ func main() {
 Program ini digunakan untuk menghitung nilai dari fungsi `f(k)`  berdasarkan nilai `( k )` yang dimasukkan oleh pengguna. Fungsi `f(k)` dihitung menggunakan rumus matematika tertentu, dan hasilnya ditampilkan dengan presisi hingga 10 angka di belakang koma.
 
 ### Algoritma Program
-
+1. Program meminta pengguna memasukkan nilai `k`.
+2. Fungsi `f(k)` melakukan langkah berikut:
+   - Hitung pembilang  `(4k + 2)^2`.
+   - Hitung penyebut  `(4k + 1)(4k + 3)`.
+   - Kembalikan hasil pembagian pembilang dengan penyebut.
+3. Tampilkan hasil perhitungan fungsi `f(k)` dengan format presisi 10 angka desimal.
 ### Cara Kerja Program
 
 
