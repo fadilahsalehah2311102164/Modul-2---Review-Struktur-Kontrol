@@ -18,7 +18,7 @@
 
 <p align="center">
   <strong>Disusun Oleh:</strong><br>
-  Rangga Pradarrell Fathi / 2311102200<br>
+  Wahyu Hidayat / 2311102178<br>
   S1 IF 11 05
 </p>
 
