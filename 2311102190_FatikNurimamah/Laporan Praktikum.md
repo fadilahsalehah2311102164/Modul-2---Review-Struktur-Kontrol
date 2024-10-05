@@ -845,7 +845,9 @@ Program ini berfungsi untuk menemukan semua faktor dari bilangan yang dimasukkan
 4. Output Hasil: Program menampilkan daftar faktor dan status apakah bilangan tersebut merupakan bilangan prima atau tidak.
 
 ## Kesimpulan 
-
+1. Struktur Kontrol: Bahasa Go memiliki kontrol alur yang serupa dengan C, namun tidak memiliki perulangan `do` atau `while`, hanya menggunakan `for`, dan `switch` lebih fleksibel dalam mengevaluasi kondisi.
+2. Inisialisasi dan Penanganan Kesalahan: Dalam Go, baik `if` maupun `switch` dapat digunakan untuk menginisialisasi variabel lokal. Selain itu, keharusan menggunakan kurung kurawal dalam `if` membantu dalam menangani kesalahan dengan menghilangkan kebutuhan untuk kondisi `else` yang tidak diperlukan.
+3. Pengulangan dan Tipe Dinamis:  Pengulangan `for` memiliki tiga bentuk dan memanfaatkan klausa `range` untuk memudahkan iterasi pada struktur data, sementara `switch` dapat digunakan untuk menangani tipe dinamis dari variabel interface.
 
 ## Daftar Pustaka
 [1] Effective Go. (n.d.). Retrieved from Golang Indonesia: https://golang-id.org/doc/effective_go.html 
