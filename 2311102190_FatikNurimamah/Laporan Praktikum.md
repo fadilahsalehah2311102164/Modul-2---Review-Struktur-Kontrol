@@ -1,7 +1,7 @@
 <h2 align="center"><strong>LAPORAN PRAKTIKUM</strong></h2>
 <h2 align="center"><strong>ALGORITMA DAN PEMROGRAMAN 2</strong></h2>
 
-<br>
+<br> 
 
 <h2 align="center"><strong>MODUL II</strong></h2>
 <h2 align="center"><strong> REVIEW STRUKTUR KONTROL </strong></h2>
