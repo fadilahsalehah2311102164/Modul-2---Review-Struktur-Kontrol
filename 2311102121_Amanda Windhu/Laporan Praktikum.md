@@ -226,6 +226,51 @@ func main() {
 ```
 ### Output: ![image](https://github.com/user-attachments/assets/e38d04e0-dec9-4866-85e4-353a2937c2d2)<br/>
 
+Kode di atas bertujuan untuk membantu Pak Andi menjaga keseimbangan beban sepeda motornya dengan memeriksa selisih berat antara dua kantong terpal yang diisi barang belanjaan. Program menerima input dari pengguna berupa dua nilai yang mewakili berat barang di kantong kiri dan kanan. Program ini akan terus meminta input dari pengguna hingga salah satu dari dua kondisi terpenuhi: salah satu kantong memiliki berat lebih dari atau sama dengan 9 kg, atau selisih berat antara kedua kantong melebihi batas aman, yaitu 9 kg. Jika salah satu kantong mencapai berat 9 kg atau lebih, program akan menampilkan pesan "Proses selesai." dan menghentikan eksekusi. Di setiap iterasi, setelah pengguna memasukkan berat kedua kantong, program akan menghitung selisih berat antara kantong kiri dan kanan. Jika hasil perhitungan menunjukkan bahwa selisih tersebut lebih dari 9 kg, program akan menampilkan pesan: "Selisih berat antara kantong kiri dan kanan melebihi 9 kg." Jika tidak, program akan melanjutkan meminta input baru dari pengguna.<br/>
+Proses ini akan terus berulang selama kedua kondisi penghentian belum terpenuhi. Sebagai contoh, jika pengguna memasukkan berat kantong kiri sebesar 5.5 kg dan berat kantong kanan sebesar 3.2 kg, program akan menghitung selisihnya, yaitu 5.5 - 3.2 = 2.3 kg, yang masih kurang dari 9 kg. Karena itu, program tidak akan menampilkan pesan dan akan melanjutkan meminta input. Selanjutnya, jika pengguna memasukkan berat kantong kiri sebesar 10 kg dan kantong kanan sebesar 0 kg, selisihnya adalah 10 kg, yang melebihi batas aman. Maka, program akan menampilkan pesan: "Selisih berat antara kantong kiri dan kanan melebihi 9 kg." Jika kemudian pengguna memasukkan berat kantong kiri sebesar 9 kg dan kantong kanan sebesar 2 kg, program akan menghentikan eksekusi dengan menampilkan pesan "Proses selesai." karena berat kantong kiri telah mencapai 9 kg.
+
+### 4. Diberikan sebuah persamaan sebagai berikut ini.<br/>
+![image](https://github.com/user-attachments/assets/ddea519e-dd44-437b-9403-a5d66b26462a)<br/>
+Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas. Akar 2 merupakan bilangan Irasional. Meskipun demikian, nilai tersebut dapat dihampiri dengan rumus beriku:<br/>
+![image](https://github.com/user-attachments/assets/f174cfd9-2bc7-4383-8cae-d87a9d80648a)<br/>
+Modifikasi program sebelumnya yang menerima input integer K dan menghitung akar 2 untuk K tersebut. Hampiran akar 2 dituliskan dalam ketelitian 10 angka di belakang koma.
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi untuk menghitung nilai hampiran akar 2 berdasarkan iterasi K
+func calculateSqrt2(k int) float64 {
+	product := 1.0 // Mulai dengan nilai produk 1
+
+	// Iterasi dari 0 hingga K
+	for i := 0; i <= k; i++ {
+		numerator := (4*float64(i) + 2) * (4*float64(i) + 2) // (4k + 2)^2
+		denominator := (4*float64(i) + 1) * (4*float64(i) + 3) // (4k + 1)(4k + 3)
+		product *= numerator / denominator
+	}
+
+	return product // Mengembalikan nilai hasil perkalian
+}
+
+func main() {
+	var k int
+
+	// Membaca input nilai K
+	fmt.Print("Masukkan nilai K: ")
+	fmt.Scan(&k)
+
+	// Menghitung nilai hampiran sqrt(2)
+	result := calculateSqrt2(k)
+
+	// Menampilkan hasil dengan 10 angka di belakang koma
+	fmt.Printf("Nilai akar 2 = %.10f\n", result)
+}
+```
+### Output: ![image](https://github.com/user-attachments/assets/f8d88a43-db9f-445d-b5ff-ea3a6e90038c)
 
 
 
