@@ -920,9 +920,12 @@ func main() {
 - Menampilkan Faktor-Faktor
 
 ##### Cara Kerja Program
-
+1 Menerima Input dari Pengguna
+2 Memanggil Fungsi faktorBawah
+3 Menampilkan Hasil
+4 Pengecekan Bilangan Negatif
 
 
 ## Referensi 
-[1] Wali, M., Nengsih, TA, Hts, DIG, Choirina, P., Awaludin, AAR, Yusuf, M., ... & Baradja, A. (2023). Pengantar 15 Bahasa Pemrograman Terbaik Masa Depan (Referensi & Coding Untuk Pemula) . PT. Sonpedia Penerbitan Indonesia.
+
 ------
