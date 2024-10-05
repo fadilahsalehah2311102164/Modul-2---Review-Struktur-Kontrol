@@ -458,9 +458,58 @@ a. **jika nam 80.1**
 Eksekusi program sesuai dengan spesifikasi soal, karena berdasarkan kondisi yang diberikan, nilai 80.1 lebih besar dari 80, sehingga sesuai dengan logika penentuan nilai huruf yang telah ditetapkan, nilai huruf yang diberikan adalah A.
 ![Screenshot 2024-10-05 200147](https://github.com/user-attachments/assets/0162912e-658c-4603-acd2-8ca0f42a31bc)
 
-b. 
+b. **beberapa kesalahan program tersebut adalah:**
 
+1. Kriteria penilaian yang tidak konsisten
 
+Penentuan nilai untuk "A", "B", "C", "D", dan "E" bisa menjadi masalah karena beberapa batasan tidak mencerminkan pembagian yang logis. Misalnya:
+ - if nam > 80 sebaiknya diubah menjadi if nam >= 80.
+ - else if nam > 72.5 sebaiknya diubah menjadi else if nam >= 72.5.
+
+2. Rentang nilai yang tumpang tindih
+
+Rentang nilai dalam struktur if-else dapat menyebabkan kebingungan. Contohnya, jika nilai nam tepat di batas 50, tidak jelas apakah seharusnya diberikan "D" atau tidak. Hal ini seharusnya diperjelas dengan penggunaan operator yang tepat.
+
+**alur program yang seharusnya:**
+
+Tampilkan hasil dengan menggunakan fmt.Printf, menampilkan nilai dan huruf indeks dengan format yang sesuai.
+
+c. program setelah diperbaiki sebagai berikut:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Mendeklarasikan variabel untuk menyimpan nilai akhir dan nama nilai
+	var nam float32  // Variabel untuk menyimpan nilai akhir mata kuliah 
+	var nmk string   // Variabel untuk menyimpan huruf nilai
+
+	// Meminta user untuk menginput nilai akhir mata kuliah
+	fmt.Print("Masukkan nilai: ")
+	fmt.Scan(&nam)   // Membaca input nilai dari user
+
+	// Logika penentuan nilai huruf berdasarkan nilai akhir yang diinputkan 
+	if nam >= 80 {
+		nmk = "A"
+	} else if nam >= 70 {
+		nmk = "B"
+	} else if nam >= 60 {
+		nmk = "C"
+	} else if nam >= 50 {
+		nmk = "D"
+	} else if nam >= 40 {
+		nmk = "E"
+	} else {
+		nmk = "F"
+	}
+
+	// Menampilkan hasil
+	fmt.Printf("Nilai Indeks untuk nilai %.2f adalah %s\n", nam, nmk)
+}
+
+```
 
 ### Source Code :
 
