@@ -486,7 +486,7 @@ Bunga: 3
 5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
 6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
-2. Program Keseimbangan Berat Belanjaan di Dua Kantong
+#### 2. Program Keseimbangan Berat Belanjaan di Dua Kantong
 
 #### Source Code
 ```go
@@ -570,7 +570,7 @@ Program kembali ke langkah 1 (meminta input berat lagi).
 4. Kondisi Berhenti:
 Jika pada suatu saat total berat kedua kantong melebihi 150 kg, atau salah satu kantong beratnya negatif, program langsung berhenti dengan pesan "Proses selesai."
 
-3. Program Perhitungan Fungsi Matematika dengan Input Variabel
+#### 3. Program Perhitungan Fungsi Matematika dengan Input Variabel
 
 #### Source Code
 ```go
@@ -628,7 +628,7 @@ Kode di atas menghitung serta menampilkan hasil dari suatu fungsi matematika ber
 6. Program menampilkan hasil perhitungan f kepada pengguna dalam bentuk desimal dengan sepuluh angka di belakang koma.
 7. Setelah hasil ditampilkan, program selesai menjalankan tugasnya.
 
-4. Program Input Bunga dengan Kata Kunci
+#### 4. Program Input Bunga dengan Kata Kunci
 
 #### Source Code
 ```go
@@ -737,7 +737,7 @@ Bunga: 3
 5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
 6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
-5. Program Input Bunga dengan Kata Kunci
+#### 5. Program Input Bunga dengan Kata Kunci
 
 #### Source Code
 ```go
