@@ -147,15 +147,22 @@ for i := 0; i < 10; i++ {
 }
 ```
 
+Ketika melakukan pengulangan pada array, slice, string, atau map, atau saat membaca dari sebuah channel, klausa `range` dapat digunakan dalam pengulangan[1].
 
 ```go
-sum := 0
-for i := 0; i < 10; i++ {
-	sum += i
+for key, value := range oldMap {
+	newMap[key] = value
 }
 ```
 
+Jika hanya memerlukan item pertama dalam `range` (yaitu, kunci dari map atau indeks dari array/slice/string), variabel kembalian kedua dapat dihilangkan[1].
 
+```go
+sum := 0
+for _, value := range array {
+	sum += value
+}
+```
 
 ## Guided 
 
