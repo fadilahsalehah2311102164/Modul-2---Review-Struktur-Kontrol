@@ -453,6 +453,8 @@ c. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Sehar
 
 **Jawaban:**
 
+a. **jika nam 80.1**
+
 
 
 ### Source Code :
