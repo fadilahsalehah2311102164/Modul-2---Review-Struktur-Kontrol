@@ -198,14 +198,24 @@ Program ini dibuat untuk menguji kemampuan pengguna dalam mengingat urutan warna
 
 ### Source Code :
 ```go
+package main
 
+import "fmt"
 
+func main() {
+	var a, b, c, d, e int
+	var hasil int
+	fmt.Scanln(&a, &b, &c, &d, &e)
+
+	hasil = a + b + c + d + e
+	fmt.Println("Hasil Penjumlahan", a, b, c, d, e, "adalah =", hasil)
+}
 ```
 ### Output:
 ![Screenshot 2024-10-05 131743](https://github.com/user-attachments/assets/d6ebbbd9-5959-45eb-90f0-b6dc491f144f)
 
 ### Full code Screenshot:
-
+![Screenshot 2024-10-05 131800](https://github.com/user-attachments/assets/f5fc9204-d27d-4274-bef8-537eb155f4ac)
 
 ### Deskripsi Program : 
 
