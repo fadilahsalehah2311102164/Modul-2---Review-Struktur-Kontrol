@@ -209,6 +209,9 @@ func main() {
 #### Deskripsi Program
 
 Kode di atas adalah program sederhana dalam bahasa Go yang meminta pengguna untuk memasukkan sebuah nama dan kemudian mencetak nama tersebut. Program dimulai dengan mendeklarasikan paket main dan mengimpor paket fmt untuk input dan output. Di dalam fungsi main, variabel nama bertipe string dideklarasikan untuk menyimpan input dari pengguna. Namun, terdapat kesalahan pada penggunaan fmt.Scanln(nama); seharusnya ditulis fmt.Scanln(&nama) untuk menyimpan input ke dalam variabel. Setelah itu, fungsi fmt.Println(nama) digunakan untuk mencetak nama yang diinputkan ke konsol.
+
+2. Pengecekan Urutan Warna 
+
 #### Source Code
 ```go
 package main
@@ -263,48 +266,56 @@ func main() {
 ```
 #### Screenshoot Source Code
 
+![Screenshot 2024-10-05 191216](https://github.com/user-attachments/assets/c1329543-1985-43e3-bf0d-e6f276fe7448)
+
+
 
 #### Screenshoot Output
+
+![Screenshot 2024-10-05 191311](https://github.com/user-attachments/assets/7c48ef60-8008-4add-8fdb-835ae82420ef)
+
 
 
 #### Deskripsi Program
 
+Kode di atas meminta pengguna untuk memasukkan urutan warna selama lima percobaan dan memeriksa apakah urutan yang dimasukkan sesuai dengan urutan yang benar, yaitu "merah", "kuning", "hijau", dan "ungu". Dengan menggunakan bufio untuk membaca input dari pengguna, program memisahkan input berdasarkan spasi dan membandingkannya dengan urutan warna yang benar. Jika semua percobaan berhasil sesuai urutan, program akan mencetak "BERHASIL : true"; jika tidak, program akan mencetak "BERHASIL : false" dan menghentikan proses. Program ini mengilustrasikan penggunaan kontrol perulangan, manipulasi string, dan pengecekan kondisi dalam pemrograman Go.
 
-3. Menambahkan bilangan yang diinputkan user
+3.  Penjumlahan Lima Angka 
 
 #### Source Code
 ```go
-package main
+package main 
 
-import (
-	"fmt" 
-)
+import "fmt"
 
-func main() {
-	
+func main (){
+
 	var a, b, c, d, e int
-	var hasil int 
-
+	var hasil int
 	fmt.Scanln(&a, &b, &c, &d, &e)
-	
-	hasil = a + b + c + d + e
 
-	fmt.Println("Hasil Penjumlahan ", a, b, c, d, e, "adalah = ", hasil)
+	hasil = a + b + c + d + e
+	fmt.Println("Hasil Penjumlahan ", a,b,c,d,e, "Adalah = ", hasil)
 }
+
 ```
 #### Screenshoot Source Code
+
+![Screenshot 2024-10-05 191628](https://github.com/user-attachments/assets/48e530c2-8c25-439e-a479-c5532f3491f9)
+
 
 
 #### Screenshoot Output
 
+![Screenshot 2024-10-05 191833](https://github.com/user-attachments/assets/627573d4-b5ec-4463-b3ca-1e009f5e8f27)
+
+
 
 #### Deskripsi Program
 
+Kode di atas menghitung jumlah dari lima angka yang dimasukkan oleh pengguna. Dalam fungsi main, variabel a, b, c, d, dan e dideklarasikan untuk menyimpan input angka, sementara variabel hasil digunakan untuk menyimpan hasil penjumlahan. Program ini menggunakan fmt.Scanln untuk membaca lima angka yang dimasukkan dalam satu baris, kemudian menjumlahkan angka-angka tersebut dan mencetak hasil penjumlahan bersama dengan angka-angka yang dimasukkan oleh pengguna. Program ini menunjukkan penggunaan input, variabel, dan operasi dasar dalam Go.
 
-4. Diberikan sebuah nilai akhir mata kullah (NAM) [0..100] dan standar penilaian nilai mata kullah (NMK)
-   sebagai berikut:
-
-
+1. Penilaian Indeks Nilai 
 
 #### Source Code
 ```go
@@ -315,61 +326,54 @@ import "fmt"
 func main() {
 	var nam float32
 	var nmk string
+	var lagi string
 
-	fmt.Print("Masukkan Nilai: ")
-	fmt.Scan(&nam)
+	for {
+		//meminta input nilai
+		fmt.Printf("Masukkan Nilai: ")
+		fmt.Scan(&nam)
 
-	if nam > 80 {
-		nmk = "A"
-	} else if nam > 72.5 {
-		nmk = "B"
-	} else if nam > 65 {
-		nmk = "C"		
-	} else if nam > 50 {
-		nmk = "D"
-	} else if nam > 40 {
-		nmk = "E"
-	} else {
-		nmk = "F"
+		//logika penentuan nilai huruf berdasarkan nilai numerik
+		if nam > 80 {
+			nmk = "A"
+		} else if nam > 72.5 {
+			nmk = "B"
+		} else if nam > 65 {
+			nmk = "C"
+		} else if nam > 50 {
+			nmk = "D"
+		} else if nam > 40 {
+			nmk = "E"
+		} else {
+			nmk = "F"
+		}
+
+		//mENAMPILKAN HASIL
+		fmt.Printf("Nilai Indeks untuk nilai %.2f adalah  %s\n", nam, nmk)
+		fmt.Printf("Jika ingin mengulang (y/n) : ")
+		fmt.Scan(&lagi)
+
+		if lagi != "y" {
+			break
+		}
 	}
-
-	fmt.Printf("Nilai indeks untuk nilai %.2f adalah %s\n", nam, nmk)
 }
+
 ```
 #### Screenshoot Source Code
+![Screenshot 2024-10-05 192125](https://github.com/user-attachments/assets/d8faad57-8dc7-4edf-b59e-7c42420c538e)
+
+
 
 #### Screenshoot Output
 
+![Screenshot 2024-10-05 192245](https://github.com/user-attachments/assets/0035c998-0a16-4605-89e8-a6ef483b5c8f)
+
 #### Deskripsi Program
 
-```go
-package main
+Kode di atas menentukan indeks nilai huruf berdasarkan input nilai numerik dari pengguna. Dalam fungsi main, program meminta pengguna untuk memasukkan nilai dengan tipe data float32 dan menentukan huruf indeks berdasarkan rentang nilai yang telah ditentukan: "A" untuk nilai di atas 80, "B" untuk 72.5 hingga 80, "C" untuk 65 hingga 72.5, "D" untuk 50 hingga 65, "E" untuk 40 hingga 50, dan "F" untuk nilai di bawah 40. Setelah menentukan indeks, program mencetak hasilnya dan menanyakan pengguna apakah ingin mengulangi proses tersebut. Pengguna dapat memasukkan "y" untuk melanjutkan atau karakter lain untuk menghentikan program. Ini menunjukkan penggunaan struktur kontrol, pengulangan, dan pengolahan input dalam Go.
 
-import "fmt"
 
-func main() {
-	var nam float64 
-	var nmk string
-
-	fmt.Print("Masukkan Nilai: ")
-	fmt.Scan(&nam)
-
-	if nam >= 80 {
-		nmk = "A"
-	} else if nam >= 65 {
-		nmk = "B"
-	} else if nam >= 50 {
-		nmk = "C"
-	} else if nam >= 40 {
-		nmk = "D"
-	} else {
-		nmk = "F"
-	}
-
-	fmt.Printf("Nilai indeks untuk nilai %.2f adalah %s\n", nam, nmk)
-}
-
-```
 
 
 ## III. UNGUIDED
