@@ -105,6 +105,12 @@ Contoh terakhir dari bagian sebelumnya menunjukkan detail tentang cara kerja dek
 f, err := os.Open(name)
 ```
 
+Perintah tersebut mendeklarasikan dua variabel, yaitu `f` dan `err`. Beberapa baris kemudian, terdapat pembacaan panggilan ke `f.Stat`[1].
+
+```go
+d, err := f.Stat()
+```
+
 
 
 
