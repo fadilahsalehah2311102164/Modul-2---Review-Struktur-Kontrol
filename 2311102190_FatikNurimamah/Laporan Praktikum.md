@@ -452,6 +452,7 @@ func main() {
 
 ```
 ### Output:
+![Screenshot 2024-10-05 105040](https://github.com/user-attachments/assets/dbe90925-f7db-431e-b38f-d8bafb0a680b)
 
 ### Full code Screenshot:
 ![Screenshot 2024-10-05 104036](https://github.com/user-attachments/assets/f5512033-3c8b-40a3-ac13-7408d7983d83)
@@ -463,6 +464,23 @@ func main() {
 ### Cara Kerja Program
 
 
+### 5. 
+
+### Source Code :
+```go
+
+```
+### Output:
+
+
+### Full code Screenshot:
+
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
 
 
 
