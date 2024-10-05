@@ -293,7 +293,6 @@ Program ini digunakan untuk menerima input dari pengguna berupa nama-nama bunga,
 1. Inisialisasi variabel pita sebagai string kosong dan TotalBunga sebagai penghitung jumlah bunga.
 2. Gunakan loop untuk terus menerima input dari pengguna.
 3. Di dalam loop:
-
    - Tambahkan nama bunga yang dimasukkan ke dalam variabel pita.
    - Jika pengguna mengetik "SELESAI", akhiri loop dan kurangi penghitung jumlah bunga karena input ini tidak dianggap sebagai bunga.
 5. Setelah keluar dari loop, tampilkan daftar lengkap bunga yang dimasukkan serta jumlah total bunga yang dihitung.
@@ -363,11 +362,11 @@ Program ini membantu Pak Andi untuk memeriksa keseimbangan beban di sepeda motor
 ### Algoritma Program
 1. Inisialisasi variabel untuk menyimpan berat kantong kiri dan kanan.
 2. Looping: Program berjalan terus selama kondisi penghentian belum terpenuhi.
-- Minta input berat dari pengguna.
-- Jika berat salah satu kantong negatif, program berhenti.
-- Jika total berat dari kedua kantong lebih dari 150 kg, program berhenti.
-- Hitung selisih berat antara kedua kantong.
-- Jika selisih berat >= 9 kg, tampilkan bahwa sepeda motor oleng; jika tidak, tampilkan bahwa sepeda motor seimbang.
+   - Minta input berat dari pengguna.
+   - Jika berat salah satu kantong negatif, program berhenti.
+   - Jika total berat dari kedua kantong lebih dari 150 kg, program berhenti.
+   - Hitung selisih berat antara kedua kantong.
+   - Jika selisih berat >= 9 kg, tampilkan bahwa sepeda motor oleng; jika tidak, tampilkan bahwa sepeda motor seimbang.
 3. Program berhenti jika salah satu kondisi penghentian tercapai.
 
 ### Cara Kerja Program
