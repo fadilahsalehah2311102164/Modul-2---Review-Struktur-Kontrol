@@ -358,11 +358,23 @@ func main() {
 ![Screenshot 2024-10-04 231930](https://github.com/user-attachments/assets/09287ed6-180a-4da8-8d39-48588b456c58)
 
 ### Deskripsi Program : 
+Program ini membantu Pak Andi untuk memeriksa keseimbangan beban di sepeda motornya berdasarkan berat dua kantong yang dia bawa. Program akan terus menerima input berat kantong kiri dan kanan hingga salah satu kantong memiliki berat negatif atau total berat kedua kantong melebihi 150 kg. Program juga akan mengevaluasi apakah sepeda motor akan oleng berdasarkan perbedaan berat antara kedua kantong.
 
 ### Algoritma Program
+1. Inisialisasi variabel untuk menyimpan berat kantong kiri dan kanan.
+2. Looping: Program berjalan terus selama kondisi penghentian belum terpenuhi.
+- Minta input berat dari pengguna.
+- Jika berat salah satu kantong negatif, program berhenti.
+- Jika total berat dari kedua kantong lebih dari 150 kg, program berhenti.
+- Hitung selisih berat antara kedua kantong.
+- Jika selisih berat >= 9 kg, tampilkan bahwa sepeda motor oleng; jika tidak, tampilkan bahwa sepeda motor seimbang.
+3. Program berhenti jika salah satu kondisi penghentian tercapai.
 
 ### Cara Kerja Program
-
+1. Input Berat Kantong: Program meminta pengguna memasukkan berat untuk kantong kiri dan kanan.
+2. Penghentian Program: Program berhenti jika salah satu berat kantong negatif atau jika total berat kedua kantong lebih dari 150 kg.
+3. Perhitungan Selisih Berat: Program menghitung perbedaan berat antara kantong kiri dan kanan. Jika selisihnya 9 kg atau lebih, program akan menyatakan bahwa sepeda motor akan oleng.
+4. Looping: Program akan terus meminta input sampai salah satu kondisi untuk menghentikan program terpenuhi.
 
 ### 3. Diberikan sebuah persamaan sebagai berikut ini.
 
