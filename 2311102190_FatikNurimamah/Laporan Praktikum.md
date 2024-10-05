@@ -580,7 +580,18 @@ func main() {
 Program ini berfungsi untuk menemukan semua faktor dari bilangan yang dimasukkan oleh pengguna dan memeriksa apakah bilangan tersebut merupakan bilangan prima. Program akan menampilkan daftar faktor serta informasi apakah bilangan tersebut adalah prima.
 
 ### Algoritma Program
-
+1. Meminta pengguna untuk memasukkan bilangan bulat.
+2. Fungsi `cariFaktor(b)`:
+     - Menginisialisasi daftar kosong untuk menyimpan faktor.
+     - Menggunakan loop dari 1 hingga b untuk memeriksa setiap angka:
+        - Jika b dapat dibagi oleh i (tanpa sisa), tambahkan i ke dalam daftar faktor.
+     - Mengembalikan daftar faktor yang ditemukan.
+3. Fungsi `cekBilPrima(b)`:
+    - Jika b kurang dari atau sama dengan 1, kembalikan false (bukan bilangan prima).
+    - Menggunakan loop dari 2 hingga akar kuadrat b untuk memeriksa apakah ada angka yang dapat membagi b:
+       - Jika ditemukan pembagi, kembalikan false (bukan prima).
+    - Jika tidak ada pembagi yang ditemukan, kembalikan true (bilangan prima).
+4. Menampilkan daftar faktor dan status primalitas dari bilangan tersebut.
 
 ### Cara Kerja Program
 1. Input Bilangan: Pengguna diminta untuk memasukkan sebuah bilangan bulat.
@@ -588,6 +599,7 @@ Program ini berfungsi untuk menemukan semua faktor dari bilangan yang dimasukkan
 3. Memeriksa Bilangan Prima: Program mengecek apakah bilangan yang dimasukkan adalah bilangan prima dengan mencari tahu apakah ada angka lain yang dapat membagi bilangan tersebut, selain dari 1 dan bilangan itu sendiri.
 4. Output Hasil: Program menampilkan daftar faktor dan status apakah bilangan tersebut merupakan bilangan prima atau tidak.
 
+## Kesimpulan 
 
 
 ## Daftar Pustaka
