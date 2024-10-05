@@ -407,6 +407,9 @@ Program ini membantu Pak Andi untuk memeriksa keseimbangan beban di sepeda motor
 4. Looping: Program akan terus meminta input sampai salah satu kondisi untuk menghentikan program terpenuhi.
 
 ### 3. Diberikan sebuah persamaan sebagai berikut ini.
+![Screenshot 2024-10-05 114327](https://github.com/user-attachments/assets/22a7ac2a-36ca-4eaa-a185-708f80bc7bc7)
+**Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(k) sesuai persamaan di atas.Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah Input/read):**
+![Screenshot 2024-10-05 134155](https://github.com/user-attachments/assets/837edc1f-f20e-4222-add9-133b56311548)
 
 
 ### Source Code :
