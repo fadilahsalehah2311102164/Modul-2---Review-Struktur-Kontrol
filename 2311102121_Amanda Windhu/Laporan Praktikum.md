@@ -133,7 +133,8 @@ func main() {
 }
 ```
 ### Output: ![image](https://github.com/user-attachments/assets/9f77d530-d6d2-4c78-93e9-b117793bba7f)<br/>
-![image](https://github.com/user-attachments/assets/ceaf8a19-5e5d-44ca-8022-195465f0f1f9)<br/>
+![image](https://github.com/user-attachments/assets/adcb8be8-6eb8-431e-9d93-3d4f3e6fee06)
+
 
 
 
