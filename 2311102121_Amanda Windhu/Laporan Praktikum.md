@@ -471,6 +471,54 @@ Kode di atas dirancang untuk menentukan nilai huruf berdasarkan input nilai akhi
 
 ![image](https://github.com/user-attachments/assets/a1a6ef25-8bef-4722-ae96-7037e09a440a)<br/>
 
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var b int
+
+	// Menerima input dari pengguna
+	fmt.Print("Masukkan bilangan bulat: ")
+	fmt.Scan(&b)
+
+	// Memeriksa apakah b lebih besar dari 0
+	if b <= 0 {
+		fmt.Println("Bilangan harus lebih besar dari 0.")
+		return
+	}
+
+	fmt.Printf("Bilangan: %d\nFaktor: ", b)
+
+	factors := []int{} // Untuk menyimpan faktor-faktor
+
+	// Mencari faktor dari b
+	for i := 1; i <= b; i++ {
+		if b%i == 0 {
+			factors = append(factors, i)
+			if i == b {
+				fmt.Print(i)
+			} else {
+				fmt.Print(i, ", ")
+			}
+		}
+	}
+
+	// Menentukan apakah b adalah bilangan prima
+	isPrime := len(factors) == 2
+
+	// Menampilkan hasil
+	fmt.Printf("\nPrima: %t\n", isPrime)
+}
+```
+
+## Output: ![image](https://github.com/user-attachments/assets/55765a3f-bb24-4e29-9065-3b2d8d09fbd9)
+
+Kode di atas dirancang untuk menerima input berupa bilangan bulat `b` yang harus lebih besar dari 0. Setelah menerima input, program memvalidasi bilangan tersebut untuk memastikan bahwa nilainya valid. Selanjutnya, program mencari semua faktor dari `b`, dengan mengiterasi dari 1 hingga `b` dan memeriksa setiap bilangan apakah `b` habis dibagi oleh bilangan tersebut. Semua faktor yang ditemukan disimpan dalam sebuah slice dan ditampilkan kepada pengguna. Selain itu, program juga menentukan apakah `b` merupakan bilangan prima, yaitu bilangan yang memiliki tepat dua faktor: 1 dan dirinya sendiri. Hal ini dilakukan dengan memeriksa jumlah faktor yang ditemukan. Akhirnya, program menampilkan informasi mengenai bilangan yang dimasukkan, daftar faktor, dan status apakah bilangan tersebut adalah bilangan prima atau bukan, dengan format yang jelas dan mudah dibaca.
+
 
 
 
