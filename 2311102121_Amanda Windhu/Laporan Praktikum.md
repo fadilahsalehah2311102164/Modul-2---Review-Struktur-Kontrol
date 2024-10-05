@@ -135,6 +135,100 @@ func main() {
 ### Output: ![image](https://github.com/user-attachments/assets/9f77d530-d6d2-4c78-93e9-b117793bba7f)<br/>
 ![image](https://github.com/user-attachments/assets/adcb8be8-6eb8-431e-9d93-3d4f3e6fee06)
 
+Kode di atas meminta pengguna untuk memasukkan jumlah bunga yang akan dimasukkan, kemudian mengumpulkan nama-nama bunga tersebut sebanyak jumlah yang diminta. Pengguna dapat mengakhiri proses penginputan lebih awal dengan mengetikkan "SELESAI". Setelah itu, program akan menyimpan nama-nama bunga dalam sebuah string yang dipisahkan oleh " – " dan menampilkan hasilnya berserta jumlah total bunga yang dimasukkan.<br/>
+
+### 3. Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg. Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.<br/>Pada modifikasi program tersebut, program akan menampilkan true jika selisih kedua isi kantong lebih dari atau sama dengan 9 kg. Program berhenti memproses apabila total berat isi kedua kantong melebihi 150 kg atau salah satu kantong beratnya negatif.
+
+# Sebelum di modifikasi
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var beratKiri, beratKanan float64
+
+	for {
+		// Menerima input berat kedua kantong dalam satu baris
+		fmt.Print("Masukan berat belanjaan di kedua kantong: ")
+		fmt.Scan(&beratKiri, &beratKanan)
+
+		// Cek jika salah satu kantong mencapai atau lebih dari 9 kg
+		if beratKiri >= 9 || beratKanan >= 9 {
+			fmt.Println("Proses selesai.")
+			break
+		}
+
+		// Hitung selisih berat antara kantong kiri dan kanan
+		selisih := beratKiri - beratKanan
+		if selisih < 0 {
+			selisih = -selisih
+		}
+
+		// Cek apakah selisih berat melebihi 9 kg
+		if selisih > 9 {
+			fmt.Println("Selisih berat antara kantong kiri dan kanan melebihi 9 kg.")
+		}
+	}
+}
+
+```
+
+# Setelah di modifikasi
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var beratKiri, beratKanan float64
+
+	for {
+		// Menerima input berat kedua kantong dalam satu baris
+		fmt.Print("Masukan berat belanjaan di kedua kantong: ")
+		fmt.Scan(&beratKiri, &beratKanan)
+
+		// Cek jika salah satu kantong memiliki berat negatif
+		if beratKiri < 0 || beratKanan < 0 {
+			fmt.Println("Proses selesai.")
+			break
+		}
+
+		// Cek jika total berat kedua kantong melebihi 150 kg
+		totalBerat := beratKiri + beratKanan
+		if totalBerat > 150 {
+			fmt.Println("Proses selesai.")
+			break
+		}
+
+		// Hitung selisih berat antara kantong kiri dan kanan
+		selisih := beratKiri - beratKanan
+		if selisih < 0 {
+			selisih = -selisih
+		}
+
+		// Menampilkan hasil apakah sepeda motor akan oleng atau tidak
+		if selisih >= 9 {
+			fmt.Println("Sepeda motor Pak Andi akan oleng: true")
+		} else {
+			fmt.Println("Sepeda motor Pak Andi akan oleng: false")
+		}
+	}
+}
+
+```
+### Output: 
+- Sebelum di modifikasi![image](https://github.com/user-attachments/assets/e28b4ab7-67eb-499e-b445-28104b997a8f)<br/>
+- Setelah di modifikasi![image](https://github.com/user-attachments/assets/e38d04e0-dec9-4866-85e4-353a2937c2d2)<br/>
+
+
+
 
 
 
