@@ -99,10 +99,17 @@ func main () {
 ![Screenshot 2024-10-04 225654](https://github.com/user-attachments/assets/5bfcd0c0-e51f-45ac-b1d8-9fe3c1f264ee)
 
 ### Deskripsi Program : 
+Program ini digunakan untuk meminta pengguna meng inputkan nama mereka. Setelah input diberikan, program akan menampilkan nama yang diinputkan di layar.
 
 ### Algoritma Program
+1. Inisialisasi variabel `nama` untuk menyimpan data yang diinput oleh pengguna.
+2. Tampilkan pesan yang meminta pengguna untuk memasukkan nama.
+3. Gunakan `fmt.Scanln` untuk membaca nama yang dimasukkan oleh pengguna.
+4. Tampilkan nama yang telah dimasukkan menggunakan `fmt.Println`.
 
 ### Cara Kerja Program
+1. Meminta Nama: Program meminta pengguna untuk mengetikkan nama melalui konsol.
+2. Menampilkan Nama: Setelah nama diinputkan, program akan menampilkan nama tersebut.
 
 
 ### 2. Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. 
