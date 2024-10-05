@@ -386,7 +386,15 @@ func main() {
 }
 ```
 
-## Jawablah pertanyaan-pertanyaan berikut:<br/>a. Jika nam diberikan adalah 80.1, apakah keluaran dari 
+## Jawablah pertanyaan-pertanyaan berikut:<br/>a. Jika nam diberikan adalah 80.1, apa keluaran dari program tersebut? Apakah eksekusi program tersebut sesuai spesifikasi soal?<br/>
+- Ya, eksekusi program sesuai dengan spesifikasi soal. Dalam soal, dijelaskan bahwa nilai huruf yang diberikan adalah:<br/>
+A: Lebih dari 80<br/>
+AB: Lebih dari 72.5<br/>
+B: Lebih dari 65<br/>
+BC: Lebih dari 57.5<br/>
+C: Lebih dari 50<br/>
+D: Lebih dari 40<br/>
+E: 40 atau kurang<br/>
 
 
 
