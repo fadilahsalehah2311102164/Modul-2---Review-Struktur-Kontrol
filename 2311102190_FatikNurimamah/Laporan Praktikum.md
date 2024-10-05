@@ -111,6 +111,20 @@ Perintah tersebut mendeklarasikan dua variabel, yaitu `f` dan `err`. Beberapa ba
 d, err := f.Stat()
 ```
 
+Pernyataan tersebut tampak seperti mendeklarasikan variabel `d` dan `err`. Perhatikan bahwa `err` muncul di kedua pernyataan[1]. Duplikasi seperti ini diperbolehkan: `err` dideklarasikan dalam pernyataan pertama, tetapi dapat digunakan kembali dalam pernyataan kedua[1]. Ini berarti panggilan ke `f.Stat` menggunakan variabel `err` yang sama yang dideklarasikan sebelumnya, dan diberi nilai baru[1].
+
+Ketika mendeklarasikan sebuah variabel `v` dengan `:=`, variabel tersebut dapat digunakan kembali meskipun telah dideklarasikan sebelumnya, asalkan:
+
+1. Deklarasi berada dalam cakupan yang sama dengan deklarasi sebelumnya dari `v` (jika `v` dideklarasikan di luar cakupan, deklarasi ini akan menciptakan variabel baru)[1].
+2. Nilai yang diinisialisasi dapat disimpan dalam `v`[1].
+3. Setidaknya ada satu variabel baru lainnya dalam deklarasi tersebut[1].
+
+Sifat yang tidak biasa ini bersifat pragmatis, memudahkan kita untuk menggunakan nilai tunggal `err`, misalnya, dalam beberapa pernyataan `if-else`. Anda akan sering menemukan penggunaan seperti ini[1].
+
+Perlu diingat bahwa dalam Go, cakupan parameter fungsi dan nilai kembalian sama dengan tubuh fungsi, meskipun tampaknya secara leksikal berada di luar kurung kurawal yang menutup tubuh fungsi[1].
+
+**3. `For`**
+
 
 
 
