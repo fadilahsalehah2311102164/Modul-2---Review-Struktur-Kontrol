@@ -218,10 +218,28 @@ func main() {
 ![Screenshot 2024-10-05 131800](https://github.com/user-attachments/assets/f5fc9204-d27d-4274-bef8-537eb155f4ac)
 
 ### Deskripsi Program : 
+Program ini dibuat untuk meminta pengguna memasukkan lima angka bulat. Setelah input diterima, program akan menghitung total dari kelima angka tersebut dan menampilkan hasilnya di layar.
 
 ### Algoritma Program
+1. Deklarasi Variabel:
+
+- Buat lima variabel a, b, c, d, dan e untuk menampung angka bulat yang akan dijumlahkan.
+- Siapkan variabel hasil untuk menyimpan hasil penjumlahan.
+2. Mengambil Input:
+
+- Gunakan `fmt.Scanln` untuk menerima input dari pengguna. Program akan menunggu hingga pengguna memasukkan lima angka bulat yang dipisahkan oleh spasi.
+3. Proses Penjumlahan:
+
+- Hitung jumlah dari kelima angka tersebut dengan menjumlahkan a, b, c, d, dan e, lalu simpan hasilnya dalam variabel hasil.
+4. Menampilkan Hasil:
+
+- Cetak hasil penjumlahan dengan format yang sesuai di layar.
 
 ### Cara Kerja Program
+1. Program mulai dijalankan dan menunggu input dari pengguna.
+2. Pengguna diminta untuk menginputkan lima angka bulat
+3. Program akan menjumlahkan angka-angka yang telah diinputkan 
+4. Setelah perhitungan selesai, program akan menampilkan hasilnya 
 
 ### 4.Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:
 
