@@ -4,28 +4,54 @@
 
 ```go
 package main
-import "fmt"
+
+import (
+	"bufio"    // Package untuk membaca input dari pengguna melalui terminal
+	"fmt"      // Package untuk menampilkan output ke terminal
+	"os"       // Package untuk interaksi dengan sistem operasi
+	"strings"  // Package untuk manipulasi string
+)
 
 func main() {
-	var (
-		satu, dua, string // Deklarasi tiga variabel string
-		tempt string // Variabel sementara untuk membantu pertukaran nilai
-	)
-	fmt.Print("Masukan input string: ")
-	fmt.Scanln(&satu)   // Menerima input string pertama dan menyimpannya di variabel 'satu'
-	fmt.Print("Masukan input string: ")
-	fmt.Scanln(&dua)  // Menerima input string kedua dan menyimpannya di variabel 'dua'
-	fmt.Print("Masukan input string: ")
-	fmt.Scanln(&tiga) // Menerima input string ketiga dan menyimpannya di variabel 'tiga'
-	fmt.Println("Output awal = " + satu + " " + dua + " " + tiga) // Menampilkan output awal sebelum pertukaran
-	// Proses pertukaran nilai antar variabel
-	tempt = satu
-	satu = dua
-	dua = tiga
-	tiga = temp
-	fmt.Println ("Output akhir = " + satu + " " + dua + " " + tiga) // Menampilkan output setelah pertukaran
+	// Array yang menyimpan urutan warna yang benar
+	correctOrder := []string{"merah", "kuning", "hijau", "ungu"}
+
+	// Membuat reader untuk membaca input pengguna dari terminal
+	reader := bufio.NewReader(os.Stdin)
+	success := true // Flag untuk menandai apakah input sesuai urutan warna yang benar
+
+	// Loop untuk percobaan sebanyak 5 kali
+	for i := 1; i <= 5; i++ {
+		fmt.Printf("Percobaan %d: ", i)   // Menampilkan percobaan ke berapa
+		input, _ := reader.ReadString('\n') // Membaca input dari pengguna hingga baris baru ('\n')
+		input = strings.TrimSpace(input)    // Menghapus spasi atau karakter newline dari input
+
+		colors := strings.Split(input, " ") // Memecah string input berdasarkan spasi menjadi slice
+		for j := 0; j < 4; j++ {            // Mengecek apakah setiap warna sesuai dengan urutan yang benar
+			if colors[j] != correctOrder[j] {  // Jika ada warna yang salah urutan
+				success = false  // Tandai success sebagai false
+				break            // Hentikan pengecekan lebih lanjut
+			}
+		}
+		if !success {  // Jika success sudah false, hentikan percobaan lebih lanjut
+			break
+		}
+	}
+
+	// Menampilkan hasil akhir
+	if success {
+		fmt.Println("BERHASIL : true")  // Jika semua input sesuai urutan
+	} else {
+		fmt.Println("BERHASIL : false") // Jika ada urutan warna yang salah
+	}
 }
 ```
 ### Output: 
+![image](https://github.com/user-attachments/assets/c27ee543-0db9-44ec-bad1-d6dd4dfb006e)
 
-Kode di atas adalah
+Kode di atas untuk meminta pengguna memasukkan urutan warna dan memeriksa apakah input tersebut sesuai dengan urutan yang benar yang telah ditentukan. Pengguna memiliki maksimal lima percobaan untuk memasukkan urutan yang benar. Jika pengguna memasukkan urutan yang benar pada suatu saat, program akan berhenti dan menunjukkan keberhasilan; jika tidak, program akan menunjukkan kegagalan setelah lima percobaan.
+Program ini menggunakan paket `bufio` untuk membaca input pengguna secara efisien, `fmt` untuk mencetak output ke konsol, `os` untuk berinteraksi dengan sistem operasi, dan `strings` untuk manipulasi string. Urutan warna yang benar ditentukan dalam sebuah slice sebagai `["merah", "kuning", "hijau", "ungu"]`.<br/>
+Dalam program, sebuah reader buffered diinisialisasi untuk membaca input dari terminal, dan sebuah flag boolean `success` diatur ke `true` untuk menandai apakah input pengguna benar. Program kemudian menjalankan loop lima kali, meminta pengguna untuk memasukkan urutan warna pada setiap percobaan.<br/>
+Setiap input dibaca hingga karakter newline, dibersihkan dari spasi, dan dipisahkan menjadi string warna individual. Kemudian, program memeriksa setiap warna dalam input pengguna terhadap urutan yang benar. Jika ada warna yang tidak cocok, flag `success` diatur ke `false` dan pengecekan lebih lanjut dihentikan.
+Jika flag `success` masih `false` setelah lima percobaan, program akan menampilkan output "BERHASIL : false"; jika tidak, program akan menampilkan "BERHASIL : true".<br/>
+Secara keseluruhan, program ini menunjukkan bagaimana menangani input pengguna, melakukan manipulasi string, dan menerapkan alur kontrol dasar dalam Go, memberikan cara sederhana namun menarik bagi pengguna untuk berinteraksi dengan urutan warna sambil belajar tentang konsep pemrograman seperti loop, kondisi, dan slice.<br/>
