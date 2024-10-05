@@ -222,18 +222,14 @@ Program ini dibuat untuk meminta pengguna memasukkan lima angka bulat. Setelah i
 
 ### Algoritma Program
 1. Deklarasi Variabel:
-
-- Buat lima variabel a, b, c, d, dan e untuk menampung angka bulat yang akan dijumlahkan.
-- Siapkan variabel hasil untuk menyimpan hasil penjumlahan.
+   - Buat lima variabel a, b, c, d, dan e untuk menampung angka bulat yang akan dijumlahkan.
+   - Siapkan variabel hasil untuk menyimpan hasil penjumlahan.
 2. Mengambil Input:
-
-- Gunakan `fmt.Scanln` untuk menerima input dari pengguna. Program akan menunggu hingga pengguna memasukkan lima angka bulat yang dipisahkan oleh spasi.
+   - Gunakan `fmt.Scanln` untuk menerima input dari pengguna. Program akan menunggu hingga pengguna memasukkan lima angka bulat yang dipisahkan oleh spasi.
 3. Proses Penjumlahan:
-
-- Hitung jumlah dari kelima angka tersebut dengan menjumlahkan a, b, c, d, dan e, lalu simpan hasilnya dalam variabel hasil.
+   - Hitung jumlah dari kelima angka tersebut dengan menjumlahkan a, b, c, d, dan e, lalu simpan hasilnya dalam variabel hasil.
 4. Menampilkan Hasil:
-
-- Cetak hasil penjumlahan dengan format yang sesuai di layar.
+   - Cetak hasil penjumlahan dengan format yang sesuai di layar.
 
 ### Cara Kerja Program
 1. Program mulai dijalankan dan menunggu input dari pengguna.
