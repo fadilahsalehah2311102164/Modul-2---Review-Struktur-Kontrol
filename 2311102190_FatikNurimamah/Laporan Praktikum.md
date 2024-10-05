@@ -558,11 +558,26 @@ func main() {
 
 
 ### Deskripsi Program : 
+Program ini digunakan untuk mengonversi nilai akhir yang dimasukkan pengguna menjadi indeks huruf. Berdasarkan input nilai, program akan menentukan huruf nilai sesuai dengan kriteria yang telah ditetapkan.
 
 ### Algoritma Program
+1. Tampilkan pesan untuk meminta pengguna memasukkan nilai akhir mata kuliah.
+2. Ambil input dari pengguna dan simpan dalam variabel nilai.
+3. Tentukan huruf nilai berdasarkan kriteria berikut:
+ - Jika nilai >= 80, huruf nilai adalah "A".
+ - Jika nilai >= 70, huruf nilai adalah "B".
+ - Jika nilai >= 60, huruf nilai adalah "C".
+ - Jika nilai >= 50, huruf nilai adalah "D".
+ - Jika nilai >= 40, huruf nilai adalah "E".
+ - Jika nilai < 40, huruf nilai adalah "F".
+4. Tampilkan hasil dengan menunjukkan nilai dan huruf indeks yang sesuai.
 
 ### Cara Kerja Program
-
+1. Program dimulai dengan mendeklarasikan variabel nam dan nmk.
+2. Program meminta pengguna untuk memasukkan nilai akhir mata kuliah melalui konsol.
+3. Nilai yang dimasukkan dibaca menggunakan fmt.Scan dan disimpan dalam variabel nam.
+4. Dengan menggunakan serangkaian pernyataan if-else if, program memeriksa nilai yang diberikan dan menetapkan huruf nilai yang sesuai ke dalam variabel nmk.
+5. Akhirnya, program menampilkan nilai akhir dan huruf indeks pada layar dengan format dua angka di belakang koma menggunakan fmt.Printf.
 
 
 ## Unguided 
