@@ -544,6 +544,48 @@ func main() {
 
 
 #### Deskripsi Program
+##### Program ini bertujuan untuk:
+- Mengumpulkan rangkaian nama bunga yang diinputkan oleh pengguna.
+- Menghitung jumlah bunga yang dimasukkan.
+- Berhenti menerima input jika pengguna memasukkan kata "SELESAI" dan menampilkan rangkaian nama bunga serta jumlah bunga yang telah dimasukkan.
+
+##### Algoritma Program
+1 Inisialisasi variabel:
+rangkaianBunga: Menyimpan rangkaian nama bunga.
+2 jumlahBunga: 
+Menghitung jumlah bunga yang dimasukkan.
+3 Pengulangan untuk input nama bunga:
+- Program meminta pengguna memasukkan nama bunga dalam perulangan tanpa batas.
+- Setiap nama bunga yang diinputkan akan ditambahkan ke dalam rangkaian nama bunga dengan pemisah " - ".
+- Jika pengguna memasukkan "SELESAI", perulangan berhenti.
+4 Menyusun rangkaian nama bunga:
+-Jika nama bunga adalah input pertama, disimpan langsung.
+- Jika bukan yang pertama, tambahkan dengan pemisah " - ".
+5 Menghitung jumlah bunga:
+Setiap kali pengguna memasukkan nama bunga (selain "SELESAI"), variabel jumlahBunga akan bertambah.
+6 Menampilkan hasil:
+Setelah pengguna selesai menginput, program menampilkan rangkaian bunga dan jumlah bunga yang diinput.
+  
+##### Cara Kerja Program
+1 Input Nama Bunga:
+- Program meminta pengguna untuk memasukkan nama bunga secara berulang. Misalnya:
+`Bunga 1: Mawar
+Bunga 2: Melati
+Bunga 3: Anggrek
+Bunga 4: SELESAI
+Input berakhir ketika pengguna memasukkan kata SELESAI (tidak sensitif terhadap huruf besar/kecil).`
+
+2 Penggabungan Nama Bunga:
+- Setiap nama bunga akan disusun ke dalam rangkaian dengan format "Bunga 1 - Bunga 2 - Bunga 3". Untuk contoh input di atas, hasil rangkaian menjadi:
+`Mawar - Melati - Anggrek`
+
+3 Menghitung Jumlah Bunga:
+Program menghitung jumlah bunga yang dimasukkan. Jika pengguna memasukkan tiga bunga, variabel jumlahBunga akan menyimpan angka 3.
+
+4 Menampilkan Hasil:
+Setelah perulangan selesai, program akan menampilkan hasil rangkaian bunga dan jumlah bunga yang telah diinputkan. Hasilnya adalah:
+`Pita: Mawar - Melati - Anggrek
+Bunga: 3`
 
 
 2. Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg. Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih. Pada modifikasi program tersebut, program akan menampilkan true Jika selisih kedua isi kantong lebih dari atau sama dengan 9 kg. Program berhenti memproses apabila total berat isi kedua kantong melebihi 150 kg atau salah satu kantong beratnya negatif.
@@ -551,7 +593,54 @@ func main() {
 
 #### Source Code
 ```go
+package main
 
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	for {
+		var beratKantong1, beratKantong2 float64
+
+		// Meminta input berat kedua kantong belanjaan
+		fmt.Print("Masukan berat belanjaan di kedua kantong: ")
+		_, err := fmt.Scanf("%f %f", &beratKantong1, &beratKantong2)
+		
+		// Pengecekan apakah input valid
+		if err != nil {
+			fmt.Println("Input tidak valid. Mohon masukkan dua angka.")
+			continue
+		}
+
+		// Pengecekan berat negatif
+		if beratKantong1 < 0 || beratKantong2 < 0 {
+			fmt.Println("Proses selesai.")
+			break
+		}
+
+		// Pengecekan total berat
+		totalBerat := beratKantong1 + beratKantong2
+		if totalBerat > 150 {
+			fmt.Println("Proses selesai.")
+			break
+		}
+
+		// Pengecekan selisih berat
+		selisihBerat := math.Abs(beratKantong1 - beratKantong2)
+		akanOleng := selisihBerat >= 9
+
+		// Menampilkan hasil apakah motor akan oleng
+		fmt.Printf("Sepeda motor pak Andi akan oleng: %t\n", akanOleng)
+
+		// Pengecekan apakah salah satu kantong mencapai atau melebihi 9 kg
+		if beratKantong1 >= 9 || beratKantong2 >= 9 {
+			fmt.Println("Proses selesai.")
+			break
+		}
+	}
+}
 ```
 #### Screenshoot Source Code
 
@@ -560,18 +649,103 @@ func main() {
 
 
 #### Deskripsi Program
+##### Program ini bertujuan untuk:
+- Meminta pengguna memasukkan berat dua kantong belanjaan secara terus-menerus.
+- Mengecek apakah motor Pak Andi akan oleng berdasarkan perbedaan berat antara kedua kantong belanjaan.
+- Program akan berhenti dalam kondisi tertentu, seperti jika total berat melebihi 150 kg, berat negatif, atau jika salah satu kantong mencapai atau melebihi 9 kg.
+
+##### Algoritma Program
+1 Inisialisasi variabel:
+- beratKantong1, beratKantong2: Variabel untuk menyimpan berat kedua kantong belanjaan.
+Pengulangan tak terbatas dimulai.
+2 Meminta input:
+- Program meminta input dua angka (berat dua kantong belanjaan) dari pengguna.
+3 Pengecekan validitas input:
+- Jika input tidak valid (bukan angka), program meminta input ulang.
+4 Pengecekan kondisi berat negatif:
+- Jika salah satu berat kantong negatif, program berhenti.
+5 Pengecekan total berat:
+- Jika total berat lebih dari 150 kg, program berhenti.
+6 Menghitung selisih berat:
+- Program menghitung selisih antara kedua berat kantong dan mengecek apakah selisihnya 9 kg atau lebih.
+- Jika selisih berat ≥ 9, motor akan dianggap oleng dan hasilnya ditampilkan.
+7 Pengecekan berat kantong ≥ 9 kg:
+- Jika salah satu kantong beratnya mencapai atau melebihi 9 kg, program berhenti.
+8 Mengulangi proses:
+- Jika tidak ada kondisi berhenti yang terpenuhi, program kembali meminta input dari pengguna.
+  
+##### Cara Kerja Program
+1 Memasukkan Berat Kantong:
+- Program meminta pengguna untuk memasukkan berat dua kantong belanjaan. Misalnya:
+- Masukan berat belanjaan di kedua kantong: 8 7
+  
+2 Validasi Input:
+- Jika input tidak valid (misalnya pengguna memasukkan huruf atau karakter non-angka), program akan menampilkan pesan kesalahan dan meminta input ulang:
+- Input tidak valid. Mohon masukkan dua angka.
+  
+3 Menghitung Selisih Berat:
+Jika input valid, program menghitung selisih berat antara kedua kantong. Misalnya:
+- Berat kantong pertama = 8 kg, berat kantong kedua = 7 kg
+- Selisih = 1 kg, karena ini kurang dari 9 kg, motor tidak akan oleng.
+
+4 Program menampilkan hasil:
+`Sepeda motor pak Andi akan oleng: false`
+
+5 Pengecekan Total Berat:
+Program memeriksa apakah total berat kedua kantong melebihi 150 kg. Jika iya, program menampilkan pesan dan berhenti:
+`Proses selesai.`
+
+6 Pengecekan Berat Kantong ≥ 9 kg:
+Jika salah satu kantong memiliki berat 9 kg atau lebih, program menampilkan pesan dan berhenti.
+
+7 Mengulangi Proses:
+Jika tidak ada kondisi berhenti yang terpenuhi, program mengulangi proses, meminta input dari pengguna lagi.
 
 
 3. Diberikan sebuah persamaan sebagai berikut ini.
    Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas.
 
 
-
 #### Source Code
 ```go
+package main
 
+import (
+	"fmt"  // Package untuk input/output
+	"math" // Package untuk fungsi matematika
+)
 
+// hitungFungsiK menghitung nilai f(k) = (4k + 2)^2 / ((4k + 1)(4k + 3))
+func hitungFungsiK(k float64) float64 {
+	// Menghitung pembilang: (4k + 2)^2
+	pembilang := math.Pow(4*k+2, 2)
+	
+	// Menghitung penyebut: (4k + 1)(4k + 3)
+	penyebut := (4*k + 1) * (4*k + 3)
+	
+	// Mengembalikan hasil pembagian
+	return pembilang / penyebut
+}
 
+func main() {
+	var k float64
+	
+	// Input nilai k dari pengguna
+	fmt.Print("Nilai K = ")
+	_, err := fmt.Scanln(&k)
+	
+	// Kondisi error jika input tidak valid
+	if err != nil {
+		fmt.Println("Error: Input harus berupa angka")
+		return
+	}
+	
+	// Menghitung f(k) dengan memanggil fungsi hitungFungsiK
+	hasil := hitungFungsiK(k)
+	
+	// Menampilkan hasil dengan format 10 angka desimal
+	fmt.Printf("Nilai f(k) = %.10f\n", hasil)
+}
 ```
 #### Screenshoot Source Code
 
@@ -580,7 +754,19 @@ func main() {
 
 
 #### Deskripsi Program
- 
+##### Program akan meminta pengguna untuk memasukkan nilai *k*, kemudian menghitung nilai F(k), berdasarkan rumus tersebut, dan menampilkan hasilnya dengan presisi hingga 10 angka desimal.
+
+##### Algoritma Program
+- Inisialisasi
+- Input dari pengguna
+- Perhitungan F(k)
+- Menampilkan Hasil
+  
+##### Cara Kerja Program
+1 Input nilai *k*
+2 Perhitungan f(k)
+3 Menampilkan Hasil
+4 Penanganan kesalahan input
 
 4. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut!
 
@@ -589,7 +775,66 @@ Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya 
 
 #### Source Code
 ```go
+package main
 
+import (
+	"fmt"
+)
+
+// hitungBiayaPengiriman menghitung biaya pengiriman berdasarkan berat parsel
+func hitungBiayaPengiriman(beratGram int) (int, string, string, int) {
+	biayaDasar := 10000 // Biaya dasar per kg
+	biayaTambahan := 0
+
+	// Konversi ke kg dan sisa gram
+	beratKg := beratGram / 1000
+	sisaGram := beratGram % 1000
+
+	// Hitung biaya dasar
+	biayaTotal := biayaDasar * beratKg
+
+	// Hitung biaya tambahan untuk sisa gram
+	if sisaGram > 0 {
+		if sisaGram <= 500 {
+			biayaTambahan = sisaGram * 15 // Rp. 15 per gram untuk <= 500g
+		} else {
+			biayaTambahan = sisaGram * 5 // Rp. 5 per gram untuk > 500g
+		}
+		biayaTotal += biayaTambahan
+	}
+
+	// Format detail berat
+	detailBerat := fmt.Sprintf("%d kg + %d gr", beratKg, sisaGram)
+
+	// Format detail biaya
+	detailBiaya := fmt.Sprintf("Rp. %d", biayaDasar*beratKg)
+	if biayaTambahan > 0 {
+		detailBiaya += fmt.Sprintf(" + Rp. %d", biayaTambahan)
+	}
+
+	return biayaTotal, detailBerat, detailBiaya, biayaTambahan
+}
+
+func main() {
+	fmt.Println("Program Perhitungan Biaya Pengiriman POS")
+	fmt.Print("Masukkan berat parsel (dalam gram): ")
+
+	var beratParsel int
+	_, err := fmt.Scan(&beratParsel)
+	if err != nil {
+		fmt.Println("Input tidak valid. Mohon masukkan angka.")
+		return
+	}
+
+	// Contoh output format
+	fmt.Println("\nBerat parsel (gram):", beratParsel)
+
+	totalBiaya, detailBerat, detailBiaya, _ := hitungBiayaPengiriman(beratParsel)
+
+	fmt.Println("Detail:", detailBerat)
+	fmt.Println("Detail biaya:", detailBiaya)
+	fmt.Println("Total biaya: Rp.", totalBiaya)
+}
 ```
 #### Screenshoot Source Code
 
@@ -598,8 +843,19 @@ Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya 
 
 
 #### Deskripsi Program
-Program ini berisi tentang menghitung dan mengonversikan berat yang dimasukkan oleh user dengan menggunakan gram dan kilogram. Program ini juga menghitung biaya pengiriman dari ketentuan yang ditentukan.
+##### Program ini menghitung biaya pengiriman berdasarkan berat parsel yang diinputkan oleh pengguna dalam satuan gram. 
 
+##### Algoritma Program
+- Input Berat Parsel
+- Perhitungan Biaya Pengiriman
+- Menghitung biaya tambahan berdasarkan sisa gram
+- Menampilkan Hasil
+
+##### Cara Kerja Program
+1 Meminta Input dari Pengguna
+2 Memanggil Fungsi hitungBiayaPengiriman
+3 Di dalam fungsi ini, program melakukan konversi
+4 Menampilkan Hasil
 
 5. Sebuah bilangan bulat b memiliki faktor bilangan f > O jika f habis membagi b. Contoh: 2 merupakan faktor dari bilangan 6 karena 6 habis dibagi 2.
 
@@ -611,7 +867,42 @@ Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b >
 
 #### Source Code
 ```go
+package main
 
+import (
+	"fmt"
+)
+
+// fungsi faktorBawah menerima sebuah bilangan integer dan mengembalikan slice berisi faktor-faktornya
+func faktorBawah(input int) []int {
+	var faktor = make([]int, 0)
+	for i := 1; i <= input; i++ {
+		if input%i == 0 {
+			faktor = append(faktor, i)
+		}
+	}
+	return faktor
+}
+
+func main() {
+	var input int
+	// meminta input dari pengguna
+	fmt.Print("Masukkan bilangan: ")
+	fmt.Scanln(&input)
+
+	// memeriksa apakah input adalah bilangan positif
+	if input <= 0 {
+		fmt.Println("Masukkan bilangan positif!")
+	} else {
+		faktor := faktorBawah(input)
+
+		// menampilkan hasil
+		fmt.Println("Faktor-faktor dari", input, ":")
+		for _, value := range faktor {
+			fmt.Println(value)
+		}
+	}
+}
 
 ```
 #### Screenshoot Source Code
@@ -620,7 +911,16 @@ Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b >
 #### Screenshoot Output
 
 #### Deskripsi Program
-Program ini berisi tentang menentukan bilangan yang dimasukkan termasuk bilangan prima atau bukan. Pada awal program, user diminta untuk memasukkan bilangan bulat terlebih dahulu
+##### Program ini bertujuan untuk mencari dan menampilkan faktor-faktor dari suatu bilangan bulat positif yang dimasukkan oleh pengguna. Faktor adalah bilangan-bilangan yang membagi habis bilangan tersebut.
+
+##### Algoritma Program
+- Input Bilangan:
+- Pengecekan Validitas Input
+- Menghitung Faktor-Faktor
+- Menampilkan Faktor-Faktor
+
+##### Cara Kerja Program
+
 
 
 ## Referensi 
