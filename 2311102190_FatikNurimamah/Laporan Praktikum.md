@@ -468,13 +468,63 @@ func main() {
 
 ### Source Code :
 ```go
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi untuk menemukan semua faktor dari bilangan b
+func cariFaktor(b int) []int {
+	var daftarfaktor []int
+	for i := 1; i <= b; i++ {
+		if b%i == 0 {
+			daftarfaktor = append(daftarfaktor, i)
+		}
+	}
+	return daftarfaktor
+}
+
+// Fungsi untuk memeriksa apakah bilangan b adalah bilangan prima.
+func cekBilPrima(b int) bool {
+	if b <= 1 {
+		return false
+	}
+	for i := 2; i*i <= b; i++ {
+		if b%i == 0 {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	var b int
+	fmt.Print("Bilangan: ")
+	fmt.Scan(&b)
+
+	// untuk mencari faktor dan menampilkannya
+	faktor := cariFaktor(b)
+	fmt.Print("Faktor: ")
+	for _, f := range faktor {
+		fmt.Print(f, " ")
+	}
+	fmt.Println()
+
+	// untuk mengecek dan menampilkan apakah bilangan tersebut prima
+	if cekBilPrima(b) {
+		fmt.Println("Prima: true")
+	} else {
+		fmt.Println("Prima: false")
+	}
+}
 
 ```
 ### Output:
-
+![Screenshot 2024-10-04 211706](https://github.com/user-attachments/assets/776fbe4f-bc4d-4220-afb8-e79f17793768)
 
 ### Full code Screenshot:
-
+![Screenshot 2024-10-05 105707](https://github.com/user-attachments/assets/933b7e72-f02b-433e-a1e6-cf4ac91fd4c3)
 
 ### Deskripsi Program : 
 
