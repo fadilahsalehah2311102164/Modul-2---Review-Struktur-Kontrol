@@ -427,7 +427,7 @@ func main() {
 `Hasil Penjumlahan 10 20 30 40 50 adalah = 150`
 
 
-### 4. 
+### 4.  Diberikan sebuah nilai akhir mata kullah (NAM) [0..100] dan standar penilaian nilai mata kullah (NMK) sebagai berikut:
 #### Source Code
 ```go
 package main
@@ -463,36 +463,28 @@ func main() {
 #### Screenshoot Output
 
 #### Deskripsi Program
+##### Program ini bertujuan untuk:
+- Meminta pengguna untuk memasukkan sebuah nilai dalam bentuk angka desimal (float).
+- Berdasarkan nilai tersebut, program akan memberikan nilai huruf (indeks) sesuai dengan kriteria yang sudah ditentukan.
+- Menampilkan nilai indeks berdasarkan nilai yang dimasukkan pengguna.
 
-```go
-package main
-
-import "fmt"
-
-func main() {
-	var nam float64 
-	var nmk string
-
-	fmt.Print("Masukkan Nilai: ")
-	fmt.Scan(&nam)
-
-	if nam >= 80 {
-		nmk = "A"
-	} else if nam >= 65 {
-		nmk = "B"
-	} else if nam >= 50 {
-		nmk = "C"
-	} else if nam >= 40 {
-		nmk = "D"
-	} else {
-		nmk = "F"
-	}
-
-	fmt.Printf("Nilai indeks untuk nilai %.2f adalah %s\n", nam, nmk)
-}
-
-```
-
+##### Algoritma Program
+- Deklarasi variabel: Program mendeklarasikan variabel nam (float) untuk menyimpan nilai yang diinputkan oleh pengguna, dan nmk (string) untuk menyimpan nilai indeks berdasarkan hasil pengkondisian.
+- Meminta input dari pengguna: Program meminta pengguna memasukkan nilai numerik.
+- Pengkondisian: Program mengevaluasi nilai yang dimasukkan dengan serangkaian pernyataan if-else untuk menentukan indeks (A, B, C, D, E, F) berdasarkan rentang nilai yang telah ditentukan.
+- Menampilkan hasil: Setelah indeks ditentukan, program akan mencetak nilai dan indeks yang sesuai ke layar.
+  
+##### Cara Kerja Program
+1 Input Pengguna:
+- Program meminta pengguna untuk memasukkan sebuah nilai numerik. Misalnya, pengguna memasukkan nilai 78.5.
+2 Pemeriksaan Rentang Nilai:
+- Setelah nilai diinput, program memeriksa dalam rentang mana nilai tersebut berada menggunakan struktur kontrol if-else.
+3 Jika nilai yang dimasukkan adalah 78.5, maka program akan mengecek:
+- Apakah nilai lebih dari 80? Tidak, lanjut ke berikutnya.
+- Apakah nilai lebih dari 72.5? Ya, maka variabel nmk diberi nilai "B".
+4 Menampilkan Nilai dan Indeks:
+- Setelah pengecekan selesai, program menampilkan hasil akhir dengan nilai yang dimasukkan pengguna dan nilai indeks yang sesuai. Pada contoh di atas, hasilnya adalah:
+`Nilai indeks untuk nilai 78.50 adalah B`
 
 ## III. UNGUIDED
 
@@ -510,8 +502,40 @@ Modifikasi program sebelumnya, proses input akan berhenti apabila user mengetikk
 
 #### Source Code
 ```go
+package main
 
+import (
+	"fmt"
+	"strings"
+)
 
+func main() {
+	var rangkaianBunga string    // Variabel untuk menyimpan rangkaian nama bunga
+	var jumlahBunga int = 0      // Variabel untuk menghitung jumlah bunga
+
+	// Perulangan untuk meminta input nama bunga
+	for i := 1; ; i++ {
+		var namaBunga string
+		fmt.Printf("Bunga %d: ", i)  
+		fmt.Scan(&namaBunga)      
+
+		// Mengecek apakah input adalah "SELESAI"
+		if strings.ToUpper(namaBunga) == "SELESAI" {
+			break                    
+		}
+
+		// Menambahkan nama bunga ke rangkaian
+		if rangkaianBunga == "" {
+			rangkaianBunga = namaBunga
+		} else {
+			rangkaianBunga += " - " + namaBunga 
+		}
+		jumlahBunga++  
+	}
+
+	// Menampilkan hasil
+	fmt.Printf("Pita: %s\n", rangkaianBunga)    
+	fmt.Printf("Bunga: %d\n", jumlahBunga)      
 ```
 #### Screenshoot Source Code
 
