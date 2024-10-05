@@ -186,6 +186,93 @@ for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
 
 **4. `Switch`**
 
+Kontrol `switch` di Go lebih generik dibandingkan dengan C. Ekspresi `switch` di Go tidak harus berupa konstanta atau integer; bagian kondisi `case` dievaluasi dari atas ke bawah hingga menemukan kondisi yang cocok. Jika ekspresi `switch` tidak ada, maka akan memeriksa kondisi `case` yang bernilai true[1]. Oleh karena itu, sangat memungkinkan—dan menjadi idiomatis—untuk menulis kondisi `if-else-if-else` menggunakan `switch`[1].
+
+```go
+func unhex(c byte) byte {
+	switch {
+	case '0' <= c && c <= '9':
+		return c - '0'
+	case 'a' <= c && c <= 'f':
+		return c - 'a' + 10
+	case 'A' <= c && c <= 'F':
+		return c - 'A' + 10
+	}
+	return 0
+}
+```
+
+Perintah `break` di Go dapat digunakan untuk mengakhiri blok `switch`[1]. Terkadang, perlu juga untuk keluar dari pengulangan, tetapi bukan dari `switch`, dan dalam Go, hal ini dapat dilakukan dengan memberikan label pada pengulangan dan "keluar" dari label tersebut[1]. Contoh berikut menunjukkan penggunaan kedua jenis `break` tersebut.
+
+```go
+Loop:
+	for n := 0; n < len(src); n += size {
+		switch {
+		case src[n] < sizeOne:
+			if validateOnly {
+				break // keluar dari switch, tapi tetap dalam pengulangan `for`
+			}
+			size = 1
+			update(src[n])
+
+		case src[n] < sizeTwo:
+			if n+1 >= len(src) {
+				err = errShortInput
+				break Loop // keluar dari `switch` dan pengulangan `for`
+			}
+			if validateOnly {
+				break // keluar dari switch, tapi tetap dalam pengulangan `for`
+			}
+			size = 2
+			update(src[n] + src[n+1]<&lt;shift)
+		}
+	}
+```
+
+Untuk mengakhiri bagian ini, berikut adalah fungsi yang membandingkan dua slice byte dengan menggunakan dua perintah switch:
+
+```go
+// Compare mengembalikan sebuah integer hasil pembandingan dari dua slice byte
+// secara leksikografi.
+// Hasilnya adalah 0 jika a == b, -1 jika a < b, dan +1 jika a > b .
+func Compare(a, b []byte) int {
+	for i := 0; i < len(a) && i < len(b); i++ {
+		switch {
+		case a[i] > b[i]:
+			return 1
+		case a[i] < b[i]:
+			return -1
+		}
+	}
+	switch {
+	case len(a) > len(b):
+		return 1
+	case len(a) < len(b):
+		return -1
+	}
+	return 0
+}
+```
+
+Perintah `switch` juga dapat digunakan untuk menentukan tipe dinamis dari sebuah variabel interface[1]. Tipe `switch` ini menggunakan sintaks dengan kata kunci `type` dalam tanda kurung[1]. Jika perintah `switch` mendeklarasikan sebuah variabel dalam ekspresinya, variabel tersebut akan memiliki tipe yang sesuai di setiap klausa[1]. Dalam konteks ini, menjadi idiomatis untuk menggunakan nama yang sama, sehingga efeknya adalah mendeklarasikan variabel baru dengan nama yang sama tetapi dengan tipe yang berbeda di setiap `case`[1].
+
+```go
+var t interface{}
+t = functionOfSomeType()
+switch t := t.(type) {
+default:
+	fmt.Printf("unexpected type %T\n", t)     // %T mencetak tipe dari `t`
+case bool:
+	fmt.Printf("boolean %t\n", t)             // t bertipe bool
+case int:
+	fmt.Printf("integer %d\n", t)             // t bertipe int
+case *bool:
+	fmt.Printf("pointer to boolean %t\n", *t) // t bertipe *bool
+case *int:
+	fmt.Printf("pointer to integer %d\n", *t) // t bertipe *int
+}
+```
+
 
 ## Guided 
 
