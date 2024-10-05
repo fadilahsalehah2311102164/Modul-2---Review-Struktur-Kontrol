@@ -442,6 +442,17 @@ Program ini dibuat untuk meminta pengguna memasukkan lima angka bulat. Setelah i
 ### 4.Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:
 
 ![Screenshot 2024-10-05 185203](https://github.com/user-attachments/assets/f9c9959e-bcde-4b09-b3a5-5feab7302db3)
+![Screenshot 2024-10-05 185442](https://github.com/user-attachments/assets/e7e4becb-ef34-4315-a1e3-9ec4fa7b5057)
+
+**Jawablah pertanyaan-pertanyaan berikut:**
+
+a. Jika nam diberikan adalah 80.1, apa keluaran dari program tersebut? Apakah eksekusi program tersebut sesuai spesifikasi soal?
+
+b. Apa saja kesalahan dari program tersebut? Mengapa demikian? Jelaskan alur program seharusnya!
+
+C. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Seharusnya keluaran yang diperoleh adalah 'A', 'B', dan 'D'.
+
+**Jawaban:**
 
 
 ### Source Code :
