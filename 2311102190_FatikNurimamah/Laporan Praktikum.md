@@ -292,8 +292,11 @@ Program ini digunakan untuk menerima input dari pengguna berupa nama-nama bunga,
 ### Algoritma Program
 1. Inisialisasi variabel pita sebagai string kosong dan TotalBunga sebagai penghitung jumlah bunga.
 2. Gunakan loop untuk terus menerima input dari pengguna.
-3. Di dalam loop: Tambahkan nama bunga yang dimasukkan ke dalam variabel pita. Dan jika pengguna mengetik "SELESAI", akhiri loop dan kurangi penghitung jumlah bunga karena input ini tidak dianggap sebagai bunga.
-4. Setelah keluar dari loop, tampilkan daftar lengkap bunga yang dimasukkan serta jumlah total bunga yang dihitung.
+3. Di dalam loop:
+
+   - Tambahkan nama bunga yang dimasukkan ke dalam variabel pita.
+   - Jika pengguna mengetik "SELESAI", akhiri loop dan kurangi penghitung jumlah bunga karena input ini tidak dianggap sebagai bunga.
+5. Setelah keluar dari loop, tampilkan daftar lengkap bunga yang dimasukkan serta jumlah total bunga yang dihitung.
 
 ### Cara Kerja Program
 1. Input Nama Bunga: Program meminta pengguna untuk memasukkan nama bunga satu per satu hingga pengguna mengetikkan kata "SELESAI".
