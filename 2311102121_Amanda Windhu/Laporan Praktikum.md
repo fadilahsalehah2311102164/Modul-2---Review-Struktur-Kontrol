@@ -176,6 +176,7 @@ func main() {
 }
 
 ```
+## Output:![image](https://github.com/user-attachments/assets/e28b4ab7-67eb-499e-b445-28104b997a8f)<br/>
 
 # Setelah di modifikasi
 
@@ -223,9 +224,7 @@ func main() {
 }
 
 ```
-### Output: 
-- Sebelum di modifikasi![image](https://github.com/user-attachments/assets/e28b4ab7-67eb-499e-b445-28104b997a8f)<br/>
-- Setelah di modifikasi![image](https://github.com/user-attachments/assets/e38d04e0-dec9-4866-85e4-353a2937c2d2)<br/>
+### Output: ![image](https://github.com/user-attachments/assets/e38d04e0-dec9-4866-85e4-353a2937c2d2)<br/>
 
 
 
