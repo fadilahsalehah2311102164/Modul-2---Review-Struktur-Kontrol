@@ -56,4 +56,84 @@ Setiap input dibaca hingga karakter newline, dibersihkan dari spasi, dan dipisah
 Jika flag `success` masih `false` setelah lima percobaan, program akan menampilkan output "BERHASIL : false"; jika tidak, program akan menampilkan "BERHASIL : true".<br/>
 Secara keseluruhan, program ini menunjukkan bagaimana menangani input pengguna, melakukan manipulasi string, dan menerapkan alur kontrol dasar dalam Go, memberikan cara sederhana namun menarik bagi pengguna untuk berinteraksi dengan urutan warna sambil belajar tentang konsep pemrograman seperti loop, kondisi, dan slice.<br/>
 
-### 2. Suatu pita (string) berisi kumpulan nama-nama bunga yang dipisahkan oleh spasi dan '–', contoh pita diilustrasikan seperti berikut ini.<br/>Pita: mawar – melati – tulip – teratai – kamboja – anggrek<br/>Buatlah sebuah program yang menerima input sebuah bilangan bulat positif (dan tidak nol) N, kemudian program akan meminta input berupa nama bunga secara berulang sebanyak N kali dan nama tersebut disimpan ke dalam pita.<br/> (Petunjuk: gunakan operasi penggabungan string dengan operator “+”.)<br/>Tampilkan isi pita setelah proses input selesai.<br/>
+### 2. Suatu pita (string) berisi kumpulan nama-nama bunga yang dipisahkan oleh spasi dan '–', contoh pita diilustrasikan seperti berikut ini.<br/>Pita: mawar – melati – tulip – teratai – kamboja – anggrek<br/>Buatlah sebuah program yang menerima input sebuah bilangan bulat positif (dan tidak nol) N, kemudian program akan meminta input berupa nama bunga secara berulang sebanyak N kali dan nama tersebut disimpan ke dalam pita.<br/> (Petunjuk: gunakan operasi penggabungan string dengan operator “+”.)<br/>Tampilkan isi pita setelah proses input selesai.<br/>Modifikasi program sebelumnya, proses input akan berhenti apabila user mengetikkan `SELESAI`. Kemudian tampilkan isi pita beserta banyaknya bunga yang ada di dalam pita<br/>
+
+```go
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+	"strconv"
+)
+
+func main() {
+	// Membuat reader untuk membaca input dari pengguna
+	reader := bufio.NewReader(os.Stdin)
+
+	// Meminta input jumlah bunga yang akan dimasukkan (bilangan bulat positif N)
+	fmt.Print("N: ")
+	var N int
+	for {
+		// Baca input dari pengguna
+		input, err := reader.ReadString('\n')
+		if err != nil {
+			fmt.Printf("Error membaca input: %v", err)
+			return
+		}
+
+		// Konversi input ke integer
+		N, err = strconv.Atoi(strings.TrimSpace(input))
+		if err != nil || N <= 0 {
+			fmt.Println("Harap masukkan bilangan bulat positif.")
+		} else {
+			break
+		}
+	}
+
+	// Inisialisasi variabel pita (string) untuk menyimpan nama bunga
+	var pita string
+	var count int // Menyimpan jumlah bunga yang dimasukkan
+
+	// Loop untuk menerima input nama bunga sebanyak N kali
+	for i := 1; i <= N; i++ {
+		fmt.Printf("Bunga %d: ", i) // Menambahkan instruksi
+
+		// Membaca input dari pengguna
+		input, err := reader.ReadString('\n')
+		if err != nil {
+			fmt.Printf("Error: %v", err)
+			return // Keluar dari program jika ada kesalahan
+		}
+
+		// Menghapus spasi dan karakter newline dari input
+		input = strings.TrimSpace(input)
+
+		// Cek jika pengguna mengetik "SELESAI"
+		if strings.ToUpper(input) == "SELESAI" {
+			break // Menghentikan input jika "SELESAI" dimasukkan
+		}
+
+		// Menggabungkan nama bunga dengan pita menggunakan " – " sebagai pemisah
+		if pita == "" {
+			pita = input // Jika pita masih kosong, langsung masukkan nama bunga
+		} else {
+			pita = pita + " – " + input // Jika sudah ada isinya, tambahkan dengan pemisah " – "
+		}
+
+		count++ // Menambah jumlah bunga yang dimasukkan
+	}
+
+	// Menampilkan isi pita dan bunga setelah semua input dimasukkan
+	fmt.Println("Pita:", pita)
+	fmt.Printf("Bunga: %d", count)
+	
+}
+```
+### Output: ![image](https://github.com/user-attachments/assets/9f77d530-d6d2-4c78-93e9-b117793bba7f)<br/>
+![image](https://github.com/user-attachments/assets/ceaf8a19-5e5d-44ca-8022-195465f0f1f9)<br/>
+
+
+
