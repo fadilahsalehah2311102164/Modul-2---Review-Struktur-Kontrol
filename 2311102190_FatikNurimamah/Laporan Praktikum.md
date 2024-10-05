@@ -421,7 +421,13 @@ Program ini digunakan untuk menghitung nilai dari fungsi `f(k)`  berdasarkan nil
    - Kembalikan hasil pembagian pembilang dengan penyebut.
 3. Tampilkan hasil perhitungan fungsi `f(k)` dengan format presisi 10 angka desimal.
 ### Cara Kerja Program
+1. Meminta Input `k` : Program akan meminta pengguna untuk memasukkan nilai `k`, yang bisa berupa bilangan desimal.
+2. Perhitungan Fungsi `f(k)` : Program menghitung nilai fungsi `f(k)` dengan rumus
+   
+    ![Screenshot 2024-10-05 114327](https://github.com/user-attachments/assets/ccf8bfc7-3591-4abe-98b2-3627d5208190)
 
+
+3. Menampilkan 3. 3. Hasil : Setelah perhitungan selesai, program akan menampilkan hasil fungsi dengan presisi 10 angka desimal.
 
 ### 4. 
 
