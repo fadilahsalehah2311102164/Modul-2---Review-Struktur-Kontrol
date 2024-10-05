@@ -347,6 +347,49 @@ func main() {
 
 ## Output: ![image](https://github.com/user-attachments/assets/59368d3d-ff15-4887-a01a-50e366329ddf)
 
+Kode di atas berfungsi untuk menghitung biaya pengiriman parsel berdasarkan berat dalam gram dengan ketentuan yang diberikan. Program dimulai dengan meminta pengguna untuk memasukkan berat parsel dalam satuan gram. Setelah input diberikan, berat tersebut dipecah menjadi dua bagian: berat dalam kilogram (kg) dan sisa berat dalam gram. Biaya pengiriman dasar adalah Rp. 10.000,- per kilogram, dan biaya tambahan dikenakan untuk sisa berat dalam gram. Jika berat sisa adalah 500 gram atau lebih, tambahan biaya dikenakan Rp. 5,- per gram, sementara jika kurang dari 500 gram, biaya tambahan adalah Rp. 15,- per gram. Namun, apabila berat total parsel lebih dari 10 kilogram, maka biaya tambahan untuk sisa gram digratiskan. Setelah menghitung biaya untuk kilogram dan gram, program menampilkan rincian berat dan biaya dalam format yang terperinci, serta menampilkan total biaya pengiriman.
+
+### 6. Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:<br/> ![image](https://github.com/user-attachments/assets/05fa8371-e853-40d9-8ee4-193873afcc1c)<br/> Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkanny.<br/>
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var nam float64
+	var nmk string
+
+	// Meminta input nilai
+	fmt.Print("Nilai akhir mata kuliah: ")
+	fmt.Scan(&nam)
+
+	// Logika penentuan nilai huruf berdasarkan nilai numerik
+	if nam > 80 {
+		nmk = "A"
+	} if nam > 72.5 {
+		nmk = "AB"
+	} if nam > 65 {
+		nam = "B"
+	} if nam > 57.5 {
+		nmk = "BC"
+	} if nam > 50 {
+		nmk = "C"
+	} if nam > 40 {
+		nmk = "D"
+	} else if nam <= 40 {
+		nam = "E"
+	}
+
+	// Menampilkan hasil
+	fmt.Printf("Nilai mata kuliah:" ,nmk)
+}
+```
+
+## Jawablah pertanyaan-pertanyaan berikut:<br/>a. Jika nam diberikan adalah 80.1, apakah keluaran dari 
+
+
+
 
 
 
