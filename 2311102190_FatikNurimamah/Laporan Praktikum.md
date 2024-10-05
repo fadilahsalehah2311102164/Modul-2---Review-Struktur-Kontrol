@@ -493,11 +493,26 @@ func main() {
 ![Screenshot 2024-10-05 104036](https://github.com/user-attachments/assets/f5512033-3c8b-40a3-ac13-7408d7983d83)
 
 ### Deskripsi Program : 
+Program ini menghitung biaya pengiriman parsel berdasarkan berat yang dimasukkan oleh pengguna dalam satuan gram. Biaya pengiriman dihitung dengan tarif tertentu per kilogram, serta biaya tambahan untuk berat yang kurang dari satu kilogram. Program juga menampilkan detail berat parsel dan rincian biaya pengiriman.
 
 ### Algoritma Program
+1. Program meminta pengguna memasukkan berat parsel dalam satuan gram.
+2. Berat diubah menjadi kilogram dan sisa gram.
+3. Biaya dasar dihitung dari berat kilogram dengan tarif Rp 10.000,- per kilogram.
+4. Biaya tambahan dihitung untuk sisa gram:
+   - Jika total berat lebih dari 10 kg, tidak ada biaya tambahan.
+   - Jika sisa gram ≤ 500, dikenakan Rp 5,- per gram.
+   - Jika sisa gram > 500, dikenakan Rp 15,- per gram.
+5. Biaya total adalah hasil penjumlahan biaya dasar dan biaya tambahan.
+6. Tampilkan rincian berat, biaya, dan total biaya pengiriman.
 
 ### Cara Kerja Program
-
+1. Memasukkan Berat: Pengguna memasukkan berat parsel dalam satuan gram.
+2. Menghitung Biaya: Program mengubah berat dari gram ke kilogram, kemudian menghitung biaya pengiriman dasar sebesar Rp 10.000,- per kilogram. Jika ada sisa berat di bawah 1 kg, program akan menghitung biaya tambahan berdasarkan ketentuan:
+   - Jika total berat lebih dari 10 kg, sisa berat tidak dikenakan biaya.
+   - Jika sisa berat 500 gram atau kurang, dikenakan Rp 5,- per gram.
+   - Jika sisa berat lebih dari 500 gram, dikenakan Rp 15,- per gram.
+3. Hasil Output: Program menampilkan rincian berat dalam kilogram dan gram, rincian biaya dasar dan biaya tambahan, serta total biaya pengiriman.
 
 ### 5. 
 
