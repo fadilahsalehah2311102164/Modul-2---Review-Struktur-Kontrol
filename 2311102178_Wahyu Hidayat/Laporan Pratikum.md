@@ -315,7 +315,7 @@ func main (){
 
 Kode di atas menghitung jumlah dari lima angka yang dimasukkan oleh pengguna. Dalam fungsi main, variabel a, b, c, d, dan e dideklarasikan untuk menyimpan input angka, sementara variabel hasil digunakan untuk menyimpan hasil penjumlahan. Program ini menggunakan fmt.Scanln untuk membaca lima angka yang dimasukkan dalam satu baris, kemudian menjumlahkan angka-angka tersebut dan mencetak hasil penjumlahan bersama dengan angka-angka yang dimasukkan oleh pengguna. Program ini menunjukkan penggunaan input, variabel, dan operasi dasar dalam Go.
 
-1. Penilaian Indeks Nilai 
+4. Penilaian Indeks Nilai 
 
 #### Source Code
 ```go
@@ -377,112 +377,114 @@ Kode di atas menentukan indeks nilai huruf berdasarkan input nilai numerik dari 
 
 
 ## III. UNGUIDED
-
-1. Suatu pita (string) berisi kumpulan nama-nama bunga yang dipisahkan oleh spasi dan '-', contoh pita diilustrasikan seperti berikut ini.
-
-Pita: mawar - melati - tulip - teratai - kamboja - anggrek
-
-Buatlah sebuah program yang menerima input sebuah bilangan bulat positif (dan tidak nol) N, kemudian program akan meminta input berupa nama bunga secara berulang sebanyak N kali dan nama tersebut disimpan ke dalam pita.
-
-(Petunjuk: gunakan operasi penggabungan string dengan operator "+").
-
-Tampilkan isi pita setelah proses input selesai.
-
-Modifikasi program sebelumnya, proses input akan berhenti apabila user mengetikkan 'SELESAI'. Kemudian tampilkan isi pita beserta banyaknya bunga yang ada di dalam pita.
-
+1. Program Input Bunga dengan Kata Kunci
 #### Source Code
 ```go
+package main
 
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	var (
+		nBunga int
+		namaBunga string
+		pita string
+		jumlahBunga int
+	)
+
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Print("N: ")
+	inputN, _ := reader.ReadString('\n')
+	inputN = strings.TrimSpace(inputN)
+	nBunga, _ = strconv.Atoi(inputN)
+
+	for i := 1; i <= nBunga; i++ {
+		fmt.Printf("Bunga %d: ", i)
+		namaBunga, _ = reader.ReadString('\n')
+		namaBunga = strings.TrimSpace(namaBunga)
+
+		// Hentikan input jika user menginputkan 'SELESAI'
+		if namaBunga == "SELESAI" {
+			break
+		}
+
+		// Tambahkan nama bunga ke pita
+		if pita == "" {
+			pita = namaBunga
+		} else {
+			pita = pita + " - " + namaBunga
+		}
+
+		// Hitung jumlah bunga
+		jumlahBunga++
+	}
+
+	fmt.Println("Pita:", pita)
+	fmt.Println("Bunga:", jumlahBunga)
+}
 
 ```
 #### Screenshoot Source Code
+![Screenshot 2024-10-05 194914](https://github.com/user-attachments/assets/52d86e31-2bba-425a-97f6-53a799f29b00)
+
 
 
 #### Screenshoot Output
 
-
-#### Deskripsi Program
-
-
-2. Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg.
-
-Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.
-
-Pada modifikasi program tersebut, program akan menampilkan true Jika selisih kedua isi kantong lebih dari atau sama dengan 9 kg. Program berhenti memproses apabila total berat isi kedua kantong melebihi 150 kg atau salah satu kantong beratnya negatif.
-
-
-#### Source Code
-```go
-
-```
-#### Screenshoot Source Code
-
-
-#### Screenshoot Output
+![Screenshot 2024-10-05 195144](https://github.com/user-attachments/assets/312f87a2-535b-472e-9a2b-6d744e2c2375)
 
 
 #### Deskripsi Program
 
-
-3. Diberikan sebuah persamaan sebagai berikut ini.
-   Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas.
+Kode di atas menerima input bilangan bulat positif 'N'. Kemudian akan meminta input nama bunga sebanyak 'N' kali. Input nama bunga tersebut akan digabungkan ke dalam variabel 'pita' dengan pemisah spasi dan '-'. Program dimodifikasi agar proses input berhenti ketika user menginput 'SELESAI'. Setelah itu, program akan menampilkan isi pita dan jumlah bunga yang ada di dalamnya.
 
 
+#### Algoritma Program
+1. Jumlah Bunga (N): User memasukkan bilangan bulat positif (selain nol) yang menunjukkan berapa banyak nama bunga yang akan diinput.
+2. Nama-nama Bunga:
+User memasukkan nama bunga satu per satu sebanyak N kali.
+Setiap nama bunga akan digabung menjadi sebuah string (pita) dengan pemisah " - ".
+Contoh 1:
 
-#### Source Code
-```go
+Input:
+N: 3
+Bunga 1: Kertas
+Bunga 2: Mawar
+Bunga 3: Tulip
+Output:
+Pita: Kertas - Mawar - Tulip -
+Modifikasi Program:
 
+Program dimodifikasi agar proses input nama bunga berhenti ketika user memasukkan kata kunci 'SELESAI'. Setelah itu, program akan menampilkan:
 
+Isi Pita: String yang berisi semua nama bunga yang telah diinput.
+Jumlah Bunga: Banyaknya bunga di dalam pita.
+Contoh 2:
 
-```
-#### Screenshoot Source Code
+Input:
+Bunga 1: Kertas
+Bunga 2: Mawar
+Bunga 3: Tulip
+Bunga 4: SELESAI
+Output:
+Pita: Kertas - Mawar - Tulip -
+Bunga: 3
 
+#### Cara Kerja Program
+1. Program meminta pengguna memasukkan bilangan bulat positif N yang menentukan berapa kali input nama bunga akan diminta.
+2. Program kemudian menjalankan loop for sebanyak N kali.
+3. Di dalam loop, program meminta pengguna untuk memasukkan nama bunga.
+4. Jika pengguna memasukkan 'SELESAI', loop akan dihentikan.
+5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
+6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
-#### Screenshoot Output
-
-
-#### Deskripsi Program
- 
-
-4. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut!
-
-Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.
-
-
-#### Source Code
-```go
-
-```
-#### Screenshoot Source Code
-
-
-#### Screenshoot Output
-
-
-#### Deskripsi Program
-Program ini berisi tentang menghitung dan mengonversikan berat yang dimasukkan oleh user dengan menggunakan gram dan kilogram. Program ini juga menghitung biaya pengiriman dari ketentuan yang ditentukan.
-
-
-5. Sebuah bilangan bulat b memiliki faktor bilangan f > O jika f habis membagi b. Contoh: 2 merupakan faktor dari bilangan 6 karena 6 habis dibagi 2.
-
-Buatlah program yang menerima input sebuah bilangan bulat b dan b> 1. Program harus dapat mencari dan menampilkan semua faktor dari bilangan tersebut!
-
-Bilangan bulat b > 0 merupakan bilangan prima p jika dan hanya jika memiliki persis dua faktor bilangan saja, yaitu 1 dan dirinya sendiri.
-
-Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b > 0. Program tersebut mencari dan menampilkan semua faktor bilangan tersebut. Kemudian, program menentukan apakah b merupakan bilangan prima.
-
-#### Source Code
-```go
-
-
-```
-#### Screenshoot Source Code
-
-
-#### Screenshoot Output
-
-#### Deskripsi Program
-Program ini berisi tentang menentukan bilangan yang dimasukkan termasuk bilangan prima atau bukan. Pada awal program, user diminta untuk memasukkan bilangan bulat terlebih dahulu
 
 
 ## Referensi 
