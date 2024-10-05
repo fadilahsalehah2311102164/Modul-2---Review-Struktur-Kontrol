@@ -552,7 +552,12 @@ Program ini menghitung biaya pengiriman parsel berdasarkan berat yang dimasukkan
    - Jika sisa berat lebih dari 500 gram, dikenakan Rp 15,- per gram.
 3. Hasil Output: Program menampilkan rincian berat dalam kilogram dan gram, rincian biaya dasar dan biaya tambahan, serta total biaya pengiriman.
 
-### 5. 
+### 5. Buatlah program yang menerima input sebuah bilangan bulat b dan b > 1 Program harus dapat mencari dan menampilkan semua faktor dari bilangan tersebut!
+**Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b > 0. Program tersebut mencari dan menampilkan semua faktor bilangan tersebut. Kemudian, program menentukan apakah b merupakan bilangan prima.**
+**Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read):**
+
+![Screenshot 2024-10-05 135730](https://github.com/user-attachments/assets/ba0f6794-f7a6-4dc6-9ef7-d793c5ea4d37)
+
 
 ### Source Code :
 ```go
