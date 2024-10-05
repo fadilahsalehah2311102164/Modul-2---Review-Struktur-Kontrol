@@ -454,7 +454,7 @@ c. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Sehar
 
 **Jawaban:**
 
-a. Jika nilai nam adalah 80.1, output dari program akan menghasilkan nilai mata kuliah "AB". Namun, ini tidak sesuai dengan spesifikasi yang diharapkan. Pada program, nilai 80.1 seharusnya mendapatkan hasil "A" karena kondisi if nam > 80 terpenuhi. Akan tetapi, program tetap melanjutkan evaluasi ke kondisi if nam > 72.5, yang juga terpenuhi, sehingga nilai berubah menjadi "AB".
+a. Jika nilai nam adalah 80.1, output dari program akan menghasilkan nilai mata kuliah "B". Namun, ini tidak sesuai dengan spesifikasi yang diharapkan. Pada program, nilai 80.1 seharusnya mendapatkan hasil "A" karena kondisi if nam > 80 terpenuhi. Akan tetapi, program tetap melanjutkan evaluasi ke kondisi if nam > 72.5, yang juga terpenuhi, sehingga nilai berubah menjadi "B".
 
 b. Kesalahan dalam program:
  - Program tidak menggunakan blok else if, sehingga setiap kondisi dievaluasi secara terpisah. Hal ini menyebabkan kondisi yang lebih rendah (misalnya 72.5) tetap dievaluasi meskipun kondisi yang lebih 
@@ -540,8 +540,24 @@ func main() {
 ```
 ### Output:
 
+**sebelum perbaikan**
+
+![Screenshot 2024-10-05 191245](https://github.com/user-attachments/assets/4c6b168f-fdb8-49a9-ad4e-7e1d9f4d5367)
+
+**setelah perbaikan**
+
+![Screenshot 2024-10-05 191556](https://github.com/user-attachments/assets/c5284cba-3524-43a6-b8b6-fe58d3165b67)
+
 
 ### Full code Screenshot:
+
+**sebelum perbaikan**
+
+![Screenshot 2024-10-05 191737](https://github.com/user-attachments/assets/55594a09-662b-4efd-8629-f6b4feaa53a6)
+
+**setelah perbaikan**
+
+![Screenshot 2024-10-05 191834](https://github.com/user-attachments/assets/864c0f8d-b9ed-4ac5-b30a-601cce8be227)
 
 
 ### Deskripsi Program : 
