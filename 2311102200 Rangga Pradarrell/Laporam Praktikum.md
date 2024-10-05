@@ -42,7 +42,7 @@
 
 ## I. Dasar Teori
 ### Pengertian Go
-GO adalah bahasa pemrograman yang digunakan untuk pembuatan aplikasi berat, seperti sistem operasi dan aplikasi web, sehingga programmer yang memahami GO dapat memanfaatkan peluang karir sebagai pembuat aplikasi berat[1].
+GO adalah bahasa pemrograman yang digunakan untuk pembuatan aplikasi berat, seperti sistem operasi dan aplikasi web, sehingga programmer yang memahami GO dapat memanfaatkan peluang karir sebagai pembuat aplikasi berat. 
 
 ## 1. Tipe Data
 
@@ -215,7 +215,7 @@ for i := 0; i < 5; i++ {
 }
 ```
 ## II. GUIDED
-1. Menampilkan output yang diinputkan user
+### 1. Menampilkan output yang diinputkan user
 
 #### Source Code
 ```go
@@ -240,9 +240,33 @@ func main() {
 
 
 #### Deskripsi Program
+##### Program di atas adalah program sederhana berbasis bahasa Go yang berfungsi untuk membaca input berupa string dari pengguna, kemudian mencetak string tersebut kembali. Program ini hanya menggunakan satu variabel untuk menyimpan input dari pengguna.
+
+##### Algoritma Program
+-Deklarasi variabel nama sebagai string.
+-Baca input dari pengguna menggunakan fmt.Scanln, dan simpan ke dalam variabel nama.
+-Cetak kembali nilai dari variabel nama menggunakan fmt.Println.
+
+##### Cara Kerja Program
+
+*Input Pengguna:*
 
 
-2. Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', 'kuning', 'hijau', dan 'ungu' selama 5 kali percobaan berulang.
+Program menunggu pengguna untuk memasukkan sebuah teks (string). Misalnya, pengguna memasukkan John Doe dan menekan "Enter".
+
+*Menyimpan Input:*
+
+
+Input dari pengguna, misalnya John Doe, akan disimpan dalam variabel nama.
+
+*Mencetak Input:*
+
+
+Program kemudian mencetak kembali nilai dari variabel nama, yang berisi string yang dimasukkan oleh pengguna. Jadi outputnya akan menjadi:
+`John Doe`
+
+
+### 2. Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah 'merah', 'kuning', 'hijau', dan 'ungu' selama 5 kali percobaan berulang.
 Buatlah sebuah program yang menerima Input berupa warna dari ke 4 gelas reaks! sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuat dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya.
 
 #### Source Code
@@ -304,9 +328,48 @@ func main() {
 
 
 #### Deskripsi Program
+##### Program ini bertujuan untuk mengecek apakah pengguna bisa memasukkan urutan warna yang benar (seperti yang telah ditentukan) dalam lima kali percobaan. Program akan menghentikan percobaan lebih awal jika urutan warna yang dimasukkan salah, dan memberikan hasil akhir apakah pengguna berhasil atau tidak.
 
 
-3. Menambahkan bilangan yang diinputkan user
+
+##### Algoritma Program
+- Inisialisasi Urutan Warna yang Benar: Tentukan urutan warna yang benar yaitu merah, kuning, hijau, ungu.
+
+- Memulai Loop dengan 5 Percobaan: Jalankan loop sebanyak 5 kali untuk memberikan kesempatan kepada pengguna memasukkan urutan warna.
+
+- Baca Input Pengguna:
+Setiap percobaan, program membaca input dari pengguna berupa urutan warna yang dipisahkan oleh spasi.
+
+- Bandingkan Urutan Input dengan Urutan yang Benar:
+
+Pisahkan input menjadi array string.
+Bandingkan urutan warna yang dimasukkan pengguna dengan urutan warna yang benar.
+
+- Evaluasi Hasil:
+
+Jika urutan salah, ubah variabel success menjadi false dan keluar dari loop.
+Jika tidak ada kesalahan, lanjutkan ke percobaan berikutnya.
+
+- Cetak Hasil:
+
+Jika semua input benar, cetak "BERHASIL: true".
+Jika ada kesalahan, cetak "BERHASIL: false".
+
+##### Cara Kerja Program
+
+- Input Pengguna: Program meminta pengguna untuk memasukkan urutan warna dalam satu baris. Pengguna harus memasukkan empat warna, dipisahkan oleh spasi, misalnya:
+`merah kuning hijau ungu`
+
+- Memeriksa Kesesuaian:
+`Program membandingkan input pengguna dengan urutan warna yang benar,
+Jika input sesuai, program akan melanjutkan ke percobaan berikutnya,
+Jika input tidak sesuai, program menghentikan percobaan dan langsung mencetak hasil "BERHASIL: false".`
+
+- Pengulangan:
+` Program memberikan hingga 5 kesempatan (percobaan) kepada pengguna. Jika pengguna berhasil memasukkan urutan yang benar dalam semua percobaan, program mencetak hasil "BERHASIL: true". Namun, jika ada satu kali kesalahan, hasil langsung dinyatakan gagal.`
+
+
+### 3. Menambahkan bilangan yang diinputkan user
 
 #### Source Code
 ```go
@@ -336,12 +399,35 @@ func main() {
 
 #### Deskripsi Program
 
+##### Program ini bertujuan untuk:
 
-4. Diberikan sebuah nilai akhir mata kullah (NAM) [0..100] dan standar penilaian nilai mata kullah (NMK)
-   sebagai berikut:
+- Menerima lima input angka integer dari pengguna.
+- Menjumlahkan kelima angka tersebut.
+- Menampilkan hasil penjumlahan beserta input yang dimasukkan oleh pengguna.
 
 
 
+##### Algoritma Program
+- Deklarasi variabel a, b, c, d, dan e untuk menyimpan input angka, serta variabel hasil untuk menyimpan hasil penjumlahan.
+- Membaca input: Program meminta pengguna memasukkan lima angka integer.
+- Menjumlahkan angka: Setelah input diterima, program menjumlahkan kelima angka tersebut.
+- Menampilkan hasil: Program menampilkan hasil penjumlahan beserta lima angka yang dimasukkan.
+
+##### Cara Kerja Program
+1 Input Pengguna:
+- Program meminta pengguna untuk memasukkan lima angka integer yang dipisahkan oleh spasi. Contoh input:
+`10 20 30 40 50`
+
+2 Penjumlahan:
+- Setelah pengguna memasukkan angka-angka tersebut, program menjumlahkan angka-angka tersebut. Pada contoh input di atas:
+`hasil = 10 + 20 + 30 + 40 + 50 = 150`
+
+3 Mencetak Hasil:
+- Setelah penjumlahan selesai, program menampilkan hasil penjumlahan dengan format yang rapi:
+`Hasil Penjumlahan 10 20 30 40 50 adalah = 150`
+
+
+### 4. 
 #### Source Code
 ```go
 package main
@@ -436,11 +522,7 @@ Modifikasi program sebelumnya, proses input akan berhenti apabila user mengetikk
 #### Deskripsi Program
 
 
-2. Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg.
-
-Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.
-
-Pada modifikasi program tersebut, program akan menampilkan true Jika selisih kedua isi kantong lebih dari atau sama dengan 9 kg. Program berhenti memproses apabila total berat isi kedua kantong melebihi 150 kg atau salah satu kantong beratnya negatif.
+2. Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg. Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih. Pada modifikasi program tersebut, program akan menampilkan true Jika selisih kedua isi kantong lebih dari atau sama dengan 9 kg. Program berhenti memproses apabila total berat isi kedua kantong melebihi 150 kg atau salah satu kantong beratnya negatif.
 
 
 #### Source Code
