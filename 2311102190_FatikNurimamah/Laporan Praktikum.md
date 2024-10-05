@@ -174,11 +174,25 @@ func main() {
 ![Screenshot 2024-10-04 232952](https://github.com/user-attachments/assets/d6f86650-497a-4dfb-91b8-b4dc27bf7ae8)
 
 ### Deskripsi Program : 
+Program ini dibuat untuk menguji kemampuan pengguna dalam mengingat urutan warna tertentu. Pengguna diminta untuk memasukkan urutan warna dalam lima percobaan, dan program akan memeriksa apakah urutan yang dimasukkan sesuai dengan urutan yang benar. Hasil akhirnya akan menunjukkan apakah pengguna berhasil atau tidak.
 
 ### Algoritma Program
+1. Tetapkan urutan warna yang benar dalam array `correctOrder`.
+2. Inisialisasi `reader` untuk membaca input dari pengguna.
+3. Atur variabel `success` menjadi `true` untuk menandakan bahwa semua percobaan berhasil.
+4. Jalankan loop sebanyak lima kali untuk mendapatkan input dari pengguna:
+   - Tampilkan nomor percobaan.
+   - Baca input pengguna dan hapus spasi di awal dan akhir.
+   - Pisahkan input berdasarkan spasi menjadi array `colors`.
+   - Periksa apakah setiap warna dalam colors sesuai dengan `correctOrder`.
+   - Jika ada warna yang tidak sesuai, ubah `success` menjadi `false` dan keluar dari loop.
+5. Setelah loop selesai, tampilkan hasil berdasarkan nilai `success`.
 
 ### Cara Kerja Program
-
+1. Urutan Warna yang Benar: Program menetapkan urutan warna yang benar, yaitu "merah", "kuning", "hijau", dan "ungu".
+2. Membaca Input: Program menggunakan `bufio.NewReader` untuk mengambil input dari pengguna dalam lima percobaan.
+3. Memeriksa Input: Setiap input yang diberikan oleh pengguna akan dipisahkan menjadi kata-kata berdasarkan spasi. Program kemudian memeriksa apakah setiap warna dalam input sesuai dengan urutan yang benar.
+4. Menampilkan Hasil: Jika semua percobaan sesuai dengan urutan yang ditetapkan, program akan menampilkan "BERHASIL: true". Jika terdapat satu percobaan yang salah, program akan menampilkan "BERHASIL: false".
 
 ### 3. Penjumlahan 5 Angka dari Input Pengguna
 
