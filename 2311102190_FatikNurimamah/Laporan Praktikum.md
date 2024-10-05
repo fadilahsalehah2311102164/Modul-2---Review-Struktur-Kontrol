@@ -501,7 +501,7 @@ func main (){
 
 **sebelum perbaikan**
 
-![Screenshot 2024-10-05 191245](https://github.com/user-attachments/assets/4c6b168f-fdb8-49a9-ad4e-7e1d9f4d5367)
+
 
 **setelah perbaikan**
 
