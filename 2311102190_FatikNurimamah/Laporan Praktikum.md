@@ -225,6 +225,7 @@ func main() {
 ### Cara Kerja Program
 
 
+
 ## Unguided 
 
 ### 1.Buatlah sebuah program yang menerima input sebuah bilangan bulat positif (dan tidak nol) N, kemudian program akan meminta input berupa nama bunga secara berulang sebanyak N kali dan nama tersebut disimpan ke dalam pita.
@@ -291,6 +292,7 @@ func main() {
 
 ### Cara Kerja Program
 
+
 ### 2. Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.
 
 
@@ -350,8 +352,46 @@ func main() {
 ### Cara Kerja Program
 
 
+### 3. Diberikan sebuah persamaan sebagai berikut ini.
 
 
+### Source Code :
+```go
+package main
+
+import (
+    "fmt"
+)
+
+// Fungsi untuk menghitung nilai f(k)
+func f(k float64) float64 {
+    pembilang := (4*k + 2) * (4*k + 2) 
+    penyebut := (4*k + 1) * (4*k + 3)  
+    return pembilang / penyebut
+}
+
+func main() {
+    var k float64
+    // Minta input nilai K dari user
+    fmt.Print("Masukkan nilai K: ")
+    fmt.Scanln(&k)
+
+    // Hitung f(K) dan tampilkan hasilnya
+    hasil := f(k)
+    fmt.Printf("Nilai f(K) = %.10f\n", hasil)
+}
+```
+### Output:
+
+
+### Full code Screenshot:
+
+
+### Deskripsi Program : 
+
+### Algoritma Program
+
+### Cara Kerja Program
 
 
 
