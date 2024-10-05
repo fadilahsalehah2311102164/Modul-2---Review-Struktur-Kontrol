@@ -198,21 +198,7 @@ Program ini dibuat untuk menguji kemampuan pengguna dalam mengingat urutan warna
 
 ### Source Code :
 ```go
-package main 
 
-import "fmt"
-
-func main() {
-	var a, b, c, d, e int
-	var hasil int
-
-	// Menambahkan prompt untuk input
-	fmt.Print("Masukkan penjualan (a, b, c, d, e): ")
-	fmt.Scanln(&a, &b, &c, &d, &e)
-
-	hasil = a + b + c + d + e
-	fmt.Println("Hasil Penjualan", a, b, c, d, e, "adalah =", hasil)
-}
 
 ```
 ### Output:
