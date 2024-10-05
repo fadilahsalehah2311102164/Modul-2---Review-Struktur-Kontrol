@@ -349,7 +349,7 @@ func main() {
 
 Kode di atas berfungsi untuk menghitung biaya pengiriman parsel berdasarkan berat dalam gram dengan ketentuan yang diberikan. Program dimulai dengan meminta pengguna untuk memasukkan berat parsel dalam satuan gram. Setelah input diberikan, berat tersebut dipecah menjadi dua bagian: berat dalam kilogram (kg) dan sisa berat dalam gram. Biaya pengiriman dasar adalah Rp. 10.000,- per kilogram, dan biaya tambahan dikenakan untuk sisa berat dalam gram. Jika berat sisa adalah 500 gram atau lebih, tambahan biaya dikenakan Rp. 5,- per gram, sementara jika kurang dari 500 gram, biaya tambahan adalah Rp. 15,- per gram. Namun, apabila berat total parsel lebih dari 10 kilogram, maka biaya tambahan untuk sisa gram digratiskan. Setelah menghitung biaya untuk kilogram dan gram, program menampilkan rincian berat dan biaya dalam format yang terperinci, serta menampilkan total biaya pengiriman.
 
-### 6. Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:<br/> ![image](https://github.com/user-attachments/assets/05fa8371-e853-40d9-8ee4-193873afcc1c)<br/> Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkanny.<br/>
+### 6. Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:<br/> ![image](https://github.com/user-attachments/assets/05fa8371-e853-40d9-8ee4-193873afcc1c)<br/> Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkannya.<br/>
 
 ```go
 package main
@@ -396,7 +396,68 @@ C: Lebih dari 50<br/>
 D: Lebih dari 40<br/>
 E: 40 atau kurang<br/>
 
+## Apa saja kesalahan dari program tersebut? Mengapa demikian? Jelaskan alur program seharusnya!<br/>
+- Kesalahan dalam Program:<br/>
+  1. Variabel `nam = "B"` seharusnya ditulis sebagai `nmk = "B"`<br/>
+  2. Dalam kode ini, semua kondisi menggunakan `if` tanpa `else if` untuk rentang nilai yang
+     saling tumpang tindih. Dengan cara ini, jika nilai `nam` lebih dari 80, maka nilai `nmk`
+     akan ditetapkan ke "A", tetapi program akan tetap melanjutkan pemeriksaan kondisi lain.
+     Hal ini tidak efisien dan dapat menghasilkan output yang tidak diinginkan.<br/>
+  3. Pada pernyataan `fmt.Printf`, format string tidak digunakan. Seharusnya ada format
+     placeholder untuk variabel `nmk`.<br/>
+  4. Dalam kondisi penentuan nilai `E`, menggunakan `else if` setelah kondisi `if` biasa.
+     Sebaiknya gunakan `else` tanpa syarat sebelumnya.<br/>
+- Alur Program seharusnya:<br/>
+  1. Meminta input<br/>
+  2. Menentukan nilai huruf:<br/>
+     - Jika `nam` lebih dari 80, maka `nmk` menjadi "A".<br/>
+     - Jika `nam` lebih dari 72.5 dan kurang dari atau sama dengan 80, maka `nmk` menjadi "AB".<br/>
+     - Jika `nam` lebih dari 65 dan kurang dari atau sama dengan 72.5, maka `nmk` menjadi "B".<br/>
+     - Jika `nam` lebih dari 57.5 dan kurang dari atau sama dengan 65, maka `nmk` menjadi "BC".<br/>
+     - Jika `nam` lebih dari 50 dan kurang dari atau sama dengan 57.5, maka `nmk` menjadi "C".<br/>
+     - Jika `nam` lebih dari 40 dan kurang dari atau sama dengan 50, maka `nmk` menjadi "D".<br/>
+     - Jika `nam ` kurang dari atau sama dengan 40, maka `nmk` menjadi "E".<br/>
 
+## Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; 49.5. Seharusnya keluaran yang diperoleh adalah 'A', 'B', dan 'D'.<br/>
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var nam float64
+	var nmk string
+
+	// Meminta input nilai
+	fmt.Print("Nilai akhir mata kuliah: ")
+	fmt.Scan(&nam)
+
+	// Logika penentuan nilai huruf berdasarkan nilai numerik
+	if nam > 80 {
+		nmk = "A"
+	} else if nam > 72.5 {
+		nmk = "AB"
+	} else if nam > 65 {
+		nmk = "B"
+	} else if nam > 57.5 {
+		nmk = "BC"
+	} else if nam > 50 {
+		nmk = "C"
+	} else if nam > 40 {
+		nmk = "D"
+	} else {
+		nmk = "E"
+	}
+
+	// Menampilkan hasil
+	fmt.Printf("Nilai Indeks untuk nilai akhir mata kuliah: %s\n", nmk)
+}
+```
+
+## Output: ![image](https://github.com/user-attachments/assets/4214a77d-7695-4086-b72b-d1edd958fa78)<br/>
+
+Kode di atas dirancang untuk menentukan nilai huruf berdasarkan input nilai akhir mata kuliah yang dimasukkan oleh pengguna. Pertama, program meminta pengguna untuk memasukkan nilai akhir dalam bentuk numerik (tipe data float64). Setelah menerima input tersebut, program menggunakan serangkaian kondisi `if` dan `else if` untuk mengevaluasi nilai dan menetapkan nilai huruf yang sesuai. Rentang nilai yang ditetapkan dalam program ini adalah: "A" untuk nilai di atas 80, "AB" untuk nilai antara 72.5 hingga 80, "B" untuk nilai antara 65 hingga 72.5, "BC" untuk nilai antara 57.5 hingga 65, "C" untuk nilai antara 50 hingga 57.5, "D" untuk nilai antara 40 hingga 50, dan "E" untuk nilai di bawah atau sama dengan 40. Setelah menentukan nilai huruf, program menampilkan hasilnya dalam format yang jelas, memberikan informasi kepada pengguna mengenai nilai indeks yang sesuai dengan nilai akhir mata kuliah yang dimasukkan.
 
 
 
