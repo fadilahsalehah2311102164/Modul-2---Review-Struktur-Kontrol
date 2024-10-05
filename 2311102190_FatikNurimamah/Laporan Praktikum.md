@@ -125,8 +125,35 @@ Perlu diingat bahwa dalam Go, cakupan parameter fungsi dan nilai kembalian sama 
 
 **3. `For`**
 
+Pengulangan `for` di Go mirip—tetapi tidak identik—dengan yang ada di C[1]. Ia menggabungkan fungsi `for` dan `while`, dan tidak ada bentuk `for-while`[1]. Terdapat tiga bentuk pengulangan `for`, namun hanya satu yang menggunakan titik koma[1].
+
+```go
+// Seperti "for" pada C
+for inisialisasi; kondisi; selanjutnya { }
+
+// Seperti "while" pada C
+for kondisi { }
+
+// Seperti "for(;;)" pada C
+for { }
+```
+
+Deklarasi singkat membuatnya mudah mendeklarasikan variabel index di dalam pengulangan[1].
+
+```go
+sum := 0
+for i := 0; i < 10; i++ {
+	sum += i
+}
+```
 
 
+```go
+sum := 0
+for i := 0; i < 10; i++ {
+	sum += i
+}
+```
 
 
 
