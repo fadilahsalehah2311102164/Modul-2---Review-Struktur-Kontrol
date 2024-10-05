@@ -370,7 +370,6 @@ func main() {
 }
 ```
 ## Output:
-![Screenshot 2024-10-04 232908](https://github.com/user-attachments/assets/1d18fa8a-bde5-412b-84fe-116ab4b62667)
 
 ### Full code Screenshot:
 ![Screenshot 2024-10-04 232952](https://github.com/user-attachments/assets/d6f86650-497a-4dfb-91b8-b4dc27bf7ae8)
@@ -493,6 +492,37 @@ func main (){
 
 **setelah perbaikan**
 ```go
+package main
+
+import "fmt"
+
+func main() {
+    // Mendeklarasikan variabel untuk menyimpan nilai akhir dan nama nilai
+	var nam float32  // Variabel untuk menyimpan nilai akhir mata kuliah 
+	var nmk string   // Variabel untuk menyimpan huruf nilai
+
+	// Meminta user untuk menginput nilai akhir mata kuliah
+	fmt.Print("Masukkan nilai: ")
+	fmt.Scan(&nam)   // Membaca input nilai dari user
+
+	// Logika penentuan nilai huruf berdasarkan nilai akhir yang diinputkan 
+	if nam >= 80 {
+		nmk = "A"
+	} else if nam >= 70 {
+		nmk = "B"
+	} else if nam >= 60 {
+		nmk = "C"
+	} else if nam >= 50 {
+		nmk = "D"
+	} else if nam >= 40 {
+		nmk = "E"
+	} else {
+		nmk = "F"
+	}
+
+	// Menampilkan hasil
+	fmt.Printf("Nilai Indeks untuk nilai %.2f adalah %s\n", nam, nmk)
+}
 
 
 ```
@@ -500,10 +530,11 @@ func main (){
 
 **sebelum perbaikan**
 
-
+![Screenshot 2024-10-05 200147](https://github.com/user-attachments/assets/5691bd23-c2bb-4983-9159-892eb6b02d2b)
 
 **setelah perbaikan**
 
+![Screenshot 2024-10-05 200024](https://github.com/user-attachments/assets/694f7880-9e94-4d3b-a954-79bc64ba9169)
 
 
 ### Full code Screenshot:
@@ -514,6 +545,7 @@ func main (){
 
 **setelah perbaikan**
 
+![Screenshot 2024-10-05 195747](https://github.com/user-attachments/assets/b1e502c4-2a2b-48d6-bce2-dff1f7e9a133)
 
 
 
