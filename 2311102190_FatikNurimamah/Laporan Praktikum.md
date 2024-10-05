@@ -370,6 +370,7 @@ func main() {
 }
 ```
 ## Output:
+![Screenshot 2024-10-05 200834](https://github.com/user-attachments/assets/6b7d16e4-2563-4947-b9b9-0ae551211008)
 
 ### Full code Screenshot:
 ![Screenshot 2024-10-04 232952](https://github.com/user-attachments/assets/d6f86650-497a-4dfb-91b8-b4dc27bf7ae8)
