@@ -275,7 +275,80 @@ func main() {
 Kode di atas untuk menghitung nilai hampiran akar 2 menggunakan metode iterasi. Dalam program ini, terdapat fungsi `calculateSqrt2` yang menerima parameter integer k, yang menentukan jumlah iterasi yang dilakukan untuk mendekati nilai akar 2. Fungsi ini menghitung hasil perkalian berdasarkan rumus matematis tertentu, di mana numerator dihitung dengan rumus 
 (4k+2) pangkat 2 dan denominator dengan (4k+1)(4k+3). Hasil dari setiap iterasi dikalikan secara berurutan untuk menghasilkan nilai hampiran yang semakin akurat. Di dalam fungsi `main`, program meminta pengguna untuk memasukkan nilai k, kemudian memanggil fungsi `calculateSqrt2` untuk menghitung hasilnya. Akhirnya, program menampilkan hasil tersebut dengan format 10 angka di belakang koma. Dengan demikian, pengguna dapat memperoleh nilai hampiran dari akar 2 berdasarkan jumlah iterasi yang ditentukan, memberikan gambaran tentang sifat irasional dari angka tersebut.<br/>
 
-### 5. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut!<br/> Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.
+### 5. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut!<br/> Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.<br/>
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func hitungBiayaKirim(berat int) int {
+	// Menghitung berat dalam kilogram dan gram
+	kg := berat / 1000
+	gram := berat % 1000
+
+	// Biaya pengiriman per kilogram
+	biayaPerKg := 10000
+	biayaTotal := kg * biayaPerKg
+
+	// Biaya tambahan untuk sisa gram
+	biayaTambahan := 0
+	if kg >= 10 {
+		biayaTambahan = 0 // Gratis biaya tambahan jika berat lebih dari 10 kg
+	} else {
+		if gram >= 500 {
+			biayaTambahan = gram * 5 // Rp. 5 per gram jika sisa >= 500 gram
+		} else {
+			biayaTambahan = gram * 15 // Rp. 15 per gram jika sisa < 500 gram
+		}
+	}
+
+	// Total biaya
+	return biayaTotal + biayaTambahan
+}
+
+func main() {
+	var berat int
+
+	// Meminta input berat dari pengguna
+	fmt.Print("Berat parsel (gram): ")
+	fmt.Scan(&berat)
+
+	// Menghitung berat dalam kg dan gram
+	kg := berat / 1000
+	gram := berat % 1000
+
+	// Menghitung total biaya pengiriman
+	biayaPerKg := 10000 * kg
+	biayaTambahan := 0
+
+	// Kondisi untuk biaya tambahan berdasarkan sisa berat gram
+	if kg >= 10 {
+		biayaTambahan = 0 // Gratis biaya tambahan jika lebih dari 10 kg
+	} else {
+		if gram >= 500 {
+			biayaTambahan = gram * 5 // Rp. 5 per gram untuk sisa >= 500 gram
+		} else {
+			biayaTambahan = gram * 15 // Rp. 15 per gram untuk sisa < 500 gram
+		}
+	}
+
+	// Menghitung total biaya
+	totalBiaya := biayaPerKg + biayaTambahan
+
+	// Menampilkan hasil
+	fmt.Printf("Detail berat: %d kg + %d gr\n", kg, gram)
+	fmt.Printf("Detail biaya: Rp. %d + Rp. %d\n", biayaPerKg, biayaTambahan)
+	fmt.Printf("Total biaya: Rp. %d\n", totalBiaya)
+}
+```
+
+## Output: ![image](https://github.com/user-attachments/assets/59368d3d-ff15-4887-a01a-50e366329ddf)
+
+
+
 
 
 
