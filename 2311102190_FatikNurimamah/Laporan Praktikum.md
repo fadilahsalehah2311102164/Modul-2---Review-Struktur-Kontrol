@@ -82,8 +82,28 @@ if err != nil {
 codeUsing(f)
 ```
 
+Ini adalah contoh situasi umum di mana kode perlu mempertahankan urutan penanganan kesalahan. Kode akan lebih mudah dibaca jika kontrol yang berhasil terus mengalir ke bawah, sehingga menghilangkan kasus kesalahan saat mereka muncul. Karena kasus kesalahan cenderung diakhiri dengan perintah `return`, maka kode tidak memerlukan perintah `else`[1].
 
+```go
+f, err := os.Open(name)
+if err != nil {
+	return err
+}
+d, err := f.Stat()
+if err != nil {
+	f.Close()
+	return err
+}
+codeUsing(f, d)
+```
 
+**2. Deklarasi dan Penemparan Ulang**
+
+Contoh terakhir dari bagian sebelumnya menunjukkan detail tentang cara kerja deklarasi singkat `:=`. Deklarasi yang menggunakan `os.Open` terdengar seperti ini:
+
+```go
+f, err := os.Open(name)
+```
 
 
 
