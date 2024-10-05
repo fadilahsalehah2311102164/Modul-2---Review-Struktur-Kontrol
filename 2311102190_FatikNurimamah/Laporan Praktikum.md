@@ -577,11 +577,16 @@ func main() {
 ![Screenshot 2024-10-05 105707](https://github.com/user-attachments/assets/933b7e72-f02b-433e-a1e6-cf4ac91fd4c3)
 
 ### Deskripsi Program : 
+Program ini berfungsi untuk menemukan semua faktor dari bilangan yang dimasukkan oleh pengguna dan memeriksa apakah bilangan tersebut merupakan bilangan prima. Program akan menampilkan daftar faktor serta informasi apakah bilangan tersebut adalah prima.
 
 ### Algoritma Program
 
-### Cara Kerja Program
 
+### Cara Kerja Program
+1. Input Bilangan: Pengguna diminta untuk memasukkan sebuah bilangan bulat.
+2. Mencari Faktor: Program menghitung semua faktor dari bilangan tersebut dengan memeriksa setiap angka dari 1 hingga bilangan itu sendiri dan menambahkan angka yang dapat membagi bilangan tanpa sisa ke dalam daftar faktor.
+3. Memeriksa Bilangan Prima: Program mengecek apakah bilangan yang dimasukkan adalah bilangan prima dengan mencari tahu apakah ada angka lain yang dapat membagi bilangan tersebut, selain dari 1 dan bilangan itu sendiri.
+4. Output Hasil: Program menampilkan daftar faktor dan status apakah bilangan tersebut merupakan bilangan prima atau tidak.
 
 
 
