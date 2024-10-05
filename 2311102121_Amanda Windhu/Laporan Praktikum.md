@@ -272,6 +272,12 @@ func main() {
 ```
 ### Output: ![image](https://github.com/user-attachments/assets/f8d88a43-db9f-445d-b5ff-ea3a6e90038c)
 
+Kode di atas untuk menghitung nilai hampiran akar 2 menggunakan metode iterasi. Dalam program ini, terdapat fungsi `calculateSqrt2` yang menerima parameter integer k, yang menentukan jumlah iterasi yang dilakukan untuk mendekati nilai akar 2. Fungsi ini menghitung hasil perkalian berdasarkan rumus matematis tertentu, di mana numerator dihitung dengan rumus 
+(4k+2) pangkat 2 dan denominator dengan (4k+1)(4k+3). Hasil dari setiap iterasi dikalikan secara berurutan untuk menghasilkan nilai hampiran yang semakin akurat. Di dalam fungsi `main`, program meminta pengguna untuk memasukkan nilai k, kemudian memanggil fungsi `calculateSqrt2` untuk menghitung hasilnya. Akhirnya, program menampilkan hasil tersebut dengan format 10 angka di belakang koma. Dengan demikian, pengguna dapat memperoleh nilai hampiran dari akar 2 berdasarkan jumlah iterasi yang ditentukan, memberikan gambaran tentang sifat irasional dari angka tersebut.<br/>
+
+### 5. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut!<br/> Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.
+
+
 
 
 
