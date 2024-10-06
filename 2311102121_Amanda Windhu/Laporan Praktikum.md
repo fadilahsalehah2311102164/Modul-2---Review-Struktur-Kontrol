@@ -17,6 +17,35 @@
 # <h3 align="center"> 2024 </h3>
 
 ## DASAR TEORI
+1. Setiap file program dalam Golang harus didefinisikan dalam sebuah package. Dalam setiap 
+   proyek Go, harus ada setidaknya satu file yang menggunakan package bernama `main`. File
+   dengan package `main` ini adalah file yang akan dieksekusi pertama kali saat program
+   dijalankan. Keyword `import` digunakan untuk menambahkan package lain ke dalam program,
+   sehingga kita dapat memanfaatkan fungsionalitas yang disediakan oleh package tersebut.
+   Salah satu package bawaan Go adalah `fmt`, yang menawarkan berbagai fungsi untuk kebutuhan
+   input-output (I/O) terkait teks.<br/>
+   Untuk menampilkan teks ke layar (seperti di terminal atau CMD), kita dapat menggunakan
+   fungsi `fmt.Println()`. Mengingat bahwa fungsi `fmt.Println()` merupakan bagian dari
+   package `fmt`, package tersebut harus diimpor terlebih dahulu agar bisa digunakan. Fungsi
+   `fmt.Println()` dapat menerima sejumlah parameter yang tidak terbatas, dan setiap parameter
+   yang diterima akan dipisahkan dengan spasi saat ditampilkan di layar.<br/>
+   ![image](https://github.com/user-attachments/assets/2fb190a2-e37f-4170-beb6-10e8bce3fedf)<br/>
+
+2. Variabel<br/>
+   Go mendukung dua cara untuk menuliskan variabel, yaitu dengan menyertakan tipe data dan
+   tanpa menyertakannya. Kedua cara ini valid dan memiliki tujuan yang sama, yaitu untuk
+   mendeklarasikan variabel, dengan perbedaan hanya terletak pada cara penulisannya.<br/>
+   - Deklarasi variabel beserta tipe data<br/>
+   ![image](https://github.com/user-attachments/assets/f398b902-89c8-4aa8-ab30-dbee79624abd)<br/>
+     Keyword `var` digunakan untuk mendeklarasikan variabel, seperti yang terlihat pada
+     variabel `firstName` dan `lastName`. Nilai variabel `firstName` diassign langsung saat
+     deklarasi, sementara `lastName` diisi nilainya setelah baris deklarasi. Hal ini
+     diperbolehkan dalam Go.
+
+
+
+  
+
 
 ### UNGUIDED ###
 
