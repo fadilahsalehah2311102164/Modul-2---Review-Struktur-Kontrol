@@ -234,7 +234,7 @@ func main() {
 }
 ```
 #### Screenshoot Source Code
-
+ <img src="https://github.com/user-attachments/assets/f944cd6d-089c-4e13-9a1f-f79788ffe3b9">
 
 #### Screenshoot Output
 
@@ -322,7 +322,7 @@ func main() {
 
 ```
 #### Screenshoot Source Code
-
+ <img src="https://github.com/user-attachments/assets/875c415a-e9ea-48b0-96c8-1342a0163337">
 
 #### Screenshoot Output
 
@@ -392,7 +392,7 @@ func main() {
 }
 ```
 #### Screenshoot Source Code
-
+<img src="https://github.com/user-attachments/assets/89fc8989-9c99-4b11-a275-aa4a47eff2d4">
 
 #### Screenshoot Output
 
@@ -459,6 +459,8 @@ func main() {
 }
 ```
 #### Screenshoot Source Code
+<img src="https://github.com/user-attachments/assets/1b173449-87f7-4687-ae3e-101e34510a8d">
+
 
 #### Screenshoot Output
 
@@ -541,6 +543,7 @@ func main() {
 	fmt.Printf("Bunga: %d\n", jumlahBunga)      
 ```
 #### Screenshoot Source Code
+<img src="https://github.com/user-attachments/assets/5567ae9d-c1c4-4d1d-a1e4-4d479d8f2313">
 
 
 #### Screenshoot Output
@@ -649,6 +652,7 @@ func main() {
 }
 ```
 #### Screenshoot Source Code
+<img src="https://github.com/user-attachments/assets/d1873b28-1b33-44c2-9aa4-1a9e9d1b8b40">
 
 
 #### Screenshoot Output
@@ -757,6 +761,7 @@ func main() {
 }
 ```
 #### Screenshoot Source Code
+<img src="https://github.com/user-attachments/assets/dccde510-d39a-4c01-b9fa-d1d7acd9329d">
 
 
 #### Screenshoot Output
@@ -849,6 +854,7 @@ func main() {
 }
 ```
 #### Screenshoot Source Code
+<img src="https://github.com/user-attachments/assets/1e9e87dc-e682-4ac9-a9f3-52a6dfe08c1d">
 
 
 #### Screenshoot Output
@@ -921,6 +927,7 @@ func main() {
 
 ```
 #### Screenshoot Source Code
+<img src="https://github.com/user-attachments/assets/a2801502-6883-4047-8aa4-64759d8aa8f5">
 
 
 #### Screenshoot Output
