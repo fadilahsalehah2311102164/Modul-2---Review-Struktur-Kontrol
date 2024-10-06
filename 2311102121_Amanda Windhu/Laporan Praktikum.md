@@ -1,12 +1,11 @@
 # <h1 align="center">LAPORAN PRAKTIKUM </h1>
 # <h2 align="center" >ALGORITMA DAN PEMROGRAMAN 2</h2>
-# <h2  align="center" >MODUL 2 2</h2>
+# <h2  align="center" >MODUL 2 </h2>
 # <h2  align="center" >REVIEW STRUKTUR KONTROL2</h2>
 <p align="center">
     <img src="https://github.com/user-attachments/assets/3ccfed0b-72d1-4349-ac08-c4dce379c827" alt="Gambar">
 </p>
-
-
+# <h3  align="center" >Disusun Oleh : </h3>
 <p align="center">Amanda Windhu Gustyas - 2311102121</p>
 
 ## DASAR TEORI
