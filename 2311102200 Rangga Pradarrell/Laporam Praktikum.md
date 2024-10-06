@@ -243,9 +243,9 @@ func main() {
 ##### Program di atas adalah program sederhana berbasis bahasa Go yang berfungsi untuk membaca input berupa string dari pengguna, kemudian mencetak string tersebut kembali. Program ini hanya menggunakan satu variabel untuk menyimpan input dari pengguna.
 
 ##### Algoritma Program
--Deklarasi variabel nama sebagai string.
--Baca input dari pengguna menggunakan fmt.Scanln, dan simpan ke dalam variabel nama.
--Cetak kembali nilai dari variabel nama menggunakan fmt.Println.
+- Deklarasi variabel nama sebagai string.
+- Baca input dari pengguna menggunakan fmt.Scanln, dan simpan ke dalam variabel nama.
+- Cetak kembali nilai dari variabel nama menggunakan fmt.Println.
 
 ##### Cara Kerja Program
 
@@ -920,10 +920,10 @@ func main() {
 - Menampilkan Faktor-Faktor
 
 ##### Cara Kerja Program
-1 Menerima Input dari Pengguna
-2 Memanggil Fungsi faktorBawah
-3 Menampilkan Hasil
-4 Pengecekan Bilangan Negatif
+- Menerima Input dari Pengguna
+- Memanggil Fungsi faktorBawah
+- Menampilkan Hasil
+- Pengecekan Bilangan Negatif
 
 
 ## Referensi 
