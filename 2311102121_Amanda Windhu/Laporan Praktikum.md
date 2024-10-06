@@ -1,4 +1,6 @@
-# <h1 align="center">Laporan Praktikum Modul 2. REVIEW STRUKTUR KONTROL</h1>
+# <h1 align="center">LAPORAN PRAKTIKUM </h1>
+# <h2 align="center">ALGORITMA DAN PEMROGRAMAN 2</H2
+
 <p align="center">Amanda Windhu Gustyas - 2311102121</p>
 
 ## DASAR TEORI
