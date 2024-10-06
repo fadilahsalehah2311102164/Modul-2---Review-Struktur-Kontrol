@@ -119,7 +119,27 @@
    notasi algoritma. Dua bentuk yang kita gunakan di sini adalah struktur while-loop dan
    repeat-until.<br/>
    <p align="center">Bentuk Perulangan dalam Bahasa Go</p>
-![Bentuk Perulangan](https://github.com/user-attachments/assets/3792fe67-613c-4195-9d49-71d9418432f0)
+![Bentuk Perulangan](https://github.com/user-attachments/assets/3792fe67-613c-4195-9d49-71d9418432f0)<br/>
+   Dalam konsep pemrograman terstruktur, setiap rancangan algoritma harus memenuhi syarat satu
+   pintu masuk dan satu pintu keluar. Karena itu tidaklah diperkenankan untuk membuat program
+   sumber yang mempunyai struktur loop yang mempunyai pintu keluar lebih dari satu, seperti:<br/>
+   - Satu pintu keluar dari kondisi for dan satu lagi dari instruksi if-break<br/>
+   - Atau mempunyai instruksi if-break yang lebih dari satu.<br/>
+   
+   1) Bentuk While-Loop<br/>
+      Bentuk while-loop memastikan setiap kali memasuki loop, ada kondisi yang harus terpenuhi
+      (benar/true). Ini juga berarti saat keluar dari loop, maka nilai kondisi tersebut pasti
+      salah/false!<br/>
+      ![image](https://github.com/user-attachments/assets/da3f7158-7377-4d97-98bd-0f4b2ff72abe)<br/>
+      Contoh penggunaan bentuk while-loop untuk menghitung ![image](https://github.com/user-attachments/assets/b398ba36-de84-4894-823d-8a20f28bafcb) adalah sebagai berikut:<br/>
+      ![image](https://github.com/user-attachments/assets/c2aad2bc-2236-4996-8dd6-531e42c66c78) ![image](https://github.com/user-attachments/assets/cb6656af-82dc-43fa-9cb7-b259db11bba4)<br/>
+
+      
+
+      
+
+
+      
 
 
       
