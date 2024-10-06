@@ -1,0 +1,30 @@
+package main
+import "fmt"
+
+//func main(){
+	var bebankiri float32
+	var bebankanan float32
+
+	//for{
+		//fmt.Print("Masukkan Beban: ")
+		//fmt.Scan(&bebankiri,&bebankanan)
+		//if bebankanan >= 9.0 || bebankiri >= 9.0{
+			//break
+		//}
+	//}
+
+	//saat run yanng dimodifikasi tolong yg atas dijadiin komen dl
+	for{
+		fmt.Print("Masukkan Beban: ")
+		fmt.Scan(&bebankiri,&bebankanan)
+		var nilai bool = false
+		total := bebankanan + bebankiri
+		if (bebankanan - bebankiri) >= 9 || (bebankiri - bebankanan) >= 9{
+			nilai = true
+		}
+		if total > 150 || bebankanan <0 || bebankiri <0{
+			break
+		}
+		fmt.Println("Sepeda Pak Andi Oleng : ", nilai)
+	}
+}
