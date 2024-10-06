@@ -725,14 +725,9 @@ func main() {
 
 Kode di atas dirancang untuk menerima input berupa bilangan bulat `b` yang harus lebih besar dari 0. Setelah menerima input, program memvalidasi bilangan tersebut untuk memastikan bahwa nilainya valid. Selanjutnya, program mencari semua faktor dari `b`, dengan mengiterasi dari 1 hingga `b` dan memeriksa setiap bilangan apakah `b` habis dibagi oleh bilangan tersebut. Semua faktor yang ditemukan disimpan dalam sebuah slice dan ditampilkan kepada pengguna. Selain itu, program juga menentukan apakah `b` merupakan bilangan prima, yaitu bilangan yang memiliki tepat dua faktor: 1 dan dirinya sendiri. Hal ini dilakukan dengan memeriksa jumlah faktor yang ditemukan. Akhirnya, program menampilkan informasi mengenai bilangan yang dimasukkan, daftar faktor, dan status apakah bilangan tersebut adalah bilangan prima atau bukan, dengan format yang jelas dan mudah dibaca.
 
+### KESIMPULAN
+Pemrograman bahasa Go didasarkan pada prinsip modular dengan penggunaan package, variabel yang jelas dan ketat dalam penanganan tipe data, serta kontrol alur yang sederhana namun fleksibel. Dengan memanfaatkan fungsionalitas dari berbagai package dan struktur kontrol, programmer dapat membangun aplikasi yang efisien dan terstruktur dengan baik.<br/>
 
-
-
-
-
-
-
-
-
-
-
+### REFERENSI
+[1] Noval Agung. Dasar Pemrograman Golang.<br/>
+[2] Modul Praktikum Algoritma Pemrograman 2<br/>
