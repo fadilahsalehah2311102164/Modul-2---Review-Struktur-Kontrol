@@ -8,6 +8,8 @@
  <h3  align="center" >Disusun Oleh : </h3>
 <p align="center">Amanda Windhu Gustyas - 2311102121</p>
 <p align="center">IF-11-05</p>
+ <h3 <p align="center" >Dosen Pengampu : </h3> </p>
+
 
 ## DASAR TEORI
 
