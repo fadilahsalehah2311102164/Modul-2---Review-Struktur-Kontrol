@@ -40,7 +40,24 @@
      Keyword `var` digunakan untuk mendeklarasikan variabel, seperti yang terlihat pada
      variabel `firstName` dan `lastName`. Nilai variabel `firstName` diassign langsung saat
      deklarasi, sementara `lastName` diisi nilainya setelah baris deklarasi. Hal ini
-     diperbolehkan dalam Go.
+     diperbolehkan dalam Go.<br/>
+   - Penggunaan fungsi `fmt.Printf()`<br/>
+     ![image](https://github.com/user-attachments/assets/c2b6b1e4-ebd8-4758-833e-5aa77ad4c71d) <br/>
+     Fungsi ini digunakan untuk menampilkan output dengan format tertentu. Fungsinya serupa
+     dengan `fmt.Println()`, tetapi struktur outputnya sudah ditentukan sebelumnya. Perhatikan
+     bagian `"halo %s %s!\n"`, di mana karakter `%s` akan digantikan oleh data string yang ada
+     di parameter kedua, ketiga, dan seterusnya.<br/>
+     Sebagai contoh, ketiga baris kode berikut ini akan menghasilkan output yang sama,
+     meskipun ditulis dengan cara yang berbeda. Tanda plus (+) digunakan untuk menggabungkan
+     dua data string, yang dikenal sebagai operasi penggabungan string atau string
+     concatenation.<br/>
+     Fungsi `fmt.Printf()` tidak secara otomatis menambahkan baris baru di akhir teks,
+     sehingga kita perlu menggunakan literal newline `\n` untuk menciptakan baris baru di
+     akhir. Ini berbeda dengan fungsi `fmt.Println()`, yang secara otomatis menambahkan baris
+     baru di akhir output.<br/>
+
+   
+     
 
 
 
