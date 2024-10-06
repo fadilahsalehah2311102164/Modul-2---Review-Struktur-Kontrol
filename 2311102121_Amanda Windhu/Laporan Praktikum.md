@@ -106,6 +106,25 @@
        Contoh:<br/>
        ![image](https://github.com/user-attachments/assets/431e2df5-67fc-483f-a951-97246ba495c5)<br/>
    2. Instruksi Dasar<br/>
+      ![image](https://github.com/user-attachments/assets/0270b54a-fb65-4af1-a451-12f58129b350)<br/>
+      Contoh:<br/>
+      ![image](https://github.com/user-attachments/assets/f4413204-b3ec-4d15-ad4b-d1d2eb4a6a37)<br/>
+   3. Konstanta Simbolik<br/>
+      Konstanta dapat diberi nama untuk memudahkan mengingat maksud dan manfaat dari nilai
+      yang diberi nama tersebut. Seperti Pi untuk merepresentasikan konstanta π.<br/>
+      ![image](https://github.com/user-attachments/assets/c61c198a-7d19-408b-9ed0-1d3ca271a87b)<br/>
+
+4. Struktur Kontrol Perulangan<br/>
+   Go hanya mempunyai kata kunci for untuk semua jenis perulangan yang kita pelajari dalam
+   notasi algoritma. Dua bentuk yang kita gunakan di sini adalah struktur while-loop dan
+   repeat-until.<br/>
+   <p align="center">Bentuk perulangan dalam bahasa Go</p>
+   <p align="center">![image](https://github.com/user-attachments/assets/791e169d-5efd-46b3-b5f0-620fcba71404)</p>
+
+      
+
+
+
 
 
    
