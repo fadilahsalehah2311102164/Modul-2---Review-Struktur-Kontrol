@@ -12,9 +12,9 @@
  <p align="center">Arif Amrulloh</p>
 
 # <h3 align="center"> PROGRAM STUDI S1 TEKNIK INFORMATIKA </h3>
-FAKULTAS INFORMATIKA
-TELKOM UNIVERSITY PURWOKERTO
-2024
+# <h3 align="center"> FAKULTAS INFORMATIKA </h3>
+# <h3 align="center"> TELKOM UNIVERSITY PURWOKERTO </h3>
+# <h3 align="center"> 2024 </h3>
 
 ## DASAR TEORI
 
