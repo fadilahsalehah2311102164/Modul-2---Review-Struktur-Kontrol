@@ -51,13 +51,13 @@
   <strong>2024</strong>
 </p>
 
-## <strong> <span style="color:#E5D9F2"> DASAR TEORI </span> </strong>
+## <strong> DASAR TEORI </strong>
 
-<span style="color:#C4D7FF; font-size:16px"><strong> ── PENGERTIAN GOLANG</strong></span>
+<span style="font-size:16px"><strong> ── PENGERTIAN GOLANG</strong></span>
 <br>
 Golang adalah bahasa pemrograman yang diciptakan dan dikembangkan oleh tim Engineer Google pada tahun 2009. Awalnya bahasa tersebut hanya digunakan untuk kepentingan internal. Kemudian bahasa ini dirilis untuk kepentingan public dan bersifat Open Source sehingga siapapun bisa mengembangkan bahasa Go atau Golang.
 
-<span style="color:#C4D7FF; font-size:16px"><strong> ── TIPE DATA</strong></span>
+<span style="font-size:16px"><strong> ── TIPE DATA</strong></span>
 <br>
 Tipe data dalam Golang mendefinisikan jenis nilai yang dapat disimpan dalam sebuah variabel. Golang merupakan bahasa pemrograman yang strongly typed, artinya setiap variabel harus memiliki tipe data yang jelas.
 
@@ -116,7 +116,7 @@ person.City = "New York"
 
 ```
 
-<span style="color:#C4D7FF; font-size:16px"><strong> ── PERCABANGAN</strong></span>
+<span style="font-size:16px"><strong> ── PERCABANGAN</strong></span>
 <br>
 Percabangan digunakan untuk membuat keputusan dalam program, yaitu menjalankan blok kode tertentu berdasarkan kondisi yang diberikan. Golang menyediakan pernyataan if dan switch untuk melakukan percabangan.
 
@@ -167,7 +167,7 @@ default:
 }
 ```
 
-<span style="color:#C4D7FF; font-size:16px"><strong> ── PERULANGAN</strong></span>
+<span style="font-size:16px"><strong> ── PERULANGAN</strong></span>
 <br>
 Perulangan digunakan untuk menjalankan blok kode secara berulang hingga kondisi tertentu terpenuhi. Golang menyediakan pernyataan for untuk melakukan perulangan.
 
@@ -226,7 +226,7 @@ for i, nilai := range slice {
 }
 ```
 
-<span style="color:#C4D7FF; font-size:16px"><strong> ── CONTROL STATEMENT DALAM PERULANGAN</strong></span>
+<span style="font-size:16px"><strong> ── CONTROL STATEMENT DALAM PERULANGAN</strong></span>
 <br>
 
 **Break**
@@ -257,9 +257,9 @@ Contoh Penggunaan Continue :
 }
 ```
 
-## <strong> <span style="color:#E5D9F2"> GUIDED </span> </strong>
+## <strong> GUIDED </strong>
 
-### <span style="color:#FFCFB3"> ── Guided 1 </span>
+### ── Guided 1
 
 #### Source Code
 
@@ -286,7 +286,7 @@ func main() {
 Deskripsi Program :
 Program ini bertujuan untuk menerima input nama dari pengguna dan mencetak kembali nama yang telah diinputkan pengguna.
 
-### <span style="color:#FFCFB3"> ── Guided 2 </span>
+### ── Guided 2
 
 #### Source Code
 
@@ -346,7 +346,7 @@ Jika urutan warna salah :
 Deskripsi Program :
 Program ini bertujuan untuk verifikasi urutan warna yang telah ditentukan oleh program. Program ini menggunakan struktur perulangan dan struktur percabangan. Pada program ini pengguna harus memasukan urutan warna yang benar sebanyak 5 kali. Jika pengguna berhasil memasukan urutan warna dengan benar maka program akan mencetak "BERHASIL: TRUE", namun jika pengguna gagal memasukan urutan warna maka program akan mencetak "BERHASIL: FALSE".
 
-### <span style="color:#FFCFB3"> ── Guided 3 </span>
+### ── Guided 3
 
 #### Source Code
 
@@ -374,7 +374,7 @@ func main() {
 Deskripsi Program :
 Program ini bertujuan untuk menghitung jumlah bilangan yang diinput oleh pengguna. Program ini hanya menggunakan operasi aritmatika sederhana. Program akan meminta pengguna untuk memasukan 5 bilang bulat, kemudian program akan menjumlahkan bilangan tersebut dan mecetak hasilnya.
 
-### <span style="color:#FFCFB3"> ── Guided 4 </span>
+### ── Guided 4
 
 #### Source Code
 
@@ -414,9 +414,9 @@ func main() {
 Deskripsi Program :
 Program ini bertujuan sebagai sistem penilaian sederhana. Program ini menggunakan struktur percabangan if-else untuk menentukan grade dari sebuah rentang nilai. Program ini akan meminta pengguna untuk memasukan nilai secara numerik, kemudian program akan menentukan grade dari rentang nilai yang dimasukan pengguna, misalnya nilai 85 akan mendapatkan grade A. Hasil akhir dari program ini berupa nilai yang telah dimasukan dan grade yang telah disesuaikan.
 
-## <strong> <span style="color:#E5D9F2"> UNGUIDED </span> </strong>
+## <strong>  UNGUIDED </strong>
 
-### <span style="color:#FFCFB3"> ── Unguided 1 </span>
+### ── Unguided 1
 
 #### Study Case
 
@@ -469,7 +469,7 @@ func main() {
 Deskripsi Program :
 Program ini bertujuan untuk membuat pita dari nama nama bunga yang telah diinputkan pengguna. Program ini menggunakan struktur perulangan. Pengguna dapat terus memasukan nama bunga hingga mereka memasukan kata "selesai". Setelah proses input selesai, program akan menampilkan semua nama bunga yang telah diinputkan pengguna dengan tanda hubung "-" sebagai sebuah pita, serta menampilkan jumlah total bungga yang telah diinputkan.
 
-### <span style="color:#FFCFB3"> ──  Unguided 2 </span>
+### ──  Unguided 2
 
 #### Study Case
 
@@ -541,7 +541,7 @@ func main() {
 Deskripsi Program :
 Program ini bertujuan untuk menentukan apakah sepeda motor Pak Andi akan oleng berdasarkan berat belanjaan di dua kantongnya. Program ini menggunakan struktur perulangan. Pengguna dapat memasukan berat belanjaan dia dua kantong sebanyak 4 kali, kemudia program akan menghitung selisih berat keduanya. Jika selisihnya lebih besar atau sama dengan 9, maka program akan mencetak "Sepeda motor pak Andi akan oleng : TRUE". Jika tidak, program akan mencetak "Sepeda motor pak Andi akan oleng : FALSE".
 
-### <span style="color:#FFCFB3"> ── Unguided 3 </span>
+### ── Unguided 3
 
 #### Study Case
 
@@ -592,7 +592,7 @@ Deskripsi Program :
 Program ini bertujuan untuk menghitung nilai fungsi F(k) berdasarkan rumus yang diberikan. Program ini menggunakan struktur if statement dan operasi aritmatika sederhana. Program akan meminta pengguna untuk memasukan nilai K, kemudian program akan menghitung F(k) sesuai dengan rumus yang diberikan. Hasil dari perhitunggan kemudian ditampilkan dengan 10 digit desimal.
 
 
-### <span style="color:#FFCFB3"> ── Unguided 4 </span>
+### ── Unguided 4
 
 #### Study Case
 
@@ -664,7 +664,7 @@ Deskripsi Program :
 Program ini digunakan untuk menghitung biaya pengiriman barang berdasarkan beratnya. Program ini menggunakan struktur if-else dan operasi aritmatika. Program akan meminta pengguna memasukan berat parsel, kemudian menghitung biaya dasar berdasarkan berat dalam kilogram, dan menambahkan biaya tambahan untuk sisa berat yang kurang dari 1 kilogram. Hasil akhir dari program ini berupa rincian berat, biaya dasar, biaya tambahan, dan total biaya yang harus dibayar.
 
 
-### <span style="color:#FFCFB3"> ── Unguided 5 </span>
+### ── Unguided 5
 
 #### Study Case
 
@@ -747,7 +747,7 @@ c. Perbaiki program tersebut! Ujilah dengan masukan: 93.5; 70.6; dan 49.5. Sehar
 <br>
 = Pada program tersebut sudah tidak perlu ada yang diperbaiki jika menggunakan	if else if dan else yang konsisten. dimana jika memberikan input 93.5 nilai yang tampil sudah A, 70.6 nilai yang tampil sudah B, dan 49.5 nilai yang tampil sudah D.
 
-### <span style="color:#FFCFB3"> ── Unguided 6 </span>
+### ── Unguided 6
 
 #### Study Case
 
@@ -799,7 +799,7 @@ func main() {
 Deskripsi Program :
 Program ini digunakan untuk menentukan apakah sebuah bilangan yang dimasukkan oleh pengguna merupakan bilangan prima atau bukan. Program akan mencari semua faktor dari bilangan tersebut dengan cara membagi bilangan tersebut dengan angka-angka dari 1 hingga bilangan itu sendiri. Jika jumlah faktor yang ditemukan hanya 2 (yaitu 1 dan bilangan itu sendiri), maka bilangan tersebut adalah bilangan prima. Program ini juga akan menampilkan semua faktor dari bilagan tersebut.
 
-## <strong> <span style="color:#E5D9F2"> REFERENSI </span> </strong>
+## <strong> REFERENSI </strong>
 
 #### [1] Novalagung. (n.d.). Dasar Pemrograman Golang. Diakses dari https://dasarpemrogramangolang.novalagung.com/
 
