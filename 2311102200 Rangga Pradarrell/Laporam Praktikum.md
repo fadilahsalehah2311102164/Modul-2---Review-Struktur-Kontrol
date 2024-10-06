@@ -237,7 +237,7 @@ func main() {
  <img src="https://github.com/user-attachments/assets/f944cd6d-089c-4e13-9a1f-f79788ffe3b9">
 
 #### Screenshoot Output
-
+ <img src="https://github.com/user-attachments/assets/e26f44de-25ec-4a77-886b-66c2087cc198">
 
 #### Deskripsi Program
 ##### Program di atas adalah program sederhana berbasis bahasa Go yang berfungsi untuk membaca input berupa string dari pengguna, kemudian mencetak string tersebut kembali. Program ini hanya menggunakan satu variabel untuk menyimpan input dari pengguna.
@@ -325,6 +325,7 @@ func main() {
  <img src="https://github.com/user-attachments/assets/875c415a-e9ea-48b0-96c8-1342a0163337">
 
 #### Screenshoot Output
+
 
 
 #### Deskripsi Program
