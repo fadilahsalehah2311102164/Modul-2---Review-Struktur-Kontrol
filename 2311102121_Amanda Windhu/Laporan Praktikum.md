@@ -5,7 +5,7 @@
 <p align="center">
     <img src="https://github.com/user-attachments/assets/3ccfed0b-72d1-4349-ac08-c4dce379c827" alt="Gambar">
 </p>
-# <h3  align="center" >Disusun Oleh : </h3>
+ <h3  align="center" >Disusun Oleh : </h3>
 <p align="center">Amanda Windhu Gustyas - 2311102121</p>
 <p align="center">IF-11-05</p>
 
