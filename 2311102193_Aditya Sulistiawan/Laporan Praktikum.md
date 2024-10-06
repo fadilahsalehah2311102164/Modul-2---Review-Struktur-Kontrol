@@ -491,6 +491,7 @@ fmt.Printf("Nilai Indeks untuk nilai %.2f adalah %s\n", nam, nmk): Menampilkan h
 
 ## III. UNGUIDED
 
+### Unguided 1
 1. Suatu pita (string) berisi kumpulan nama-nama bunga yang dipisahkan oleh spasi dan '-', contoh pita diilustrasikan seperti berikut ini.
 
 Pita: mawar - melati - tulip - teratai - kamboja - anggrek
@@ -552,6 +553,7 @@ func main() {
 
 #### Screenshoot Output
 ![Unguided 1-1](https://github.com/user-attachments/assets/491b1173-6b96-48ee-bd0c-aca0dab73f2e)
+![Unguided 1-2](https://github.com/user-attachments/assets/5f362817-5f7d-4c88-8144-9eb78d91653d)
 
 
 #### Deskripsi Program
@@ -566,6 +568,7 @@ Gunakan loop for dari 1 hingga b.
 Untuk setiap nilai i dalam loop:
 Jika b habis dibagi i, maka i adalah faktor dari b.
 Tampilkan i.
+
 3. Menentukan Bilangan Prima:
 Inisialisasi variabel jumlah_faktor dengan 0.
 Gunakan loop for dari 1 hingga b.
@@ -579,7 +582,14 @@ Jika tidak, b bukan bilangan prima (prima = False).
 Tampilkan apakah b merupakan bilangan prima atau bukan.
 
 #### Cara Kerja Program
+1. Deklarasi Variabel dan Import Package
+2.  Prompt Pengguna
+3.  Loop Input
+4.  Pemeriksaan Slice Kosong
+5.  Pembuatan Pita
+6. Cetak Hasil
 
+### Unguided 2
 2. Setiap hari Pak Andi membawa banyak barang belanjaan dari pasar dengan mengendarai sepeda motor. Barang belanjaan tersebut dibawa dalam kantong terpal di kiri-kanan motor. Sepeda motor tidak akan oleng jika selisih berat barang di kedua kantong sisi tidak lebih dari 9 kg.
 
 Buatlah program Pak Andi yang menerima input dua buah bilangan real positif yang menyatakan berat total masing-masing isi kantong terpal. Program akan terus meminta input bilangan tersebut hingga salah satu kantong terpal berisi 9 kg atau lebih.
@@ -589,37 +599,200 @@ Pada modifikasi program tersebut, program akan menampilkan true Jika selisih ked
 
 #### Source Code
 ```go
+package main
 
+import (
+	"bufio"   // Mengimpor paket bufio untuk membaca input dari pengguna
+	"fmt"     // Mengimpor paket fmt untuk menampilkan output
+	"os"      // Mengimpor paket os untuk menggunakan input dari sistem operasi
+	"strconv" // Mengimpor paket strconv untuk konversi string ke tipe data numerik
+	"strings" // Mengimpor paket strings untuk manipulasi string
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin) // Membuat reader untuk membaca input pengguna
+
+	// Loop untuk meminta input pengguna secara berulang
+	for {
+		fmt.Print("Masukan berat belanjaan di kedua kantong: ")
+		input, _ := reader.ReadString('\n') // Membaca input pengguna
+		input = strings.TrimSpace(input)    // Menghapus spasi dan karakter newline di awal dan akhir
+
+		// Memisahkan input menjadi dua bagian berdasarkan spasi
+		berat := strings.Split(input, " ")
+
+		// Mengecek apakah input terdiri dari dua angka
+		if len(berat) != 2 {
+			fmt.Println("Input tidak valid. Masukkan dua angka.") // Menampilkan pesan kesalahan jika input tidak valid
+			continue                                              // Melanjutkan ke iterasi berikutnya untuk meminta input ulang
+		}
+
+		// Mengonversi input dari string ke float64
+		berat1, _ := strconv.ParseFloat(berat[0], 64)
+		berat2, _ := strconv.ParseFloat(berat[1], 64)
+
+		// Jika salah satu berat negatif, sepeda tidak oleng dan keluar dari loop
+		if berat1 < 0 || berat2 < 0 {
+			fmt.Println("Sepeda motor pak Andi akan oleng: false") // Menampilkan bahwa sepeda tidak oleng
+			break                                                  // Keluar dari loop
+		}
+
+		// Jika total berat lebih dari 150 kg, sepeda tidak oleng dan keluar dari loop
+		if berat1+berat2 > 150 {
+			fmt.Println("Sepeda motor pak Andi akan oleng: false") // Sepeda tidak oleng karena berat berlebihan
+			break                                                  // Keluar dari loop
+		}
+
+		// Menghitung selisih berat antara kedua kantong
+		selisih := berat1 - berat2
+		if selisih < 0 {
+			selisih = -selisih // Mengubah selisih menjadi nilai absolut (selisih selalu positif)
+		}
+
+		// Jika selisih berat lebih dari atau sama dengan 9 kg, sepeda akan oleng
+		if selisih >= 9 {
+			fmt.Println("Sepeda motor pak Andi akan oleng: true")
+		} else {
+			fmt.Println("Sepeda motor pak Andi akan oleng: false")
+		}
+	}
+
+	// Pesan yang ditampilkan setelah proses selesai
+	fmt.Println("Proses selesai.")
+}
 ```
 #### Screenshoot Source Code
+![SC](https://github.com/user-attachments/assets/f48c994f-b2a9-46f8-8155-5735020950ff)
 
 
 #### Screenshoot Output
+![Ungui2](https://github.com/user-attachments/assets/abc23604-0477-486b-9a4d-1852fd34f8fe)
 
 
 #### Deskripsi Program
+Program ini adalah aplikasi console sederhana yang mensimulasikan penentuan keseimbangan sepeda motor berdasarkan berat belanjaan di kedua kantong
 
+#### Algoritma Program
+1. Mulai program
+2. Inisialisasi reader untuk membaca input pengguna
+3. Mulai loop utama 3.1. Tampilkan prompt untuk memasukkan berat belanjaan 3.2. Baca input pengguna 3.3. Hapus spasi dan karakter newline di awal dan akhir input 3.4. Pisahkan input menjadi dua bagian berdasarkan spasi 3.5. Jika input tidak terdiri dari dua bagian 3.5.1. Tampilkan pesan error 3.5.2. Lanjut ke iterasi berikutnya (kembali ke langkah 3.1) 3.6. Konversi kedua bagian input dari string ke float64 3.7. Jika salah satu berat negatif 3.7.1. Tampilkan "Sepeda motor pak Andi akan oleng: false" 3.7.2. Keluar dari loop (lanjut ke langkah 4) 3.8. Jika total berat lebih dari 150 kg 3.8.1. Tampilkan "Sepeda motor pak Andi akan oleng: false" 3.8.2. Keluar dari loop (lanjut ke langkah 4) 3.9. Hitung selisih berat antara kedua kantong 3.10. Jika selisih negatif, ubah menjadi positif (nilai absolut) 3.11. Jika selisih lebih dari atau sama dengan 9 kg 3.11.1. Tampilkan "Sepeda motor pak Andi akan oleng: true" 3.12. Jika tidak 3.12.1. Tampilkan "Sepeda motor pak Andi akan oleng: false"
+4. Tampilkan "Proses selesai."
+5. Selesai
+
+#### Cara Kerja Program
+1. Input Pengguna:
+Program meminta pengguna untuk memasukkan berat belanjaan di kedua kantong.
+Input diterima dalam bentuk dua angka yang dipisahkan oleh spasi.
+
+2. Validasi Input:
+Program memeriksa apakah input terdiri dari dua angka.
+Jika input tidak valid, program akan meminta pengguna untuk memasukkan input ulang.
+
+3. Konversi Data:
+Input string dikonversi menjadi tipe data float64 untuk perhitungan.
+
+4. Logika Keseimbangan:
+Jika salah satu berat negatif, program menyatakan sepeda tidak oleng dan berhenti.
+Jika total berat melebihi 150 kg, program menyatakan sepeda tidak oleng dan berhenti.
+Program menghitung selisih berat antara kedua kantong.
+Jika selisih berat lebih dari atau sama dengan 9 kg, sepeda dinyatakan oleng.
+
+5. Output:
+Program menampilkan apakah sepeda motor akan oleng atau tidak berdasarkan perhitungan.
+
+6. Perulangan:
+Program berjalan dalam loop, memungkinkan pengguna untuk memasukkan beberapa set input.
+Loop akan berhenti jika kondisi khusus terpenuhi (berat negatif atau total berat melebihi 150 kg).
+
+7. Penanganan Kesalahan:
+Program menggunakan mekanisme sederhana untuk menangani input yang tidak valid.
+
+8. Pesan Penutup:
+Setelah loop berakhir, program menampilkan pesan "Proses selesai."
+
+### Unguided 3
 
 3. Diberikan sebuah persamaan sebagai berikut ini.
    Buatlah sebuah program yang menerima input sebuah bilangan sebagai K, kemudian menghitung dan menampilkan nilai f(K) sesuai persamaan di atas.
 
-
-
 #### Source Code
 ```go
+package main
 
+import (
+        "fmt"
+)
 
+func main() {
+        var k int
+        fmt.Print("Nilai K = ")
+        fmt.Scan(&k)
 
+        // Hitung nilai f(k)
+        fk := float64((4*k+2)*(4*k+2)) / float64((4*k+1)*(4*k+3))
+
+        fmt.Printf("Nilai f(K) = %.10f\n", fk)
+}
 ```
 #### Screenshoot Source Code
+![SC](https://github.com/user-attachments/assets/71081d7d-7790-443e-9f78-4ed61dbbd63b)
 
 
 #### Screenshoot Output
+![Ungui3](https://github.com/user-attachments/assets/02f61c82-842a-46be-8373-374ec3e4a523)
 
 
 #### Deskripsi Program
- 
+Program ini adalah aplikasi console sederhana yang menghitung nilai dari sebuah fungsi matematika f(k) berdasarkan input nilai k dari pengguna. 
 
+#### Algoritma Program
+1. Mulai program
+
+2. Deklarasi variabel:
+Deklarasikan variabel k sebagai integer
+
+3. Input pengguna:
+Tampilkan prompt "Nilai K = "
+Baca input dari pengguna dan simpan ke dalam variabel k
+
+4. Perhitungan f(k):
+Hitung nilai f(k) menggunakan rumus: f(k) = (4k + 2)² / ((4k + 1) * (4k + 3))
+Lakukan perhitungan ini dengan langkah-langkah: a. Hitung pembilang: (4k + 2) * (4k + 2) b. Hitung penyebut: (4k + 1) * (4k + 3) c. Bagi pembilang dengan penyebut
+Konversi hasil ke tipe data float64 untuk presisi desimal
+Simpan hasil dalam variabel fk
+
+5. Output hasil:
+Tampilkan hasil perhitungan f(k) dengan format: "Nilai f(K) = [hasil]"
+Gunakan format %.10f untuk menampilkan hasil hingga 10 angka desimal
+
+6. Selesai program
+Algoritma ini menggambarkan langkah-langkah yang diambil oleh program, mulai dari input pengguna, proses perhitungan, hingga output hasil. Program ini relatif sederhana dan langsung, dengan fokus utama pada perhitungan matematika dan formatting output.
+
+#### Cara Kerja Program 
+1. Input Pengguna:
+Program meminta pengguna untuk memasukkan nilai k.
+Input diterima sebagai bilangan bulat (integer).
+
+2. Perhitungan Fungsi:
+Program menghitung nilai f(k) menggunakan rumus: f(k) = (4k + 2)² / ((4k + 1) * (4k + 3))
+
+3. Konversi Tipe Data:
+Program menggunakan konversi tipe data dari int ke float64 untuk memastikan perhitungan dilakukan dengan presisi floating-point.
+
+4. Output:
+Program menampilkan hasil perhitungan f(k) dengan format floating-point hingga 10 angka desimal.
+
+5. Penggunaan Package:
+Program menggunakan package fmt untuk input/output standar.
+
+6. Deklarasi Variabel:
+Variabel k dideklarasikan sebagai int untuk menyimpan input pengguna.
+Variabel fk dideklarasikan sebagai float64 untuk menyimpan hasil perhitungan.
+
+7. Formatting Output:
+Program menggunakan fmt.Printf untuk memformat output dengan presisi desimal yang ditentukan.
+
+### Unguided 4
 4. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut!
 
 Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.
