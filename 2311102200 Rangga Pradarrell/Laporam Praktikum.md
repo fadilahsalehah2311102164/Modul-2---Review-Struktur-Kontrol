@@ -502,6 +502,9 @@ Modifikasi program sebelumnya, proses input akan berhenti apabila user mengetikk
 
 #### Source Code
 ```go
+//Rangga Pradarrell Fathi
+//2311102200
+//11-IF-05
 package main
 
 import (
@@ -593,6 +596,9 @@ Bunga: 3`
 
 #### Source Code
 ```go
+//Rangga Pradarrell Fathi
+//2311102200
+//11-IF-05
 package main
 
 import (
@@ -708,6 +714,9 @@ Jika tidak ada kondisi berhenti yang terpenuhi, program mengulangi proses, memin
 
 #### Source Code
 ```go
+//Rangga Pradarrell Fathi
+//2311102200
+//11-IF-05
 package main
 
 import (
@@ -775,6 +784,9 @@ Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya 
 
 #### Source Code
 ```go
+//Rangga Pradarrell Fathi
+//2311102200
+//11-IF-05
 package main
 
 import (
@@ -867,6 +879,9 @@ Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b >
 
 #### Source Code
 ```go
+//Rangga Pradarrell Fathi
+//2311102200
+//11-IF-05
 package main
 
 import (
