@@ -56,6 +56,67 @@
      akhir. Ini berbeda dengan fungsi `fmt.Println()`, yang secara otomatis menambahkan baris
      baru di akhir output.<br/>
 
+3. Tipe Data dan Variabel<br/>
+   1. Data dan Variabel<br/>
+   Variabel adalah nama dari suatu lokasi di memori, yang data dengan tipe tertentu dapat
+   disimpan.<br/>
+   - Nama variabel dimulai dengan huruf dan dapat diikuti dengan jumlah huruf, angka, atau
+     garis bawah<br/>
+     ![image](https://github.com/user-attachments/assets/e6b903bd-ab4d-4bbb-a2ef-60460bba1882)<br/>
+     - Tipe data yang umum tersedia adalah integer, real, boolean, karakter, dan string. Lihat
+       tabel berikut ini untuk variasi tipe data yang disediakan dalam bahasa Go.<br/>
+     - Nilai data yang tersimpan dalam variabel dapat diperoleh dengan menyebutkan langsung
+       nama variabelnya.<br/>
+       Contoh: Menyebutkan nama found akan mengambil nilai tersimpan dalam memori untuk
+       variabel found, pastinya.<br/>
+     - Informasi alamat atau lokasi dari variabel dapat diperoleh dengan menambahkan prefiks &
+       di depan nama variabel tersebut.<br/>
+       Contoh: &found akan mendapatkan alamat memori untuk menyimpan data pada found.<br/>
+     - Jika variabel berisi alamat memori, prefiks * pada variabel tersebut akan memberikan
+       nilai yang tersimpan dalam memori yang lokasinya disimpan dalam variabel tersebut.<br/>
+       Contoh: `*mem` akan mendapatkan data di memori yang alamatnya tersimpan di `mem`.
+       Karenanya `*(&found)` akan mendapatkan data dari lokasi memori variabel `found` berada,
+       alias sama saja dengan menyebutkan langsung `found 8-)`.<br/>
+     - Operasi yang dapat dilakukan terhadap tipe data di atas adalah<br/>
+       ![image](https://github.com/user-attachments/assets/e7e317fa-5a52-4b01-9804-6ee60006b061)<br/>
+       Contoh:<br/>
+       ![image](https://github.com/user-attachments/assets/577e0834-28ed-45a8-8f76-21297d5f68fc)<br/>
+     - Bahasa Go menganut kesesuaian tipe data yang ketat. Tipe data yang berbeda tidak boleh
+       dicampur dalam satu ekspresi, bahkan tipe data masih yang sejenis, misalnya masih sama
+       sama integer (int dan Int32). Untuk menyesuaikan tipe data, ada beberapa cara yang
+       dapat dilakukan:<br/>
+       - Casting, tipe(data), mengubah tipe dari data yang diberikan ke tipe yang diinginkan.<br/>
+       - Memanfaatkan fungsi Sprint dan Sscan dari paket fmt.<br/>
+       - Memanfaatkan fungsi-fungsi dalam paket strconv, seperti Atol, Itoa, dan ParseBool.<br/>
+         Lihat lampiran untuk contoh penggunaan.<br/>
+       Contoh:<br/>
+     ![image](https://github.com/user-attachments/assets/c0fc57c3-2331-49d9-bd6b-66bf6e1e0754)<br/>
+     - Variabel harus dideklarasikan dulu sebelum digunakan. Variabel juga harus
+       diinisialisasi dulu (diisi data) agar nilai yang tersimpan diketahui dengan jelas dan
+       eksekusi algoritma menjadi terprediksi. Dalam bahasa Go, variabel yang tidak
+       diinisialisasi lebih dahulu otomatis diisi dengan nilai default yang ekivalen dengan
+       bit 0.<br/>
+       - Nilai 0 untuk bilangan integer<br/>
+       - 0.0E+0 untuk bilangan real<br/>
+       - false untuk boolean<br/>
+       - Karakter NUL (lihat tabel ASCII) untuk karakter<br/>
+       - "" (string kosong, string dengan panjang 0) untuk string<br/>
+       - nil untuk alamat memori<br/>
+       ![image](https://github.com/user-attachments/assets/71694ea5-035d-47fe-9dfd-2c95da0d34ed)<br/>
+       Contoh:<br/>
+       ![image](https://github.com/user-attachments/assets/431e2df5-67fc-483f-a951-97246ba495c5)<br/>
+   2. Instruksi Dasar<br/>
+
+
+   
+
+
+     
+
+       
+
+
+
    
      
 
