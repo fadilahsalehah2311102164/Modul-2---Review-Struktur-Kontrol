@@ -325,7 +325,7 @@ func main() {
  <img src="https://github.com/user-attachments/assets/875c415a-e9ea-48b0-96c8-1342a0163337">
 
 #### Screenshoot Output
-
+ <img src="https://github.com/user-attachments/assets/ad24c6d1-05b4-4e5d-bd33-50213803afa4">
 
 
 #### Deskripsi Program
@@ -396,7 +396,7 @@ func main() {
 <img src="https://github.com/user-attachments/assets/89fc8989-9c99-4b11-a275-aa4a47eff2d4">
 
 #### Screenshoot Output
-
+<img src="https://github.com/user-attachments/assets/82132a20-0ab3-4536-8ab5-36049284c8cb">
 
 #### Deskripsi Program
 
@@ -464,6 +464,8 @@ func main() {
 
 
 #### Screenshoot Output
+<img src="https://github.com/user-attachments/assets/898abcee-e2cb-4c2a-800a-dc701f190a98">
+
 
 #### Deskripsi Program
 ##### Program ini bertujuan untuk:
@@ -548,7 +550,7 @@ func main() {
 
 
 #### Screenshoot Output
-
+<img src="https://github.com/user-attachments/assets/116211b8-c40a-4a68-bd18-9127afb992d8">
 
 #### Deskripsi Program
 ##### Program ini bertujuan untuk:
@@ -657,7 +659,7 @@ func main() {
 
 
 #### Screenshoot Output
-
+<img src="https://github.com/user-attachments/assets/9f3c0886-4eab-4bc9-9bcc-11340e9251fe">
 
 #### Deskripsi Program
 ##### Program ini bertujuan untuk:
@@ -766,6 +768,7 @@ func main() {
 
 
 #### Screenshoot Output
+<img src="https://github.com/user-attachments/assets/4d65295e-bf25-4c67-bebf-8ec8f572d988">
 
 
 #### Deskripsi Program
@@ -859,6 +862,7 @@ func main() {
 
 
 #### Screenshoot Output
+<img src="https://github.com/user-attachments/assets/b389e9b5-7afa-4552-93a3-0b32a0702164">
 
 
 #### Deskripsi Program
@@ -932,6 +936,7 @@ func main() {
 
 
 #### Screenshoot Output
+<img src="https://github.com/user-attachments/assets/73877e31-b3d5-4dfb-a4c8-6be6181bacc6">
 
 #### Deskripsi Program
 ##### Program ini bertujuan untuk mencari dan menampilkan faktor-faktor dari suatu bilangan bulat positif yang dimasukkan oleh pengguna. Faktor adalah bilangan-bilangan yang membagi habis bilangan tersebut.
