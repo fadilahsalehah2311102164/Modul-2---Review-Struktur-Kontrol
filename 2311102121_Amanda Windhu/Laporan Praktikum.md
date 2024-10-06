@@ -263,7 +263,7 @@ Setiap input dibaca hingga karakter newline, dibersihkan dari spasi, dan dipisah
 Jika flag `success` masih `false` setelah lima percobaan, program akan menampilkan output "BERHASIL : false"; jika tidak, program akan menampilkan "BERHASIL : true".<br/>
 Secara keseluruhan, program ini menunjukkan bagaimana menangani input pengguna, melakukan manipulasi string, dan menerapkan alur kontrol dasar dalam Go, memberikan cara sederhana namun menarik bagi pengguna untuk berinteraksi dengan urutan warna sambil belajar tentang konsep pemrograman seperti loop, kondisi, dan slice.<br/>
 
-## 4. Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:<br/> ![image](https://github.com/user-attachments/assets/05fa8371-e853-40d9-8ee4-193873afcc1c)<br/> Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkannya.<br/>
+## 4. Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:<br/>![image](https://github.com/user-attachments/assets/247bc3eb-b356-4b1e-9b96-228289ff956d)![image](https://github.com/user-attachments/assets/99019855-2c34-479d-ac84-f5036b1303e9)<br/> Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkannya.<br/>
 
 ```go
 package main
