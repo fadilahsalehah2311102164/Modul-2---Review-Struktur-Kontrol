@@ -170,44 +170,29 @@
 
 ### II. GUIDED
 
-### 1. 
-
-### 2. Hasill Penjumlahan
+### 1. Hasill Penjumlahan
 
 ``` go
-// guided 2
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func main() {
+func main(){
+
 	var a, b, c, d, e int
-	var hasil int
-	
-	// Menginstruksikan pengguna untuk memasukkan lima angka
-	fmt.Print("Masukkan angka: ")
-	
-	// Menerima input dari pengguna
-	_, err := fmt.Scanln(&a, &b, &c, &d, &e)
-	if err != nil {
-		fmt.Println("Terjadi kesalahan saat memasukkan data:", err)
-		return
-	}
+	var hasil int 
+	fmt.Scanln(&a, &b, &c, &d, &e)
 
-	// Menghitung hasil penjumlahan
-	hasil = a + b + c + d + e
-	
-	// Menampilkan hasil
-	fmt.Printf("Hasil Penjumlahan %d, %d, %d, %d, %d adalah %d\n", a, b, c, d, e, hasil)
+	hasil = a+b+c+d+e
+	fmt.Println("Hasil Penjumlahan ", a, b, c, d, e, "adalah = ", hasil)
+
 }
 ```
-## Output: ![image](https://github.com/user-attachments/assets/bd047dcf-eade-428f-8f09-92a383c1723d)
+## Output: ![image](https://github.com/user-attachments/assets/03a886c6-899a-47d7-933f-17fe6f234859)
 
 Kode di atas berfungsi untuk menjumlahkan lima angka yang diinputkan oleh pengguna. Saat program dijalankan, pengguna akan diminta untuk memasukkan lima angka, yang harus dipisahkan dengan spasi. Program kemudian akan menggunakan fungsi `fmt.Scanln` untuk membaca input tersebut dan menyimpannya dalam variabel `a`, `b`, `c`, `d`, dan `e`. Setelah semua angka berhasil diinput, program menghitung hasil penjumlahan dari kelima angka tersebut dan menyimpan hasilnya dalam variabel `hasil`. Akhirnya, program menampilkan hasil penjumlahan dengan format yang jelas, memberikan informasi kepada pengguna mengenai angka-angka yang dimasukkan dan hasilnya. Selain itu, program juga menangani kesalahan input dengan memberikan pesan yang sesuai jika pengguna memasukkan nilai yang tidak valid. 
 
-## 3.  Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturut-turut adalah ‘merah’, ‘kuning’, ‘hijau’, dan ‘ungu’ selama 5 kali percobaan berulang.<br/> Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya.<br/>
+## 2.  Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturut-turut adalah ‘merah’, ‘kuning’, ‘hijau’, dan ‘ungu’ selama 5 kali percobaan berulang.<br/> Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya.<br/>
 
 ```go
 package main
@@ -263,7 +248,7 @@ Setiap input dibaca hingga karakter newline, dibersihkan dari spasi, dan dipisah
 Jika flag `success` masih `false` setelah lima percobaan, program akan menampilkan output "BERHASIL : false"; jika tidak, program akan menampilkan "BERHASIL : true".<br/>
 Secara keseluruhan, program ini menunjukkan bagaimana menangani input pengguna, melakukan manipulasi string, dan menerapkan alur kontrol dasar dalam Go, memberikan cara sederhana namun menarik bagi pengguna untuk berinteraksi dengan urutan warna sambil belajar tentang konsep pemrograman seperti loop, kondisi, dan slice.<br/>
 
-## 4. Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:<br/>![image](https://github.com/user-attachments/assets/247bc3eb-b356-4b1e-9b96-228289ff956d)![image](https://github.com/user-attachments/assets/99019855-2c34-479d-ac84-f5036b1303e9)<br/> Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkannya.<br/>
+## 3. Diberikan sebuah nilai akhir mata kuliah (NAM) [0..100] dan standar penilaian nilai mata kuliah (NMK) sebagai berikut:<br/>![image](https://github.com/user-attachments/assets/247bc3eb-b356-4b1e-9b96-228289ff956d)![image](https://github.com/user-attachments/assets/99019855-2c34-479d-ac84-f5036b1303e9)<br/> Program berikut menerima input sebuah bilangan rill yang menyatakan NAM. Program menghitung NMK dan menampilkannya.<br/>
 
 ```go
 package main
