@@ -118,8 +118,8 @@
    Go hanya mempunyai kata kunci for untuk semua jenis perulangan yang kita pelajari dalam
    notasi algoritma. Dua bentuk yang kita gunakan di sini adalah struktur while-loop dan
    repeat-until.<br/>
-   <p align="center">Bentuk perulangan dalam bahasa Go</p>
-   ![image](https://github.com/user-attachments/assets/3792fe67-613c-4195-9d49-71d9418432f0)<br/>
+   <p align="center">Bentuk Perulangan dalam Bahasa Go</p>
+![Bentuk Perulangan](https://github.com/user-attachments/assets/3792fe67-613c-4195-9d49-71d9418432f0)
 
 
       
