@@ -164,7 +164,7 @@ func bagi(a, b int) (int, error) {
 
 # GUIDED
 
-## 1. Soal Nama
+## Guided 1 - Soal Nama
 ### Study Case
 Membuat sebuah program sederhana yang meminta pengguna memasukkan nama mereka, lalu mencetak nama tersebut ke layar. Program ini dirancang menggunakan bahasa pemrograman Go dan bertujuan untuk memahami dasar penggunaan input/output serta variabel.
 
@@ -204,7 +204,7 @@ Program ini merupakan sebuah program sederhana yang dibuat dengan menggunakan ba
 
 Jadi, intinya, program ini membaca teks yang dimasukkan oleh pengguna, kemudian menampilkannya kembali sebagai output.
 
-## 2. 2B - 1
+## Guided 2 - 2B - 1
 ### Study Case
 Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah ‘merah’, ‘kuning’, ‘hijau’, dan ‘ungu’ selama 5 kali percobaan berulang.
 <br>
@@ -280,10 +280,16 @@ Program akan langsung menghasilkan:
 BERHASIL : false
 ```
 
-## 2B - 3
+## Guided - 3 - Soal abcde
 ### Study Case
+Membuat program sederhana yang memungkinkan pengguna memasukkan 5 angka integer, kemudian program menjumlahkan kelima angka tersebut dan menampilkan hasilnya.
+
 ### Source Code
+![Uploading guided3.png…]()
+
 ### Screenshot Output
+
+
 ### Deskripsi Program 
 
 ## 2B - 3
