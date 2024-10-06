@@ -16,7 +16,7 @@
 # <h3 align="center"> TELKOM UNIVERSITY PURWOKERTO </h3>
 # <h3 align="center"> 2024 </h3>
 
-## DASAR TEORI
+## I. DASAR TEORI
 1. Setiap file program dalam Golang harus didefinisikan dalam sebuah package. Dalam setiap 
    proyek Go, harus ada setidaknya satu file yang menggunakan package bernama `main`. File
    dengan package `main` ini adalah file yang akan dieksekusi pertama kali saat program
@@ -166,7 +166,9 @@
       (atau alias dari) susunan suatu if-else...else-endif.<br/>
       ![image](https://github.com/user-attachments/assets/1d9e1ff7-dc04-4f45-a0d9-9cacd18471ad)<br/>
       Contoh menentukan batas nilai untuk suatu indeks.<br/>
-      ![image](https://github.com/user-attachments/assets/b4f357df-b760-4b0a-aa94-eb8a74e10936) ![image](https://github.com/user-attachments/assets/a1fe368e-f6e6-4181-8f3c-ab2f85a549f0) ![image](https://github.com/user-attachments/assets/55533896-bb0f-44ea-8450-344d7f7e0c1f)
+      ![image](https://github.com/user-attachments/assets/b4f357df-b760-4b0a-aa94-eb8a74e10936) ![image](https://github.com/user-attachments/assets/a1fe368e-f6e6-4181-8f3c-ab2f85a549f0) ![image](https://github.com/user-attachments/assets/55533896-bb0f-44ea-8450-344d7f7e0c1f)<br/>
+
+### II. GUIDED
 
 
 
