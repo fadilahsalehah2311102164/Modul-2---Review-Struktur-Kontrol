@@ -1,0 +1,13 @@
+package main
+import "fmt"
+
+func main(){
+	var K float32
+	fmt.Print("Masukkan Nilai K: ")
+	fmt.Scan(&K)
+	a := (4*K + 2)
+	atas := a * a
+	bawah := (4*K+1)*(4*K + 3)
+	var nilaif float32 = atas / bawah
+	fmt.Print("Nilai F dari K: ", nilaif)
+}
