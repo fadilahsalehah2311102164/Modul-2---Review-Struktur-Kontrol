@@ -2,6 +2,8 @@
 # <h2 align="center" >ALGORITMA DAN PEMROGRAMAN 2</h2>
 # <h2  align="center" >MODUL 2 2</h2>
 # <h2  align="center" >REVIEW STRUKTUR KONTROL2</h2>
+<p align="center"> ![image](https://github.com/user-attachments/assets/3ccfed0b-72d1-4349-ac08-c4dce379c827)</p>
+
 
 <p align="center">Amanda Windhu Gustyas - 2311102121</p>
 
