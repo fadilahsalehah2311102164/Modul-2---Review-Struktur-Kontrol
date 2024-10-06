@@ -1,7 +1,7 @@
 # <h1 align="center">LAPORAN PRAKTIKUM </h1>
-# <h2 >ALGORITMA DAN PEMROGRAMAN 2</h2>
-# <h2 >MODUL 2 2</h2>
-# <h2 >REVIEW STRUKTUR KONTROL2</h2>
+# <h2 align="center" >ALGORITMA DAN PEMROGRAMAN 2</h2>
+# <h2  align="center" >MODUL 2 2</h2>
+# <h2  align="center" >REVIEW STRUKTUR KONTROL2</h2>
 
 <p align="center">Amanda Windhu Gustyas - 2311102121</p>
 
