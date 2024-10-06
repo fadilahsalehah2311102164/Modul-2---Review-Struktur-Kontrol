@@ -134,6 +134,54 @@
       Contoh penggunaan bentuk while-loop untuk menghitung ![image](https://github.com/user-attachments/assets/b398ba36-de84-4894-823d-8a20f28bafcb) adalah sebagai berikut:<br/>
       ![image](https://github.com/user-attachments/assets/c2aad2bc-2236-4996-8dd6-531e42c66c78) ![image](https://github.com/user-attachments/assets/cb6656af-82dc-43fa-9cb7-b259db11bba4)<br/>
 
+   2) Bentuk Repeat-Until<br/>
+      Bentuk repeat-until di perulangan dilakukan terus menerus sampai kondisi keluar
+      terpenuhi. Artinya selama kondisi belum terpenuhi (salah/false) maka perulangan akan
+      terus dilakukan. Pada saat keluar dari loop maka nilai kondisi pasti benar/true!<br/>
+      ![image](https://github.com/user-attachments/assets/079aa236-4fdc-4f46-a483-f2e3c9c1c8c3)<br/>
+      Contoh pengggunaan bentuk repeat-until untuk mencetak deret bilangan Fibonacci:<br/>
+      ![image](https://github.com/user-attachments/assets/a446fede-d319-466b-aca5-1295cc77ee24)<br/>
+      Perhatian: Karena pernyataan kondisi ada di bawah pada bentuk repeat-until, apapun
+      kondisinya, badan loop pasti akan pernah dieksekusi minimum satu kali!<br/>
+      Kode Go di bawah menggunakan algoritma yang sangat mirip dengan algoritma di atas,
+      dengan perbedaan pada digunakannya bentuk while-loop. Umumnya keluaran kedua algoritma
+      sama, kecuali saat maxF diinisialisasi dengan nilai 0 atau lebih kecil!<br/>
+      ![image](https://github.com/user-attachments/assets/c984453e-c556-4691-969e-a434edad460f)<br/>
+
+5. Struktur Kontrol Percabangan<br/>
+   1) Bentuk If-Else<br/>
+      Berikut ini bentuk-bentuk if-else yang mungkin dilakukan dalam bahasa Go. Semua bentuk
+      di bawah merupakan satu instruksi if-else-endif (hanya satu endif). Bentuk if-else yang
+      bersarang (dengan beberapa endif) dapat dibentuk dengan komposisi beberapa if-else-endif
+      tersebut.<br/>
+      ![image](https://github.com/user-attachments/assets/b51795ae-f068-4271-b118-653c6115aeba)<br/>
+      Contoh konversi (nilai, tubes, kehadiran) menjadi indeks nilai.<br/>
+      ![image](https://github.com/user-attachments/assets/d66de8d4-cc7b-4c0a-bbee-f721820470c3)<br/>
+   2) Bentuk Switch-Case<br/>
+      Dalam bahasa Go ada dua variasi bentuk switch-case. Bentuk yang biasa digunakan adalah
+      ekspresi ditulis pada perintah switch dan nilai ditulis dalam setiap label case-nya.
+      Bentuk yang kedua mempunyai switch tanpa ekspresi, tetapi setiap case boleh berisi
+      ekspresi boolean.<br/>
+      Tentunya bentuk yang kedua lebih bersifat umum, dan merupakan penyederhanaan bentuk
+      (atau alias dari) susunan suatu if-else...else-endif.<br/>
+      ![image](https://github.com/user-attachments/assets/1d9e1ff7-dc04-4f45-a0d9-9cacd18471ad)<br/>
+      Contoh menentukan batas nilai untuk suatu indeks.<br/>
+      ![image](https://github.com/user-attachments/assets/b4f357df-b760-4b0a-aa94-eb8a74e10936) ![image](https://github.com/user-attachments/assets/a1fe368e-f6e6-4181-8f3c-ab2f85a549f0) ![image](https://github.com/user-attachments/assets/55533896-bb0f-44ea-8450-344d7f7e0c1f)
+
+
+
+
+      
+
+
+   
+      
+
+
+      
+      
+
+
       
 
       
