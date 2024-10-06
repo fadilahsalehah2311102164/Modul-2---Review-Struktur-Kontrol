@@ -1,7 +1,7 @@
 # <h2 align="center">LAPORAN PRAKTIKUM</h2>
-<h2>ALGORITMA DAN PEMROGRAMAN 2</h2>
-<h2>MODUL 2</h2>
-<h2>REVIEW STRUKTUR KONTROL</h2>
+# <h2 align="center">ALGORITMA DAN PEMROGRAMAN 2</h2>
+# <h2 align="center">MODUL 2</h2>
+# <h2 align="center"> REVIEW STRUKTUR KONTROL</h2>
 <p align="center">
     <img src="https://github.com/user-attachments/assets/3ccfed0b-72d1-4349-ac08-c4dce379c827" alt="Gambar">
 </p>
