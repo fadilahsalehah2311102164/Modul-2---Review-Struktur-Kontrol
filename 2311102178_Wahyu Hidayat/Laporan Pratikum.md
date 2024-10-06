@@ -728,7 +728,7 @@ Jika sisa gram lebih dari atau sama dengan 500, biaya tambahan adalah Rp. 5 per 
 Jika sisa gram kurang dari 500, biaya tambahan adalah Rp. 15 per gram
 4. Total biaya pengiriman dihitung sebagai penjumlahan biaya dasar dan biaya sisa gram
 5. Program menampilkan hasil berupa detail berat dalam kg dan gram, biaya dasar dan tambahan, serta total biaya
-## 5. Program Input Bunga dengan Kata Kunci
+## 5. Program mencari faktor dari sebuah bilangan bulat positif dan prima
 
 #### Source Code
 ```go
