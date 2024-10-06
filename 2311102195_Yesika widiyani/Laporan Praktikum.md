@@ -37,7 +37,6 @@
 ------
 
 ## DASAR TEORI
-<p style="text-align: justify; font-size: 12px;">
 
 ### Bahasa Go
 Bahasa Go, yang juga dikenal dengan nama Golang, adalah bahasa pemrograman yang dikembangkan oleh Google pada tahun 2007 dan dirilis secara publik pada tahun 2009. Go dirancang untuk menjadi bahasa yang sederhana, efisien, dan mudah dipahami, dengan fitur-fitur yang mendukung pemrograman paralel dan konkuren. Go sering digunakan dalam pengembangan sistem, aplikasi web, dan infrastruktur cloud.
@@ -162,7 +161,26 @@ func bagi(a, b int) (int, error) {
 }
 ```
 
+------
+
 # GUIDED
+
+### 1. 2B - 1
+#### Study Case
+Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah ‘merah’, ‘kuning’, ‘hijau’, dan ‘ungu’ selama 5 kali percobaan berulang.
+<br>
+
+Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya.
+Perhatikan contoh sesi interaksi program seperti di bawah ini (teks bergaris bawah adalah input/read):
+
+#### Source Code
+![guided1](https://github.com/user-attachments/assets/92144e4a-0c63-48cd-ac6c-297bf862a942)
+
+#### Screenshot Output
+![outputg1](https://github.com/user-attachments/assets/4903b775-5221-4fb3-8e9e-427527b71b46)
+
+#### Deskripsi Program
+
 
 
 
