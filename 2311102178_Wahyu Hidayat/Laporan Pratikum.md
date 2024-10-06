@@ -179,7 +179,7 @@ func main() {
 
 
 ## II. GUIDED
-1. Menampilkan output yang diinputkan user
+## 1. Menampilkan output yang diinputkan user
 
 #### Source Code
 ```go
@@ -210,7 +210,7 @@ func main() {
 
 Kode di atas adalah program sederhana dalam bahasa Go yang meminta pengguna untuk memasukkan sebuah nama dan kemudian mencetak nama tersebut. Program dimulai dengan mendeklarasikan paket main dan mengimpor paket fmt untuk input dan output. Di dalam fungsi main, variabel nama bertipe string dideklarasikan untuk menyimpan input dari pengguna. Namun, terdapat kesalahan pada penggunaan fmt.Scanln(nama); seharusnya ditulis fmt.Scanln(&nama) untuk menyimpan input ke dalam variabel. Setelah itu, fungsi fmt.Println(nama) digunakan untuk mencetak nama yang diinputkan ke konsol.
 
-2. Pengecekan Urutan Warna 
+## 2. Pengecekan Urutan Warna 
 
 #### Source Code
 ```go
@@ -280,7 +280,7 @@ func main() {
 
 Kode di atas meminta pengguna untuk memasukkan urutan warna selama lima percobaan dan memeriksa apakah urutan yang dimasukkan sesuai dengan urutan yang benar, yaitu "merah", "kuning", "hijau", dan "ungu". Dengan menggunakan bufio untuk membaca input dari pengguna, program memisahkan input berdasarkan spasi dan membandingkannya dengan urutan warna yang benar. Jika semua percobaan berhasil sesuai urutan, program akan mencetak "BERHASIL : true"; jika tidak, program akan mencetak "BERHASIL : false" dan menghentikan proses. Program ini mengilustrasikan penggunaan kontrol perulangan, manipulasi string, dan pengecekan kondisi dalam pemrograman Go.
 
-3.  Penjumlahan Lima Angka 
+## 3.  Penjumlahan Lima Angka 
 
 #### Source Code
 ```go
@@ -315,7 +315,7 @@ func main (){
 
 Kode di atas menghitung jumlah dari lima angka yang dimasukkan oleh pengguna. Dalam fungsi main, variabel a, b, c, d, dan e dideklarasikan untuk menyimpan input angka, sementara variabel hasil digunakan untuk menyimpan hasil penjumlahan. Program ini menggunakan fmt.Scanln untuk membaca lima angka yang dimasukkan dalam satu baris, kemudian menjumlahkan angka-angka tersebut dan mencetak hasil penjumlahan bersama dengan angka-angka yang dimasukkan oleh pengguna. Program ini menunjukkan penggunaan input, variabel, dan operasi dasar dalam Go.
 
-4. Penilaian Indeks Nilai 
+## 4. Penilaian Indeks Nilai 
 
 #### Source Code
 ```go
@@ -377,7 +377,7 @@ Kode di atas menentukan indeks nilai huruf berdasarkan input nilai numerik dari 
 
 
 ## III. UNGUIDED
-1. Program Input Bunga dengan Kata Kunci
+## 1. Program Input Bunga dengan Kata Kunci
 
 #### Source Code
 ```go
@@ -486,7 +486,7 @@ Bunga: 3
 5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
 6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
 
-#### 2. Program Keseimbangan Berat Belanjaan di Dua Kantong
+## 2. Program Keseimbangan Berat Belanjaan di Dua Kantong
 
 #### Source Code
 ```go
@@ -570,7 +570,7 @@ Program kembali ke langkah 1 (meminta input berat lagi).
 4. Kondisi Berhenti:
 Jika pada suatu saat total berat kedua kantong melebihi 150 kg, atau salah satu kantong beratnya negatif, program langsung berhenti dengan pesan "Proses selesai."
 
-#### 3. Program Perhitungan Fungsi Matematika dengan Input Variabel
+## 3. Program Perhitungan Fungsi Matematika dengan Input Variabel
 
 #### Source Code
 ```go
@@ -628,7 +628,7 @@ Kode di atas menghitung serta menampilkan hasil dari suatu fungsi matematika ber
 6. Program menampilkan hasil perhitungan f kepada pengguna dalam bentuk desimal dengan sepuluh angka di belakang koma.
 7. Setelah hasil ditampilkan, program selesai menjalankan tugasnya.
 
-#### 4. Program Perhitungan Biaya Pengiriman
+## 4. Program Perhitungan Biaya Pengiriman
 
 #### Source Code
 ```go
@@ -728,7 +728,7 @@ Jika sisa gram lebih dari atau sama dengan 500, biaya tambahan adalah Rp. 5 per 
 Jika sisa gram kurang dari 500, biaya tambahan adalah Rp. 15 per gram
 4. Total biaya pengiriman dihitung sebagai penjumlahan biaya dasar dan biaya sisa gram
 5. Program menampilkan hasil berupa detail berat dalam kg dan gram, biaya dasar dan tambahan, serta total biaya
-#### 5. Program Input Bunga dengan Kata Kunci
+## 5. Program Input Bunga dengan Kata Kunci
 
 #### Source Code
 ```go
