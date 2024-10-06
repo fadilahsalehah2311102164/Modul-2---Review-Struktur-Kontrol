@@ -9,7 +9,12 @@
 <p align="center">Amanda Windhu Gustyas - 2311102121</p>
 <p align="center">IF-11-05</p>
  <h3 <p align="center" >Dosen Pengampu : </h3> </p>
+ <p align="center">Arif Amrulloh</p>
 
+# <h3 align="center"> PROGRAM STUDI S1 TEKNIK INFORMATIKA </h3>
+FAKULTAS INFORMATIKA
+TELKOM UNIVERSITY PURWOKERTO
+2024
 
 ## DASAR TEORI
 
