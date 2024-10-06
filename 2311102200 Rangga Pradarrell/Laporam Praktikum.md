@@ -955,7 +955,8 @@ func main() {
 
 
 ## Referensi 
-[1] Donovan, A. A., & Kernighan, B. W. (2015). The Go Programming Language. Addison-Wesley Professional. 
 
+[1] Donovan, A. A., & Kernighan, B. W. (2015). The Go Programming Language. Addison-Wesley Professional. 
+------
 [2] Bodner, J. (2021). Learning Go: An Idiomatic Approach to Real-World Go Programming. O'Reilly Media. 
 ------
