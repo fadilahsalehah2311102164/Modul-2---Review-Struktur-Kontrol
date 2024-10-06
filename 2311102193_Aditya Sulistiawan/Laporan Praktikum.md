@@ -800,17 +800,113 @@ Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya 
 
 #### Source Code
 ```go
+package main
 
+import "fmt"
+
+// Fungsi untuk menghitung biaya pengiriman
+func hitungBiaya(beratGram int) (int, int, int) {
+	// Konversi berat dari gram ke kg
+	beratKg := beratGram / 1000
+	sisaGram := beratGram % 1000
+
+	// Hitung biaya pengiriman per kg
+	biayaKg := beratKg * 10000
+
+	// Hitung biaya pengiriman untuk sisa gram
+	var biayaSisa int
+	if sisaGram >= 500 {
+		biayaSisa = sisaGram * 5
+	} else if sisaGram > 0 && beratKg <= 10 {
+		biayaSisa = sisaGram * 15
+	} else {
+		biayaSisa = 0
+	}
+
+	return biayaKg, biayaSisa, beratKg
+}
+
+func main() {
+	var beratGram int
+	fmt.Print("Masukkan berat parsel (dalam gram): ")
+	fmt.Scanln(&beratGram)
+
+	// Panggil fungsi hitungBiaya untuk mendapatkan biaya pengiriman
+	biayaKg, biayaSisa, beratKg := hitungBiaya(beratGram)
+
+	// Tampilkan hasil perhitungan
+	fmt.Printf("Total berat: %d kg %d gram\n", beratKg, beratGram%1000)
+	fmt.Printf("Biaya pengiriman: Rp. %d\n", biayaKg+biayaSisa)
+	fmt.Printf("  - Biaya per kg: Rp. %d\n", biayaKg)
+	fmt.Printf("  - Biaya sisa gram: Rp. %d\n", biayaSisa)
+}
 ```
 #### Screenshoot Source Code
+![SC](https://github.com/user-attachments/assets/37d138a1-6b92-4d3d-846c-c82304cbe509)
 
 
 #### Screenshoot Output
+![Ungui 4](https://github.com/user-attachments/assets/8c3b932d-d815-4f30-affb-1067eccfd22d)
 
 
 #### Deskripsi Program
-Program ini berisi tentang menghitung dan mengonversikan berat yang dimasukkan oleh user dengan menggunakan gram dan kilogram. Program ini juga menghitung biaya pengiriman dari ketentuan yang ditentukan.
+Program ini adalah aplikasi konsol yang dikembangkan menggunakan bahasa pemrograman Go untuk menghitung biaya pengiriman parsel berdasarkan berat. Program dapat menangani input berat dalam gram dan memberikan rincian biaya pengiriman yang terdiri dari biaya per kilogram dan biaya tambahan untuk sisa gram.
 
+#### Algoritma Program
+ALGORITMA
+1. Tampilkan "Masukkan berat parsel (dalam gram): "
+2. Input beratGram
+3. biayaKg, biayaSisa, beratKg ← PANGGIL hitungBiaya(beratGram)
+4. Tampilkan "Total berat: " + beratKg + " kg " + (beratGram MOD 1000) + " gram"
+5. Tampilkan "Biaya pengiriman: Rp. " + (biayaKg + biayaSisa)
+6. Tampilkan "  - Biaya per kg: Rp. " + biayaKg
+7. Tampilkan "  - Biaya sisa gram: Rp. " + biayaSisa
+
+#### Cara Kerja Program
+1. Import Package
+Program dimulai dengan mengimpor package fmt, yang digunakan untuk input dan output format di Go.
+
+2. Fungsi hitungBiaya
+Fungsi ini bertugas untuk menghitung biaya pengiriman berdasarkan berat yang diberikan dalam gram. Berikut adalah rincian cara kerja fungsi ini:
+Parameter: Menerima beratGram, yang merupakan berat parsel dalam gram.
+
+Konversi Berat:
+Berat dari gram dikonversi ke kilogram dengan cara membagi beratGram dengan 1000. Hasilnya disimpan dalam beratKg.
+Sisa gram dihitung dengan menggunakan operasi modulus (sisa pembagian), yaitu beratGram % 1000.
+Biaya Pengiriman:
+
+Biaya untuk kilogram dihitung dengan mengalikan beratKg dengan 10.000 (asumsi bahwa biaya per kg adalah Rp. 10.000).
+
+Untuk sisa gram:
+
+Jika sisa gram lebih besar atau sama dengan 500, biaya dihitung dengan mengalikan sisaGram dengan 5 (biaya per gram).
+Jika sisa gram lebih besar dari 0 dan beratKg kurang dari atau sama dengan 10, biaya dihitung dengan mengalikan sisaGram dengan 15 (biaya per gram untuk berat tertentu).
+Jika tidak memenuhi kondisi di atas, biaya sisa adalah 0.
+Return Value: Fungsi mengembalikan tiga nilai: biayaKg, biayaSisa, dan beratKg.
+
+3. Fungsi main
+Fungsi ini adalah titik awal program:
+
+Input Pengguna:
+
+Menggunakan fmt.Print untuk meminta pengguna memasukkan berat parsel dalam gram.
+Nilai yang dimasukkan disimpan dalam variabel beratGram dengan fmt.Scanln.
+Menghitung Biaya:
+
+Memanggil fungsi hitungBiaya dengan beratGram sebagai argumen dan menyimpan hasilnya dalam biayaKg, biayaSisa, dan beratKg.
+Output Hasil:
+
+Menampilkan total berat dalam format "X kg Y gram".
+Menampilkan total biaya pengiriman dengan menjumlahkan biayaKg dan biayaSisa.
+Menampilkan rincian biaya per kg dan biaya untuk sisa gram.
+
+4. Contoh Eksekusi
+Jika pengguna memasukkan 3500 gram:
+
+Berat kg akan menjadi 3 kg dan sisa gram 500.
+Biaya per kg: 3 * 10000 = Rp. 30000.
+Biaya sisa gram: 500 * 5 = Rp. 2500.
+Total biaya pengiriman: 30000 + 2500 = Rp. 32500.
 
 5. Sebuah bilangan bulat b memiliki faktor bilangan f > O jika f habis membagi b. Contoh: 2 merupakan faktor dari bilangan 6 karena 6 habis dibagi 2.
 
@@ -822,18 +918,145 @@ Lanjutkan program sebelumnya. Setelah menerima masukan sebuah bilangan bulat b >
 
 #### Source Code
 ```go
+package main
 
+import "fmt"
 
+func main() {
+  var b int
+  fmt.Print("Bilangan: ")
+  fmt.Scanln(&b)
+
+  fmt.Print("Faktor: ")
+  for i := 1; i <= b; i++ {
+    if b%i == 0 {
+      fmt.Print(i, " ")
+    }
+  }
+
+  prima := true
+  if b <= 1 {
+    prima = false
+  } else {
+    for i := 2; i*i <= b; i++ {
+      if b%i == 0 {
+        prima = false
+        break
+      }
+    }
+  }
+
+  fmt.Println("\nPrima:", prima)
+}
 ```
 #### Screenshoot Source Code
+![SC](https://github.com/user-attachments/assets/c3f836ac-192a-4244-a317-756c0a7df1fe)
 
 
 #### Screenshoot Output
+![Screenshot 2024-10-05 172454](https://github.com/user-attachments/assets/f098c08e-0535-4914-a9fd-12f299a11f23)
+
 
 #### Deskripsi Program
 Program ini berisi tentang menentukan bilangan yang dimasukkan termasuk bilangan prima atau bukan. Pada awal program, user diminta untuk memasukkan bilangan bulat terlebih dahulu
 
+#### Algoritma Program
+Berikut adalah algoritma dari program Go yang Anda berikan. Program ini meminta pengguna untuk memasukkan sebuah bilangan bulat dan kemudian mencetak faktor-faktornya serta menentukan apakah bilangan tersebut adalah bilangan prima.
+
+1. **Inisialisasi**
+   - Mulai program.
+   - Deklarasikan variabel `b` sebagai integer.
+
+2. **Input Bilangan**
+   - Tampilkan pesan "Bilangan: ".
+   - Baca input dari pengguna dan simpan dalam variabel `b`.
+
+3. **Menghitung Faktor**
+   - Tampilkan pesan "Faktor: ".
+   - Untuk setiap integer `i` dari 1 hingga `b`:
+     - Jika `b` dapat dibagi habis oleh `i` (yaitu `b % i == 0`):
+       - Cetak `i` sebagai faktor.
+
+4. **Menentukan Bilangan Prima**
+   - Inisialisasi variabel boolean `prima` sebagai `true`.
+   - Jika `b` kurang dari atau sama dengan 1:
+     - Set `prima` menjadi `false`.
+   - Jika tidak, lakukan langkah berikut:
+     - Untuk setiap integer `i` dari 2 hingga akar kuadrat dari `b` (yaitu `i*i <= b`):
+       - Jika `b` dapat dibagi habis oleh `i` (yaitu `b % i == 0`):
+         - Set `prima` menjadi `false`.
+         - Hentikan loop (break).
+
+5. **Output Hasil**
+   - Tampilkan hasil apakah bilangan tersebut adalah prima dengan mencetak "Prima: " diikuti oleh nilai dari variabel `prima`.
+
+6. **Akhiri Program**
+   - Program selesai.
+   - 
+#### Cara Kerja Program
+Berikut adalah penjelasan tentang cara kerja program Go yang Anda berikan. Penjelasan ini akan membahas setiap bagian dari program dan bagaimana mereka berinteraksi untuk mencapai tujuan akhir.
+
+### 1. **Inisialisasi Program**
+   - Program dimulai dengan mendeklarasikan paket `main` dan mengimpor paket `fmt`, yang digunakan untuk input dan output.
+
+### 2. **Deklarasi Variabel**
+   ```go
+   var b int
+   ```
+   - Variabel `b` dideklarasikan untuk menyimpan bilangan bulat yang akan dimasukkan oleh pengguna.
+
+### 3. **Input Bilangan**
+   ```go
+   fmt.Print("Bilangan: ")
+   fmt.Scanln(&b)
+   ```
+   - Program menampilkan pesan "Bilangan: " untuk meminta pengguna memasukkan sebuah bilangan.
+   - Fungsi `fmt.Scanln(&b)` membaca input dari pengguna dan menyimpannya dalam variabel `b`.
+
+### 4. **Menghitung Faktor**
+   ```go
+   fmt.Print("Faktor: ")
+   for i := 1; i <= b; i++ {
+       if b%i == 0 {
+           fmt.Print(i, " ")
+       }
+   }
+   ```
+   - Program menampilkan pesan "Faktor: ".
+   - Menggunakan loop `for`, program memeriksa setiap angka `i` dari 1 hingga `b`.
+     - Jika `b` dapat dibagi habis oleh `i` (diperiksa dengan `b % i == 0`), maka `i` adalah faktor dari `b`.
+     - Faktor tersebut dicetak ke layar.
+
+### 5. **Menentukan Bilangan Prima**
+   ```go
+   prima := true
+   if b <= 1 {
+       prima = false
+   } else {
+       for i := 2; i*i <= b; i++ {
+           if b%i == 0 {
+               prima = false
+               break
+           }
+       }
+   }
+   ```
+   - Variabel boolean `prima` diinisialisasi sebagai `true`, mengasumsikan bahwa bilangan tersebut adalah prima.
+   - Jika `b` kurang dari atau sama dengan 1, maka bilangan tidak bisa dianggap prima, sehingga `prima` di-set ke `false`.
+   - Jika tidak, program memeriksa angka mulai dari 2 hingga akar kuadrat dari `b`:
+     - Jika ditemukan angka `i` yang dapat membagi `b` tanpa sisa, maka bilangan tersebut bukan prima, dan program mengubah nilai `prima` menjadi `false` serta menghentikan loop.
+
+### 6. **Output Hasil**
+   ```go
+   fmt.Println("\nPrima:", prima)
+   ```
+   - Program mencetak hasil apakah bilangan tersebut adalah prima atau tidak dengan menampilkan "Prima: " diikuti oleh nilai dari variabel `prima`.
+
+### 7. **Akhiri Program**
+   - Setelah semua langkah selesai, program berakhir.
 
 ## Referensi 
 [1] Wali, M., Nengsih, TA, Hts, DIG, Choirina, P., Awaludin, AAR, Yusuf, M., ... & Baradja, A. (2023). Pengantar 15 Bahasa Pemrograman Terbaik Masa Depan (Referensi & Coding Untuk Pemula) . PT. Sonpedia Penerbitan Indonesia.
+------
+The Go Programming Language
 ------
