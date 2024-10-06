@@ -1,4 +1,4 @@
-<h2 align="center"><strong>LAPORAN PRAKTIKUM</strong></h2>
+![Screenshot 2024-10-06 155431](https://github.com/user-attachments/assets/a6d48a04-4b84-49a4-814c-b5136fb71d79)<h2 align="center"><strong>LAPORAN PRAKTIKUM</strong></h2>
 <h2 align="center"><strong>ALGORITMA DAN PEMROGRAMAN 2</strong></h2>
 
 <br>
@@ -628,115 +628,106 @@ Kode di atas menghitung serta menampilkan hasil dari suatu fungsi matematika ber
 6. Program menampilkan hasil perhitungan f kepada pengguna dalam bentuk desimal dengan sepuluh angka di belakang koma.
 7. Setelah hasil ditampilkan, program selesai menjalankan tugasnya.
 
-#### 4. Program Input Bunga dengan Kata Kunci
+#### 4. Program Perhitungan Biaya Pengiriman
 
 #### Source Code
 ```go
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strconv"
-	"strings"
 )
 
-func main() {
-	var (
-		nBunga int
-		namaBunga string
-		pita string
-		jumlahBunga int
-	)
+// Fungsi hitungBiayaPengiriman mengembalikan 5 nilai
+func hitungBiayaPengiriman(beratGrams int) (int, int, int, int, int) {
+	// Konversi ke kilogram dan sisa gram
+	kg := beratGrams / 1000
+	sisaGram := beratGrams % 1000
 
-	reader := bufio.NewReader(os.Stdin)
+	// Biaya per kilogram
+	biayaPerKg := 10000
+	biayaTotal := kg * biayaPerKg
 
-	fmt.Print("N: ")
-	inputN, _ := reader.ReadString('\n')
-	inputN = strings.TrimSpace(inputN)
-	nBunga, _ = strconv.Atoi(inputN)
-
-	for i := 1; i <= nBunga; i++ {
-		fmt.Printf("Bunga %d: ", i)
-		namaBunga, _ = reader.ReadString('\n')
-		namaBunga = strings.TrimSpace(namaBunga)
-
-		// Hentikan input jika user menginputkan 'SELESAI'
-		if namaBunga == "SELESAI" {
-			break
-		}
-
-		// Tambahkan nama bunga ke pita
-		if pita == "" {
-			pita = namaBunga
-		} else {
-			pita = pita + " - " + namaBunga
-		}
-
-		// Hitung jumlah bunga
-		jumlahBunga++
+	// Hitung biaya sisa gram
+	var biayaSisaGram int
+	if sisaGram >= 500 {
+		biayaSisaGram = sisaGram * 5 // jika sisa berat lebih dari atau sama dengan 500 gram
+	} else if sisaGram > 0 && sisaGram < 500 {
+		biayaSisaGram = sisaGram * 15 // jika sisa berat kurang dari 500 gram
 	}
 
-	fmt.Println("Pita:", pita)
-	fmt.Println("Bunga:", jumlahBunga)
+	// Total biaya termasuk biaya sisa gram
+	totalBiaya := biayaTotal + biayaSisaGram
+
+	// Jika total berat lebih dari 10kg, gratis biaya sisa gram
+	if kg >= 10 {
+		biayaSisaGram = 0
+		totalBiaya = kg * biayaPerKg
+	}
+
+	// Mengembalikan 5 nilai: kg, sisaGram, biayaTotal, biayaSisaGram, totalBiaya
+	return kg, sisaGram, biayaTotal, biayaSisaGram, totalBiaya
+}
+
+func main() {
+	// Input berat parsel (dalam gram)
+	var beratGrams int
+	fmt.Print("Masukkan berat parsel (dalam gram): ")
+	fmt.Scan(&beratGrams)
+
+	// Hitung detail dan total biaya
+	kg, sisaGram, biayaTotal, biayaSisaGram, totalBiaya := hitungBiayaPengiriman(beratGrams)
+
+	// Tampilkan hasil sesuai format yang diminta
+	fmt.Printf("Detail berat: %d kg + %d gr\n", kg, sisaGram)
+	fmt.Printf("Detail biaya: Rp. %d + Rp. %d\n", biayaTotal, biayaSisaGram)
+	fmt.Printf("Total biaya: Rp. %d\n", totalBiaya)
 }
 
 ```
 #### Screenshoot Source Code
-![Screenshot 2024-10-05 194914](https://github.com/user-attachments/assets/52d86e31-2bba-425a-97f6-53a799f29b00)
+![Screenshot 2024-10-06 153826](https://github.com/user-attachments/assets/93bb5e15-63c9-4dc9-99d4-d3a08e3d3566)
 
 
 
 #### Screenshoot Output
-
-![Screenshot 2024-10-05 195144](https://github.com/user-attachments/assets/312f87a2-535b-472e-9a2b-6d744e2c2375)
-
+![Screenshot 2024-10-06 153844](https://github.com/user-attachments/assets/2817ff3d-b84b-4878-a442-b0177ec995ac)
 
 #### Deskripsi Program
 
-Kode di atas menerima input bilangan bulat positif 'N'. Kemudian akan meminta input nama bunga sebanyak 'N' kali. Input nama bunga tersebut akan digabungkan ke dalam variabel 'pita' dengan pemisah spasi dan '-'. Program dimodifikasi agar proses input berhenti ketika user menginput 'SELESAI'. Setelah itu, program akan menampilkan isi pita dan jumlah bunga yang ada di dalamnya.
+Kode ini menghitung biaya pengiriman berdasarkan berat parsel dalam gram. Pertama, berat dikonversi menjadi kilogram dan sisa gram. Biaya dasar pengiriman dihitung berdasarkan berat dalam kilogram dengan tarif Rp. 10.000 per kilogram. Jika sisa gram lebih dari atau sama dengan 500, biaya tambahan dihitung Rp. 5 per gram; jika kurang dari 500 gram, dikenakan Rp. 15 per gram. Jika berat total melebihi 10 kg, biaya sisa gram dibebaskan. Program menampilkan detail berat, rincian biaya, dan total biaya pengiriman sesuai format yang diminta.
 
 
 #### Algoritma Program
-1. Jumlah Bunga (N): User memasukkan bilangan bulat positif (selain nol) yang menunjukkan berapa banyak nama bunga yang akan diinput.
-2. Nama-nama Bunga:
-User memasukkan nama bunga satu per satu sebanyak N kali.
-Setiap nama bunga akan digabung menjadi sebuah string (pita) dengan pemisah " - ".
-Contoh 1:
-
-Input:
-N: 3
-Bunga 1: Kertas
-Bunga 2: Mawar
-Bunga 3: Tulip
-Output:
-Pita: Kertas - Mawar - Tulip -
-Modifikasi Program:
-
-Program dimodifikasi agar proses input nama bunga berhenti ketika user memasukkan kata kunci 'SELESAI'. Setelah itu, program akan menampilkan:
-
-Isi Pita: String yang berisi semua nama bunga yang telah diinput.
-Jumlah Bunga: Banyaknya bunga di dalam pita.
-Contoh 2:
-
-Input:
-Bunga 1: Kertas
-Bunga 2: Mawar
-Bunga 3: Tulip
-Bunga 4: SELESAI
-Output:
-Pita: Kertas - Mawar - Tulip -
-Bunga: 3
+1. Input: Masukkan berat parsel dalam gram.
+2. Konversi berat:
+Hitung berat dalam kilogram (kg) dengan membagi berat parsel (gram) dengan 1000.
+Hitung sisa gram dengan mengambil modulus 1000 dari berat parsel.
+3. Hitung biaya pengiriman:
+Setiap 1 kg dikenakan biaya Rp. 10.000.
+Jika sisa gram lebih dari atau sama dengan 500:
+Tambahkan biaya Rp. 5 per gram untuk sisa gram.
+Jika sisa gram kurang dari 500:
+Tambahkan biaya Rp. 15 per gram untuk sisa gram.
+4. Kondisi khusus:
+Jika total berat (kg) lebih dari atau sama dengan 10 kg:
+Biaya sisa gram gratis.
+5. Output:
+Tampilkan berat dalam format kg dan gram.
+Tampilkan biaya dasar (untuk kg) dan biaya tambahan (untuk sisa gram).
+Tampilkan total biaya pengiriman.
 
 #### Cara Kerja Program
-1. Program meminta pengguna memasukkan bilangan bulat positif N yang menentukan berapa kali input nama bunga akan diminta.
-2. Program kemudian menjalankan loop for sebanyak N kali.
-3. Di dalam loop, program meminta pengguna untuk memasukkan nama bunga.
-4. Jika pengguna memasukkan 'SELESAI', loop akan dihentikan.
-5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
-6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
-
+1. Input berat parsel dalam satuan gram
+2. Konversi berat
+Kilogram dihitung dengan membagi berat parsel dengan 1000
+Sisa gram dihitung dengan mengambil sisa pembagian dari 1000
+3. Hitung biaya pengiriman
+Biaya per kilogram adalah Rp. 10.000
+Jika sisa gram lebih dari atau sama dengan 500, biaya tambahan adalah Rp. 5 per gram
+Jika sisa gram kurang dari 500, biaya tambahan adalah Rp. 15 per gram
+4. Total biaya pengiriman dihitung sebagai penjumlahan biaya dasar dan biaya sisa gram
+5. Program menampilkan hasil berupa detail berat dalam kg dan gram, biaya dasar dan tambahan, serta total biaya
 #### 5. Program Input Bunga dengan Kata Kunci
 
 #### Source Code
@@ -744,108 +735,99 @@ Bunga: 3
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strconv"
-	"strings"
 )
 
-func main() {
-	var (
-		nBunga int
-		namaBunga string
-		pita string
-		jumlahBunga int
-	)
-
-	reader := bufio.NewReader(os.Stdin)
-
-	fmt.Print("N: ")
-	inputN, _ := reader.ReadString('\n')
-	inputN = strings.TrimSpace(inputN)
-	nBunga, _ = strconv.Atoi(inputN)
-
-	for i := 1; i <= nBunga; i++ {
-		fmt.Printf("Bunga %d: ", i)
-		namaBunga, _ = reader.ReadString('\n')
-		namaBunga = strings.TrimSpace(namaBunga)
-
-		// Hentikan input jika user menginputkan 'SELESAI'
-		if namaBunga == "SELESAI" {
-			break
+// Function to get all factors of a number
+func getFactors(n int) []int {
+	var factors []int
+	for i := 1; i <= n; i++ {
+		if n%i == 0 {
+			factors = append(factors, i)
 		}
-
-		// Tambahkan nama bunga ke pita
-		if pita == "" {
-			pita = namaBunga
-		} else {
-			pita = pita + " - " + namaBunga
-		}
-
-		// Hitung jumlah bunga
-		jumlahBunga++
 	}
-
-	fmt.Println("Pita:", pita)
-	fmt.Println("Bunga:", jumlahBunga)
+	return factors
 }
+
+// Function to check if a number is prime
+func isPrime(n int) bool {
+	if n <= 1 {
+		return false
+	}
+	// A number is prime if it has only two divisors: 1 and itself
+	return len(getFactors(n)) == 2
+}
+
+func main() {
+	var b int
+	fmt.Print("Bilangan: ")
+	fmt.Scanln(&b)
+
+	// Get the factors
+	factors := getFactors(b)
+	fmt.Printf("Faktor: ")
+	for _, f := range factors {
+		fmt.Printf("%d ", f)
+	}
+	fmt.Println()
+
+	// Check if the number is prime
+	if isPrime(b) {
+		fmt.Println("Prima: true")
+	} else {
+		fmt.Println("Prima: false")
+	}
+}
+
 
 ```
 #### Screenshoot Source Code
-![Screenshot 2024-10-05 194914](https://github.com/user-attachments/assets/52d86e31-2bba-425a-97f6-53a799f29b00)
+
+![Screenshot 2024-10-06 155431](https://github.com/user-attachments/assets/08024ab4-0d18-431e-9b32-9654ce1dfb36)
 
 
 
 #### Screenshoot Output
 
-![Screenshot 2024-10-05 195144](https://github.com/user-attachments/assets/312f87a2-535b-472e-9a2b-6d744e2c2375)
+![Screenshot 2024-10-06 155455](https://github.com/user-attachments/assets/0754e9f3-9a37-48b5-8d8c-036d5cd1612f)
 
 
 #### Deskripsi Program
 
-Kode di atas menerima input bilangan bulat positif 'N'. Kemudian akan meminta input nama bunga sebanyak 'N' kali. Input nama bunga tersebut akan digabungkan ke dalam variabel 'pita' dengan pemisah spasi dan '-'. Program dimodifikasi agar proses input berhenti ketika user menginput 'SELESAI'. Setelah itu, program akan menampilkan isi pita dan jumlah bunga yang ada di dalamnya.
+Kode di atas menerima input berupa bilangan bulat positif dan mencari semua faktornya. Setelah itu, program akan menentukan apakah bilangan tersebut adalah bilangan prima, yaitu memiliki tepat dua faktor: 1 dan dirinya sendiri. Dengan menggunakan fungsi untuk menghitung faktor dan memeriksa keprimaan, program ini memberikan output yang jelas, menampilkan faktor-faktor dan status keprimaan dari bilangan yang dimasukkan.
 
 
 #### Algoritma Program
-1. Jumlah Bunga (N): User memasukkan bilangan bulat positif (selain nol) yang menunjukkan berapa banyak nama bunga yang akan diinput.
-2. Nama-nama Bunga:
-User memasukkan nama bunga satu per satu sebanyak N kali.
-Setiap nama bunga akan digabung menjadi sebuah string (pita) dengan pemisah " - ".
-Contoh 1:
-
-Input:
-N: 3
-Bunga 1: Kertas
-Bunga 2: Mawar
-Bunga 3: Tulip
-Output:
-Pita: Kertas - Mawar - Tulip -
-Modifikasi Program:
-
-Program dimodifikasi agar proses input nama bunga berhenti ketika user memasukkan kata kunci 'SELESAI'. Setelah itu, program akan menampilkan:
-
-Isi Pita: String yang berisi semua nama bunga yang telah diinput.
-Jumlah Bunga: Banyaknya bunga di dalam pita.
-Contoh 2:
-
-Input:
-Bunga 1: Kertas
-Bunga 2: Mawar
-Bunga 3: Tulip
-Bunga 4: SELESAI
-Output:
-Pita: Kertas - Mawar - Tulip -
-Bunga: 3
-
+1. Mulai
+2. Input: Minta pengguna untuk memasukkan sebuah bilangan bulat positif b.
+3. Inisialisasi:
+Buat sebuah daftar kosong untuk menyimpan faktor-faktor dari b.
+Inisialisasi variabel jumlahFaktor dengan 0.
+4. Cari Faktor:
+Untuk setiap bilangan i dari 1 hingga b:
+Jika b habis dibagi i (yaitu b % i == 0):
+Tambahkan i ke daftar faktor.
+Tambahkan 1 ke jumlahFaktor.
+5. Tampilkan Faktor:
+Cetak semua faktor yang terdapat dalam daftar.
+6. Periksa Keprimaan:
+Jika jumlahFaktor sama dengan 2, maka:
+Bilangan b adalah bilangan prima.
+Jika tidak:
+Bilangan b bukan bilangan prima.
+7. Tampilkan Hasil:
+Cetak status keprimaan dari b.
+8. Selesai.
 #### Cara Kerja Program
-1. Program meminta pengguna memasukkan bilangan bulat positif N yang menentukan berapa kali input nama bunga akan diminta.
-2. Program kemudian menjalankan loop for sebanyak N kali.
-3. Di dalam loop, program meminta pengguna untuk memasukkan nama bunga.
-4. Jika pengguna memasukkan 'SELESAI', loop akan dihentikan.
-5. Jika tidak, nama bunga yang diinputkan akan ditambahkan ke variabel pita yang akan membentuk string berisi kumpulan nama-nama bunga.
-6. Setelah loop selesai, program akan mencetak isi variabel pita dan jumlah_bunga.
-
+1. Input: Pengguna memasukkan 12.
+2. Inisialisasi: Program menyiapkan daftar kosong untuk faktor dan variabel untuk menghitung jumlah faktor.
+3. Mencari Faktor:
+Program memeriksa angka dari 1 hingga 12:
+Menemukan faktor: 1, 2, 3, 4, 6, 12.
+4. Menampilkan Faktor: Program mencetak semua faktor yang ditemukan.
+5. Memeriksa Keprimaan:
+Mengetahui bahwa 12 memiliki 6 faktor, program menyimpulkan bahwa 12 bukan bilangan prima.
+6. Output: Program mencetak faktor dan status prima: Faktor: 1 2 3 4 6 12, Prima: false.
 
 ## Referensi 
 [1]Donovan, A. A., & Kernighan, B. W. (2015). The Go Programming Language. Addison-Wesley.
