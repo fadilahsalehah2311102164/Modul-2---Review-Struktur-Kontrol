@@ -119,7 +119,7 @@
    notasi algoritma. Dua bentuk yang kita gunakan di sini adalah struktur while-loop dan
    repeat-until.<br/>
    <p align="center">Bentuk perulangan dalam bahasa Go</p>
-   <p align="center">![image](https://github.com/user-attachments/assets/791e169d-5efd-46b3-b5f0-620fcba71404)</p>
+   ![image](https://github.com/user-attachments/assets/791e169d-5efd-46b3-b5f0-620fcba71404)<br/>
 
       
 
